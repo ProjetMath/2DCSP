@@ -1,16 +1,12 @@
-package p;
+package images;
 
-/**
- * Image
- *
- */
-public class Item {
+public class TypeImage {
 	private int id;
 	private double height; //hauteur image
 	private double width; //largeur image
 	private int demand; //nombre d'image de ce type souhaité
 	
-	public Item(int id, double height, double width, int demand) {
+	public TypeImage(int id, double height, double width, int demand) {
 		super();
 		this.id = id;
 		this.height = height;
@@ -42,6 +38,4 @@ public class Item {
 	public void setDemand(int demand) {
 		this.demand = demand;
 	}
-	
-	
 }
