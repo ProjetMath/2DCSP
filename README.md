@@ -1,3 +1,6 @@
 # 2DCSP
 
-Le projet est sous Eclipse et utilise UMLDesigner (plugin eclipse) pour modéliser des diagrammes UML.
+Le projet est sous Eclipse.
+
+Diagramme UML avec Cacoo.
+
