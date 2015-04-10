@@ -1,4 +1,4 @@
-package images;
+package image;
 
 import java.awt.Point;
 
@@ -8,11 +8,13 @@ import java.awt.Point;
 public class Item {
 	private TypeImage type;
 	private Point position;
+	private boolean rotated; //sens de l'image (pivoté ou non)
 	
-	public Item(TypeImage type, Point position) {
+	public Item(TypeImage type, Point position, boolean rotated) {
 		super();
 		this.setType(type);
 		this.setPosition(position);
+		this.setRotated(rotated);
 	}
 
 	public TypeImage getType() {
@@ -30,7 +32,13 @@ public class Item {
 	public void setPosition(Point position) {
 		this.position = position;
 	}
-	
-	
+
+	public boolean isRotated() {
+		return rotated;
+	}
+
+	public void setRotated(boolean rotated) {
+		this.rotated = rotated;
+	}
 	
 }

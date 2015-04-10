@@ -1,40 +1,73 @@
 package p;
 
-import images.Item;
-import images.TypeImage;
+import image.Item;
 
 import java.util.List;
+import java.util.Map;
 
 public class Solution {
 	private List<Pattern> patterns;
-	private int[] nbPrintPattern; //Nombre impression du pattern
-	
+	//private int[] nbPrintPattern; //Nombre impression du pattern
+	private Map<Pattern, Integer> nbPrintPattern; //nombre d'impression pour chaque pattern
 	private long elapsedTime; //temps pour obtenir la solution
-	
-	private static double globalFitness;
-	
+	private static double globalFitness = 0.0;
 	private double localFitness; 
 
-	public Solution(List<Pattern> patterns, int[] nbPrintPattern,
-			long elapsedTime, double localFitness) {
+	public Solution(List<Pattern> patterns, Map<Pattern, Integer> nbPrintPattern,
+			long elapsedTime) {
 		super();
 		this.patterns = patterns;
 		this.nbPrintPattern = nbPrintPattern;
 		this.elapsedTime = elapsedTime;
+		this.localFitness = 0;
+	}
+	
+	public long getElapsedTime() {
+		return elapsedTime;
+	}
+	
+	public void setElapsedTime(long elapsedTime) {
+		this.elapsedTime = elapsedTime;
+	}
+	
+	public double getLocalFitness() {
+		return localFitness;
+	}
+	
+	public void setLocalFitness(double localFitness) {
 		this.localFitness = localFitness;
 	}
 	
-	public void calculFitness()
+	public static double getGlobalFitness() {
+		return globalFitness;
+	}
+	
+	public double calculFitness()
 	{
-		for (Pattern p : patterns)
-		{
-			List<Item> images = p.getImages();
-			
-		}
-			
 		localFitness = 0;
 		
 		if (globalFitness > localFitness)
 			localFitness = globalFitness;
+		
+		return localFitness;
+	}
+	
+	
+	@Override
+	public String toString() {
+		String s = "Solution = {\r\n";
+		
+		for (int i=0; i<patterns.size(); ++i)
+		{
+			s += patterns.get(i)+"\r\n";
+			s += "p"+i+" : "+nbPrintPattern.get(patterns.get(i)); 
+			s += " [t="+elapsedTime+", lf="+localFitness+", gf="+globalFitness+"]"; 
+			s += "\r\n"; 
+			//example : "p0 : 10 [t=2.2, lf=4.3, gf=4.3]"
+		} 
+		
+		s += "\r\n}";
+		
+		return s;
 	}
 }
