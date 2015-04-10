@@ -5,8 +5,6 @@ import image.TypeImage;
 import java.util.ArrayList;
 import java.util.List;
 
-import algoPlacement.AlgoPlacement;
-
 /**
  * Execution general
  *
@@ -24,14 +22,7 @@ public class Execute {
 		imagesToPlace.add(new TypeImage(3, 23, 9, 3498));
 		
 		Pattern.setSize(40, 60); 
-		
-		//Algo placement TODO
-		//TODO Trier les images (grande >> petite)
-		int nbPatternMax = 1;
-		AlgoPlacement ap = new AlgoPlacement(imagesToPlace, nbPatternMax);
-		
-		Solution s = ap.execute();
-		System.out.println(s);
+	
 	}
 
 }
