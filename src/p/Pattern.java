@@ -5,7 +5,6 @@ import image.TypeImage;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class Pattern {
 	private int id;

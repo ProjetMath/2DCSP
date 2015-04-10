@@ -65,7 +65,7 @@ public class TypeImage {
 		if (obj instanceof TypeImage) {
 			TypeImage ti = (TypeImage)obj;
 			
-			return (ti.height == this.height && ti.width == this.width && this.id == ti.id);
+			return (this.id == ti.id);
 		}
 		return false;
 	};
