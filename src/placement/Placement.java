@@ -1,4 +1,4 @@
-package algoPlacement;
+package placement;
 
 import image.Item;
 import image.TypeImage;

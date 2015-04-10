@@ -1,4 +1,4 @@
-package algoPlacement;
+package placement;
 
 import java.awt.Point;
 
