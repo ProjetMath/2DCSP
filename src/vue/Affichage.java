@@ -85,6 +85,7 @@ public class Affichage extends JFrame
 	{
 		//TODO faire le traitement correct pour une image avec un boolean true(position(x,y)->(y,x))
 		//donner une couleur a un type d'image simple mais utile
+		//Rotation de l'image (boolean dans Item)
 		Pattern.setSize(200, 300);
 		TypeImage typeA=new TypeImage(1,50,75,20);
 		List<Pattern> patterns = new ArrayList<Pattern>();
@@ -97,8 +98,7 @@ public class Affichage extends JFrame
 			patterns.add(new Pattern(images, imgsNb));
 			patterns.get(i).setImages(images);
 		}
-		final Solution solution = new Solution(patterns,
-				new HashMap<Pattern, Integer>(), 0);
+		final Solution solution = new Solution(patterns, 0);
 		JFrame frame = new Affichage(solution);
 		frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		frame.pack();
