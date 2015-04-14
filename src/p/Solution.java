@@ -55,12 +55,12 @@ public class Solution {
 	
 	@Override
 	public String toString() {
-		String s = "Solution = {\r\n";
+		String s = "Solution = [t="+elapsedTime+", lf="+localFitness+", gf="+globalFitness+"] {\r\n";
 		
 		for (int i=0; i<patterns.size(); ++i)
 		{
 			s += patterns.get(i)+"";
-			s += ", [printed= "+nbPrintPattern.get(patterns.get(i))+", t="+elapsedTime+", lf="+localFitness+", gf="+globalFitness+"]"; 
+			s += ", [printed= "+nbPrintPattern.get(patterns.get(i))+"]"; 
 			s += "\r\n"; 
 			//example : "p0 : 10 [t=2.2, lf=4.3, gf=4.3]"
 		} 
