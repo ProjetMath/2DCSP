@@ -23,7 +23,7 @@ public class Solution {
 	private List<TypeImage> typesImages; //types d'images utilisés dans l'ensemble des patterns
 	private Map<Pattern, Integer> nbPrintPattern; //nombre d'impression pour chaque pattern
 	private long elapsedTime; //temps pour obtenir la solution
-	private double localFitness; 
+	private double fitness; 
 
 	public Solution(List<TypeImage> typesImages, List<Pattern> patterns, long elapsedTime) {
 		super();
@@ -31,7 +31,7 @@ public class Solution {
 		this.typesImages = typesImages;
 		this.nbPrintPattern = new HashMap<Pattern, Integer>();
 		this.elapsedTime = elapsedTime;
-		this.localFitness = 0;
+		this.fitness = 0;
 	}
 	public List<Pattern> getPatterns(){
 		return this.patterns;
@@ -44,12 +44,8 @@ public class Solution {
 		this.elapsedTime = elapsedTime;
 	}
 	
-	public double getLocalFitness() {
-		return localFitness;
-	}
-	
-	public void setLocalFitness(double localFitness) {
-		this.localFitness = localFitness;
+	public double getFitness() {
+		return fitness;
 	}
 	
 	public double calculFitness()
@@ -108,9 +104,9 @@ public class Solution {
 			nbPrintPattern.put(patterns.get(i), s);
 		}
 		
-		localFitness = optSolution.getValue();
+		fitness = optSolution.getValue();
 		
-		return localFitness;
+		return fitness;
 	}
 	
 	public Map<Pattern, Integer> getNbPrintPattern() {
@@ -119,7 +115,7 @@ public class Solution {
 	
 	@Override
 	public String toString() {
-		String s = "Solution = [pW="+Pattern.getWidth()+", pH="+Pattern.getHeight()+", t="+elapsedTime+", f="+localFitness+"] {\r\n";
+		String s = "Solution = [pW="+Pattern.getWidth()+", pH="+Pattern.getHeight()+", t="+elapsedTime+", f="+fitness+"] {\r\n";
 		
 		for (int i=0; i<patterns.size(); ++i)
 		{
