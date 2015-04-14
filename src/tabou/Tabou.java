@@ -41,11 +41,11 @@ public class Tabou {
 					{
 						s1.calculFitness();
 
-						System.out.println("f="+s1.getFitness());
+						//System.out.println("f="+s1.getFitness());
 						
 						//Si meilleur voisin trouvé le remplacer
 						if (bestNeightbor == null 
-								|| (bestNeightbor != null && s1.getFitness() > bestNeightbor.getFitness()))
+								|| (bestNeightbor != null && s1.getFitness() < bestNeightbor.getFitness()))
 							bestNeightbor = s1;
 					}
 					
@@ -101,6 +101,6 @@ public class Tabou {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("Hello elo !");
+		System.out.println("hey");
 	}
 }
