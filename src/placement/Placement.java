@@ -22,9 +22,11 @@ public class Placement {
 		this.imagesToPlace = imagesToPlace;
 	}
 	
-	public Pattern designPattern() {
-		Pattern pat = null;
-		
+	/**
+	 * Try to place all the images
+	 * @return Pattern or null if pattern not found
+	 */
+	public Pattern place() {
 		//Transform type image in images with null position 
 		images = new ArrayList<Item>();
 		for (Entry<TypeImage, Integer> e : imagesToPlace.entrySet())
@@ -89,24 +91,11 @@ public class Placement {
 				freeSpace.add(b1);
 				freeSpace.add(b2);
 			} else {
-				System.out.println("No such rectangle found");
+				return null;
 			}
 		}
 		
-		//Check
-		boolean check = true;
-		for (Item i : images)
-		{
-			if (i.getPosition() == null)
-			{
-				check = false;
-				break;
-			}
-		}
-		if (check)
-			pat = new Pattern(images, imagesToPlace);
-		
-		return pat;
+		return new Pattern(images, imagesToPlace);
 	}
 	
 	/**
@@ -152,78 +141,8 @@ public class Placement {
 		imgsNb.put(tImages.get(2), 0);
 		
 		Placement pl = new Placement(imgsNb);
-		Pattern p = pl.designPattern();
+		Pattern p = pl.place();
 		System.out.println(p);
-		
-		/*	
-		//Maximum pour un type image dans un pattern
-		int[] maxTypePerPattern = new int[tImages.size()];
-		for(int i=0; i<tImages.size(); ++i)
-			maxTypePerPattern[i] = (int) (Pattern.getSurface() / tImages.get(i).getSurface());
-		
-		//création d'une première solution aléatoire
-		List<Pattern> listPattern = new ArrayList<>();
-		Random rand = new Random();
-		for(int i=0; i<nbMaxPat; ++i)
-		{
-			System.out.println("debut lp="+listPattern.size());
-			Pattern p = null;
-			do
-			{
-				//random nb image par type image dans pattern
-				Map<TypeImage, Integer> imgsNb = new HashMap<TypeImage, Integer>();
-				for(int j=0; j<tImages.size(); ++j)
-					imgsNb.put(tImages.get(j), rand.nextInt(maxTypePerPattern[j]+1));
-				
-				System.out.println("imgsNb="+imgsNb.size());
-				
-				// Vérifier qu'existe pas déjà 
-				boolean exist = false;
-				for (Pattern pa : listPattern)
-				{
-					//Pas la même taille
-					if (imgsNb.size() != pa.getImgsNb().size())
-						continue;
-					
-					//Chaque type d'image a le même nombre d'images
-					exist = true;
-					for(Entry<TypeImage, Integer> entry : pa.getImgsNb().entrySet())  
-					{
-						Integer v = imgsNb.get(entry.getKey());
-						if (v != entry.getValue())
-						{
-							exist = false;
-							break;
-						}
-					}
-					if (!exist) continue;
-					
-					break; //exist !
-				}				
-				if (exist) continue; //re generation aleatoire d'un autre pattern
-				
-				System.out.println("exist="+exist);
-							
-				//checker placement
-				Placement pl = new Placement(imgsNb);
-				p = pl.place();
-				System.out.println(p);
-			} while(p != null);
-			break;
-			//listPattern.add(p);
-		}
-		System.out.println("fin");
-	
-		//Nb print per Pattern
-		Map<Pattern, Integer> nbPrintPattern = new HashMap<>();
-		for(Pattern p : listPattern)
-			nbPrintPattern.put(p, 555);
-		
-		//Solution
-		Solution s = new Solution(listPattern, nbPrintPattern, 0);
-		
-		//Affichage
-		System.out.println(s);*/
 	}
 
 }

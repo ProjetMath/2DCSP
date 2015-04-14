@@ -1,7 +1,6 @@
 package p;
 
-import image.Item;
-
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,11 +12,10 @@ public class Solution {
 	private static double globalFitness = 0.0;
 	private double localFitness; 
 
-	public Solution(List<Pattern> patterns, Map<Pattern, Integer> nbPrintPattern,
-			long elapsedTime) {
+	public Solution(List<Pattern> patterns, long elapsedTime) {
 		super();
 		this.patterns = patterns;
-		this.nbPrintPattern = nbPrintPattern;
+		this.nbPrintPattern = new HashMap<Pattern, Integer>();
 		this.elapsedTime = elapsedTime;
 		this.localFitness = 0;
 	}
@@ -59,9 +57,8 @@ public class Solution {
 		
 		for (int i=0; i<patterns.size(); ++i)
 		{
-			s += patterns.get(i)+"\r\n";
-			s += "p"+i+" : "+nbPrintPattern.get(patterns.get(i)); 
-			s += " [t="+elapsedTime+", lf="+localFitness+", gf="+globalFitness+"]"; 
+			s += patterns.get(i)+"";
+			s += ", [printed= "+nbPrintPattern.get(patterns.get(i))+", t="+elapsedTime+", lf="+localFitness+", gf="+globalFitness+"]"; 
 			s += "\r\n"; 
 			//example : "p0 : 10 [t=2.2, lf=4.3, gf=4.3]"
 		} 

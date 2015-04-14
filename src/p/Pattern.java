@@ -34,6 +34,11 @@ public class Pattern {
 		surface = height * width;
 	}
 	
+	public static void resetCpt()
+	{
+		cpt = 0;
+	}
+	
 	/* OBJECT METHODS */
 	public Pattern(List<Item> images, Map<TypeImage, Integer> imgsNb) 
 	{
