@@ -21,7 +21,9 @@ public class Solution {
 		this.elapsedTime = elapsedTime;
 		this.localFitness = 0;
 	}
-	
+	public List<Pattern> getPatterns(){
+		return this.patterns;
+	}
 	public long getElapsedTime() {
 		return elapsedTime;
 	}
