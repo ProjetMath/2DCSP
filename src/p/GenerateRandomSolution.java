@@ -119,7 +119,7 @@ public class GenerateRandomSolution {
 		}
 		
 		//Solution
-		Solution s = new Solution(listPattern, System.currentTimeMillis()-timeStart);
+		Solution s = new Solution(tImages, listPattern, System.currentTimeMillis()-timeStart);
 		return s;
 	}
 
@@ -137,6 +137,7 @@ public class GenerateRandomSolution {
 		tImages.add(new TypeImage(2, 220, 333, 121));		
 		
 		Solution s = new GenerateRandomSolution(tImages).generate(nbMaxPat);
+		s.calculFitness();
 		
 		//Affichage
 		System.out.println(s);

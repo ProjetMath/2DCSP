@@ -95,6 +95,8 @@ public class Affichage extends JFrame
 		//donner une couleur a un type d'image simple mais utile
 		Pattern.setSize(200, 300);
 		TypeImage typeA=new TypeImage(1,50,75,20);
+		List<TypeImage> typesImages = new ArrayList<TypeImage>();
+		typesImages.add(typeA);
 		List<Pattern> patterns = new ArrayList<Pattern>();
 		List<Item> images = new ArrayList<Item>();
 		Item image1=new Item(typeA,new Point(0,0),false);
@@ -105,7 +107,7 @@ public class Affichage extends JFrame
 			patterns.add(new Pattern(images, imgsNb));
 			patterns.get(i).setImages(images);
 		}
-		final Solution solution = new Solution(patterns, 0);
+		final Solution solution = new Solution(typesImages, patterns, 0);
 		JFrame frame = new Affichage(solution,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
 		affiche(frame);
 	}

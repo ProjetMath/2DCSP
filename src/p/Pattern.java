@@ -84,7 +84,7 @@ public class Pattern {
 		for (Item i : images)
 		{
 			s += "   [";
-			s += i.getType().getId()+", x="+i.getPosition().getX()+", y="+i.getPosition().getY();
+			s += i.getType().getId()+", dem="+i.getType().getDemand()+", x="+i.getPosition().getX()+", y="+i.getPosition().getY();
 			s += ", w="+i.getType().getWidth()+", h="+i.getType().getHeight();
 			s += ", rot="+i.isRotated();
 			s += "]\r\n";
