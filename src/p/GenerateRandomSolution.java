@@ -132,13 +132,14 @@ public class GenerateRandomSolution {
 		
 		//list types images
 		List<TypeImage> tImages = new ArrayList<>();
-		tImages.add(new TypeImage(0, 933, 372, 179));
-		tImages.add(new TypeImage(1, 893, 307, 192));
-		tImages.add(new TypeImage(2, 727, 333, 121));		
+		tImages.add(new TypeImage(0, 415, 372, 179));
+		tImages.add(new TypeImage(1, 312, 307, 192));
+		tImages.add(new TypeImage(2, 220, 333, 121));		
 		
 		Solution s = new GenerateRandomSolution(tImages).generate(nbMaxPat);
 		
 		//Affichage
+		System.out.println(s);
 		JFrame frame = new Affichage(s,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
 		Affichage.affiche(frame);
 	}

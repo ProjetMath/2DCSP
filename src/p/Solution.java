@@ -55,7 +55,7 @@ public class Solution {
 	
 	@Override
 	public String toString() {
-		String s = "Solution = [t="+elapsedTime+", lf="+localFitness+", gf="+globalFitness+"] {\r\n";
+		String s = "Solution = [pW="+Pattern.getWidth()+", pH="+Pattern.getHeight()+", t="+elapsedTime+", lf="+localFitness+", gf="+globalFitness+"] {\r\n";
 		
 		for (int i=0; i<patterns.size(); ++i)
 		{

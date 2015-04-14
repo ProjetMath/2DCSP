@@ -86,6 +86,7 @@ public class Pattern {
 			s += "   [";
 			s += i.getType().getId()+", x="+i.getPosition().getX()+", y="+i.getPosition().getY();
 			s += ", w="+i.getType().getWidth()+", h="+i.getType().getHeight();
+			s += ", rot="+i.isRotated();
 			s += "]\r\n";
 		}
 		
