@@ -113,6 +113,10 @@ public class Solution {
 		return nbPrintPattern;
 	}
 	
+	public List<TypeImage> getTypesImages() {
+		return typesImages;
+	}
+	
 	@Override
 	public String toString() {
 		String s = "Solution = [pW="+Pattern.getWidth()+", pH="+Pattern.getHeight()+", t="+elapsedTime+", f="+fitness+"] {\r\n";
