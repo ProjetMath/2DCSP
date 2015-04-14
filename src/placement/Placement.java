@@ -23,10 +23,11 @@ public class Placement {
 	}
 	
 	/**
-	 * Try to place all the images
+	 * * Try to place all the images
+	 * @param idPattern qui va être créé
 	 * @return Pattern or null if pattern not found
 	 */
-	public Pattern place() {
+	public Pattern place(int idPattern) {
 		//Transform type image in images with null position 
 		images = new ArrayList<Item>();
 		for (Entry<TypeImage, Integer> e : imagesToPlace.entrySet())
@@ -95,7 +96,7 @@ public class Placement {
 			}
 		}
 		
-		return new Pattern(images, imagesToPlace);
+		return new Pattern(idPattern, images, imagesToPlace);
 	}
 	
 	/**
@@ -141,7 +142,7 @@ public class Placement {
 		imgsNb.put(tImages.get(2), 0);
 		
 		Placement pl = new Placement(imgsNb);
-		Pattern p = pl.place();
+		Pattern p = pl.place(0);
 		System.out.println(p);
 	}
 

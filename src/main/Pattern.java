@@ -3,16 +3,16 @@ package main;
 import image.Item;
 import image.TypeImage;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Pattern {
-	private int id;
+	private int id; //id du pattern dans la solution
 	private List<Item> images;
 	private Map<TypeImage, Integer> imgsNb; //TypeImage / nombre dans pattern
 	
 	private static double height = 0.0, width = 0.0, surface = 0.0; //tous les patterns ont la même taille
-	private static int cpt = 0;
 
 	/* STATIC METHODS */
 	public static double getHeight() {
@@ -34,17 +34,12 @@ public class Pattern {
 		surface = height * width;
 	}
 	
-	public static void resetCpt()
-	{
-		cpt = 0;
-	}
-	
 	/* OBJECT METHODS */
-	public Pattern(List<Item> images, Map<TypeImage, Integer> imgsNb) 
+	public Pattern(int id, List<Item> images, Map<TypeImage, Integer> imgsNb) 
 	{
 		this.images = images;
-		this.imgsNb = imgsNb;
-		this.id = cpt++;
+		this.imgsNb = new HashMap<TypeImage, Integer>(imgsNb);
+		this.id = id;
 	}
 
 	public List<Item> getImages() {

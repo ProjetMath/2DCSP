@@ -42,7 +42,7 @@ public class GenerateRandomSolution {
 		//System.out.println("#GenerateSolution# liste image size = "+tImages.size()+", maxTypePerPattern size = "+maxTypePerPattern.length);
 		for (;;)
 		{
-			Pattern.resetCpt();
+			int cptPattern = 0;
 			listPattern.clear();
 			int[] cptTypeImage = new int[tImages.size()]; //To check if every type of picture has been place at least once
 			
@@ -96,10 +96,11 @@ public class GenerateRandomSolution {
 								
 					//checker placement
 					Placement pl = new Placement(imgsNb);
-					p = pl.place();
+					p = pl.place(cptPattern);
 				} while(p == null);
 				
 				listPattern.add(p);
+				cptPattern++;
 				
 				int k = 0;
 				for (Entry<TypeImage, Integer> e : p.getImgsNb().entrySet())
