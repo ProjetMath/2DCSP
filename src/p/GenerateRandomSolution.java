@@ -2,6 +2,7 @@ package p;
 
 import image.TypeImage;
 
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,7 +10,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 
+import javax.swing.JFrame;
+
 import placement.Placement;
+import vue.Affichage;
 
 public class GenerateRandomSolution {
 	private List<TypeImage> tImages;	
@@ -135,7 +139,8 @@ public class GenerateRandomSolution {
 		Solution s = new GenerateRandomSolution(tImages).generate(nbMaxPat);
 		
 		//Affichage
-		System.out.println(s);
+		JFrame frame = new Affichage(s,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
+		Affichage.affiche(frame);
 	}
 
 }

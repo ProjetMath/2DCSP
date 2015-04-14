@@ -16,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JViewport;
+import javax.swing.text.Position;
 
 import p.Pattern;
 import p.Solution;
@@ -24,24 +25,27 @@ public class Affichage extends JFrame
 {
 	private JPanel panel;
 	private JScrollPane scrollPane;
+	private int positionnementPattern;
 	// la methode paintComponent n'appel que des methode avec des attribue
 	// finaux
-	public Affichage(final Solution solution)
+	public Affichage(final Solution solution,Dimension patternSize)
 	{
+		//permet de repartit les pattern sur la dimension desiré
+		positionnementPattern=1850/patternSize.width;
+		//permet d'obetnir la taille en hauteur pour empiler 1à 1 tout les pattern(pour des gros pattern)
+		int hauteurPanel= patternSize.height+((patternSize.height*solution.getPatterns().size())/positionnementPattern);
 		getContentPane().setForeground(Color.BLACK);
 		panel = new JPanel()
 		{
 			public void paintComponent(Graphics dessin)
 			{
 				super.paintComponent(dessin);
-				// image.drawArc( 100, 100, 80, 80, 0, 360);
-				// appel de la fonction qui va reelement dessiner la solution
 				dessineRectangle(solution, dessin);
 			}
 		};
 		panel.setBackground(Color.BLACK);
 		panel.setOpaque(false);
-		panel.setPreferredSize(new Dimension(1900,1000));
+		panel.setPreferredSize(new Dimension(1900,hauteurPanel));
 		scrollPane = new JScrollPane();
 		scrollPane.setPreferredSize(new Dimension(1000, 600));
 		getContentPane().add(scrollPane);
@@ -65,22 +69,28 @@ public class Affichage extends JFrame
 			// on commence par dessiner les pattern avec un cadre,
 			// on prend donc leur taille et on les place en parsant en
 			// int(contraintes)
-			composant.drawRect((int) (i%9 * Pattern.getWidth() + 50),
-					hauteur - (int) (((i/9)+1) *Pattern.getHeight()+20),
+			composant.drawRect((int) (i%positionnementPattern * Pattern.getWidth() + 50),
+					hauteur - (int) (((i/positionnementPattern)+1) *Pattern.getHeight()+20),
 					(int) Pattern.getWidth(), (int) Pattern.getHeight());
 			composant.setColor(Color.cyan);
 			//une fois qu'un pattern est dessiner on le remplit avec des rectangle plein
 			for(int j=0;j<pattern.getImages().size();j++)
 			{
 				Item image=pattern.getImages().get(j);
-				composant.drawRect((int) (i%9 * Pattern.getWidth() + 50)+image.getPosition().x,
-						hauteur - (int) (((i/9)+1) *Pattern.getHeight()+20)
+				composant.drawRect((int) (i%positionnementPattern * Pattern.getWidth() + 50)+image.getPosition().x,
+						hauteur - (int) (((i/positionnementPattern)+1) *Pattern.getHeight()+20)
 						+(int)(Pattern.getHeight()-image.getPosition().y-image.getType().getHeight()),
 						(int)image.getType().getWidth() , (int)image.getType().getHeight());
 			}
 		}
 	}
-
+	public static void affiche(JFrame frame)
+	{
+		frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		frame.pack();
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+	}
 	public static void main(String[] args)
 	{
 		//TODO faire le traitement correct pour une image avec un boolean true(position(x,y)->(y,x))
@@ -97,12 +107,8 @@ public class Affichage extends JFrame
 			patterns.add(new Pattern(images, imgsNb));
 			patterns.get(i).setImages(images);
 		}
-		final Solution solution = new Solution(patterns,
-				new HashMap<Pattern, Integer>(), 0);
-		JFrame frame = new Affichage(solution);
-		frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		frame.pack();
-		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
+		final Solution solution = new Solution(patterns, 0);
+		JFrame frame = new Affichage(solution,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
+		affiche(frame);
 	}
 }
