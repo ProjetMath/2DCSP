@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 
-import p.Pattern;
+import main.Pattern;
 
 public class Placement {
 	private Map<TypeImage, Integer> imagesToPlace; //Type, nombre du type à placer

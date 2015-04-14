@@ -16,8 +16,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JViewport;
 
-import p.Pattern;
-import p.Solution;
+import main.Pattern;
+import main.Solution;
 
 public class Affichage extends JFrame
 {
