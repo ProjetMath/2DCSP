@@ -48,11 +48,10 @@ public class TransformationIncr implements Transformation {
 			Pattern newPattern = new Placement(newMapti).place();
 			if (newPattern != null) 
 			{ //Si le nouveau pattern créé est correct
+				//recréé le nouveau tableau de pattern en modifiant l'élément
 				Pattern[] newListPatterns = new Pattern[s.getPatterns().length];
 				for (int i=0; i<s.getPatterns().length; i++)
-				{
 					newListPatterns[i] = s.getPatterns()[i];
-				}
 				
 				newListPatterns[idPattern] = newPattern;
 				
@@ -97,5 +96,15 @@ public class TransformationIncr implements Transformation {
 					this.idPattern == t.getIdPattern();
 		} else 
 			return false;		
+	}
+	
+	@Override
+	public String toString() {
+		String s = "";
+		
+		s += "Transform = [t="+transformation+", ";
+		s += "ti="+tI.getId()+", numPat="+idPattern+"]";
+		
+		return s;
 	}
 }
