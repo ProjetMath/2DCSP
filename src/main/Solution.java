@@ -18,12 +18,15 @@ import org.apache.commons.math3.optim.linear.Relationship;
 import org.apache.commons.math3.optim.linear.SimplexSolver;
 import org.apache.commons.math3.optim.nonlinear.scalar.GoalType;
 
+import transformation.Transformation;
+
 public class Solution {
 	private Pattern[] patterns;
 	private List<TypeImage> typesImages; //types d'images utilisés dans l'ensemble des patterns
 	private Map<Pattern, Integer> nbPrintPattern; //nombre d'impression pour chaque pattern
 	private long elapsedTime; //temps pour obtenir la solution
 	private double fitness; 
+	private Transformation fromTransform;	//Transformation d'ou provient la solution
 
 	public Solution(List<TypeImage> typesImages, Pattern[] patterns, long elapsedTime) {
 		super();
@@ -32,10 +35,18 @@ public class Solution {
 		this.nbPrintPattern = new HashMap<Pattern, Integer>();
 		this.elapsedTime = elapsedTime;
 		this.fitness = 0;
+		this.fromTransform = null;
 	}
+	
+	public Solution(List<TypeImage> typesImages, Pattern[] patterns, long elapsedTime, Transformation fromTransform) {
+		this(typesImages, patterns, elapsedTime);
+		this.fromTransform = fromTransform;
+	}
+	
 	public Pattern[] getPatterns(){
 		return this.patterns;
 	}
+	
 	public long getElapsedTime() {
 		return elapsedTime;
 	}
@@ -48,6 +59,14 @@ public class Solution {
 		return fitness;
 	}
 	
+	public Transformation getFromTransform() {
+		return fromTransform;
+	}
+
+	public void setFromTransform(Transformation fromTransform) {
+		this.fromTransform = fromTransform;
+	}
+
 	public double calculFitness()
 	{
 		nbPrintPattern.clear();

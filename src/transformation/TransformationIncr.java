@@ -46,7 +46,7 @@ public class TransformationIncr implements Transformation {
 				newListPatterns[idPattern] = newPattern;
 				
 				//new Solution
-				return new Solution(s.getTypesImages(), newListPatterns, timeStart-System.currentTimeMillis());
+				return new Solution(s.getTypesImages(), newListPatterns, timeStart-System.currentTimeMillis(), this);
 			}		
 		}
 		return null;	
