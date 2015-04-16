@@ -2,35 +2,42 @@ package tabou;
 
 import image.TypeImage;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 
-import main.GenerateRandomSolution;
-import main.Pattern;
 import main.Solution;
-import placement.Placement;
 import transformation.Transformation;
 import transformation.TransformationIncr;
 
 public class Tabou {
 	private int maxLevel;
+	private final int maxSizeListTabou;
+	private ListTabou listTabou;
 	
-	public Tabou(int maxLevel) {
-		// TODO Auto-generated constructor stub
+	/**
+	 * Constructor
+	 * @param sizeListTabou Taille maximum de la liste tabou à créer
+	 * @param maxLevel
+	 */
+	public Tabou(int maxSizeListTabou, int maxLevel) {
+		this.maxSizeListTabou = maxSizeListTabou;
 		this.maxLevel = maxLevel;
 	}
 	
+	/**
+	 * Executer l'algorithme tabou à partir d'une solution initial
+	 * @param s1 : solution initial
+	 * @return meilleur solution
+	 */
 	public Solution generatedTabou(Solution s1)
 	{
-		List<Transformation> tabou = new ArrayList<>();
+		listTabou = new ListTabou(maxSizeListTabou);
+		
 		Solution sMin = s1;
 		Solution sCurrent = s1;
 		
+		//Condition d'arrêt = nombre maximum de noeud parcouru
 		for (int i=0; i < maxLevel; i++)
-		{
+		{ 
 			Solution bestNeighbor = bestNeighbor(sCurrent);
 			if (bestNeighbor == null)
 				break;						// plus de voisins
@@ -39,12 +46,12 @@ public class Tabou {
 			sCurrent.calculFitness();
 			
 			if (sCurrent.getFitness() > sMin.getFitness())
-			{
-				//Remplir liste tabou avec s1
-				tabou.add(sCurrent.getFromTransform());
+			{ //Remplir liste tabou 
+				
+				listTabou.add(sCurrent.getFromTransform());
 			}
 			else 
-			{
+			{ //meilleur solution que la precedente ne pas modifier la liste tabou
 				sMin = sCurrent;
 			}	
 		}
@@ -54,7 +61,6 @@ public class Tabou {
 	/**
 	 * Renvoi le meilleur voisin selon la fitness de la solution passée en paramètre
 	 * @param s : Solution de départ
-	 * @param listTransformForbidden : liste des transformations interdite
 	 * @return Solution : meilleur voisin selon la fitness
 	 */
 	public Solution bestNeighbor(Solution s)
@@ -70,17 +76,22 @@ public class Tabou {
 				for (int incr=0; incr<2; incr++)
 				{ //Tour 1 = +1 et tour 2 = -1
 					Transformation transform = new TransformationIncr(t, e.getKey(), i);
-					Solution s1 = transform.transform(s);
-					if (s1 != null)
+					if (!listTabou.contains(transform))
 					{
-						s1.calculFitness();
+						Solution s1 = transform.transform(s); //transformer la solution 
+						if (s1 != null)
+						{
+							s1.calculFitness();
 
-						//System.out.println("f="+s1.getFitness());
-						
-						//Si meilleur voisin trouvé le remplacer
-						if (bestNeightbor == null 
-								|| (bestNeightbor != null && s1.getFitness() < bestNeightbor.getFitness()))
-							bestNeightbor = s1;
+							//System.out.println("f="+s1.getFitness());
+							
+							//Si meilleur voisin trouvé le remplacer
+							if (bestNeightbor == null 
+									|| (bestNeightbor != null && s1.getFitness() < bestNeightbor.getFitness()))
+								bestNeightbor = s1;
+						}
+					} else {
+						System.out.println("Transformation contenu !");
 					}
 					
 					t = -t; //-1
@@ -89,15 +100,6 @@ public class Tabou {
 		}
 		
 		return bestNeightbor;
-	}
-	
-	
-	/**
-	 * Main test algo tabou
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		System.out.println("hey");
 	}
 
 	public int getMaxLevel() {
