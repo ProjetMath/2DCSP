@@ -17,6 +17,42 @@ public class Tabou {
 	public Tabou() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Solution generatedTabou(Solution s1)
+	{
+		// solution initiale s1, liste tabou vide au depart, calculfonction(double), compteur i
+		List<Solution> tabou = new ArrayList<>();
+		double f = s1.calculFitness();
+		Solution sMin = s1;
+		
+		for (int i=0; i < 4; i++)
+		{
+			List<Solution> neighbors = new ArrayList<>(); //liste des voisins - sol interdite
+			Solution sNeighbor = s1.newNeighbor();
+			neighbors.add(sNeighbor);
+			
+			if (neighbors.size()>0)
+			{
+				Solution s2; //meilleure solution dans la liste des voisins
+				s2.bestNeighbor(s1);
+				
+				if (s2.calculFitness() > s1.calculFitness())
+				{
+					//Remplir liste tabou avec s1
+					tabou.add(s1);
+				}
+				else 
+				{
+					f=s2.getFitness();
+					sMin = s2;
+				}	
+			}
+			
+			
+		}
+		
+		return sMin;
+	}
 
 	/**
 	 * Renvoi le meilleur voisin selon la fitness de la solution passée en paramètre
@@ -24,7 +60,7 @@ public class Tabou {
 	 * @param listTransformForbidden : liste des transformations interdite
 	 * @return Solution : meilleur voisin selon la fitness
 	 */
-	public Solution bestNeighbor(Solution s)//, List<TransformForbidden> listTransformForbidden)
+	public Solution bestNeighbor(Solution s)
 	{
 		Solution bestNeightbor = null; 
 		
@@ -57,44 +93,6 @@ public class Tabou {
 		return bestNeightbor;
 	}
 	
-	/**
-	 * Création d'un nouveau voisin en modifiant le nombre d'un type d'image dans un pattern 
-	 * selon la transformation en paramètre
-	 * @param s : Solution à transformer
-	 * @param p : Pattern dans la solution à transformer
-	 * @param eTypeImage : Type d'image dans le à transformer
-	 * @param transformation : + ou -
-	 * @return Solution correspondant au nouveau voisin (null si voisin incorrect)
-	 */
-	private Solution newNeighbor(Solution s, Pattern p, Entry<TypeImage, Integer> eTypeImage, int transformation)
-	{
-		long timeStart = System.currentTimeMillis();
-		
-		//TODO verifier si transformation n'est pas interdite à partir de la liste tabou
-		if ((transformation < 0 && eTypeImage.getValue() > 0) || 
-				(transformation > 0 && (((int) (Pattern.getSurface() / eTypeImage.getKey().getSurface())) > eTypeImage.getValue() + transformation)))
-		{ 
-			Map<TypeImage, Integer> newMapti = new HashMap<>(p.getImgsNb());
-			newMapti.replace(eTypeImage.getKey(), eTypeImage.getValue()+transformation);
-			
-			Pattern newPattern = new Placement(newMapti).place(p.getId());
-			if (newPattern != null) 
-			{
-				List<Pattern> newListPatterns = new ArrayList<>();
-				for (Pattern pat : s.getPatterns())
-				{//copier la liste des patterns sauf celui qui correspont à celui modifié
-					if (!pat.equals(newPattern))
-						newListPatterns.add(pat);
-				}
-				newListPatterns.add(newPattern); //ajouter le pattern modifié
-				
-				//new Solution
-				return new Solution(s.getTypesImages(), newListPatterns, timeStart-System.currentTimeMillis());
-			}
-		}
-		
-		return null;
-	}
 	
 	/**
 	 * Main test algo tabou
