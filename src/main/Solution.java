@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.commons.math3.optim.MaxIter;
 import org.apache.commons.math3.optim.PointValuePair;
@@ -134,6 +135,21 @@ public class Solution {
 	
 	public List<TypeImage> getTypesImages() {
 		return typesImages;
+	}
+	
+	/**
+	 * Calcul du prix réel d'une solution
+	 * @return double : prix calculé
+	 */
+	public double calculPrice() {
+		double total = 0.0;
+		
+		total += Pattern.getPrice() * (double)(patterns.length); //prix des patterns 
+	
+		for (Entry<Pattern, Integer> e : nbPrintPattern.entrySet())
+			total += (double)e.getValue(); //some des impressions des patterns (impression coute 1)
+		
+		return total;
 	}
 	
 	@Override

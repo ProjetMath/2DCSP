@@ -12,6 +12,7 @@ public class Pattern {
 	private Map<TypeImage, Integer> imgsNb; //TypeImage / nombre dans pattern
 	
 	private static double height = 0.0, width = 0.0, surface = 0.0; //tous les patterns ont la même taille
+	private static double price = 0.0; //prix d'un pattern
 
 	/* STATIC METHODS */
 	public static double getHeight() {
@@ -31,6 +32,15 @@ public class Pattern {
 		height = newHeight;
 		width = newWidth;
 		surface = height * width;
+	}
+	
+	public static double getPrice() {
+		return price;
+	}
+	
+	public static void setPrice(double price)
+	{
+		Pattern.price = price;
 	}
 	
 	/* OBJECT METHODS */
