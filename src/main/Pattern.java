@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 
 public class Pattern {
-	private int id; //id du pattern dans la solution
 	private List<Item> images;
 	private Map<TypeImage, Integer> imgsNb; //TypeImage / nombre dans pattern
 	
@@ -35,11 +34,10 @@ public class Pattern {
 	}
 	
 	/* OBJECT METHODS */
-	public Pattern(int id, List<Item> images, Map<TypeImage, Integer> imgsNb) 
+	public Pattern(List<Item> images, Map<TypeImage, Integer> imgsNb) 
 	{
 		this.images = images;
 		this.imgsNb = new HashMap<TypeImage, Integer>(imgsNb);
-		this.id = id;
 	}
 
 	public List<Item> getImages() {
@@ -58,23 +56,9 @@ public class Pattern {
 		this.imgsNb = imgsNb;
 	}
 	
-	public int getId() {
-		return this.id;
-	}
-	
-	@Override
-	public boolean equals(Object obj) {
-		if (obj instanceof Pattern)
-		{
-			Pattern p = (Pattern)obj;
-			return this.getId() == p.getId();
-		}
-		return false;
-	}
-	
 	@Override
 	public String toString() {
-		String s = "pattern "+id+" = {\r\n";
+		String s = "pattern = {\r\n";
 		
 		for (Item i : images)
 		{

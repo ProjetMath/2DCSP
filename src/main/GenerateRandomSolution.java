@@ -97,7 +97,7 @@ public class GenerateRandomSolution {
 								
 					//checker placement
 					Placement pl = new Placement(imgsNb);
-					p = pl.place(i);
+					p = pl.place();
 				} while(p == null);
 				
 				listPattern[i] = p;

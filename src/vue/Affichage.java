@@ -105,7 +105,7 @@ public class Affichage extends JFrame
 		Map<TypeImage, Integer> imgsNb = null;
 		for (int i = 0; i < maxPattern; i++)
 		{
-			patterns[i]= new Pattern(i, images, imgsNb);
+			patterns[i]= new Pattern(images, imgsNb);
 			patterns[i].setImages(images);
 		}
 		final Solution solution = new Solution(typesImages, patterns, 0);
