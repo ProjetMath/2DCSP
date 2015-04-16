@@ -31,7 +31,7 @@ public class Affichage extends JFrame
 		//permet de repartit les pattern sur la dimension desiré
 		positionnementPattern=1850/patternSize.width;
 		//permet d'obetnir la taille en hauteur pour empiler 1à 1 tout les pattern(pour des gros pattern)
-		int hauteurPanel= patternSize.height+((patternSize.height*solution.getPatterns().size())/positionnementPattern);
+		int hauteurPanel= patternSize.height+((patternSize.height*solution.getPatterns().length)/positionnementPattern);
 		getContentPane().setForeground(Color.BLACK);
 		panel = new JPanel()
 		{
@@ -59,11 +59,11 @@ public class Affichage extends JFrame
 	public void dessineRectangle(Solution solution, Graphics dessin)
 	{
 		Graphics composant = dessin;
-		for (int i = 0; i < solution.getPatterns().size(); i++)
+		for (int i = 0; i < solution.getPatterns().length; i++)
 		{
 			int hauteur=panel.getSize().height;
 			composant.setColor(Color.RED);
-			Pattern pattern = solution.getPatterns().get(i);
+			Pattern pattern = solution.getPatterns()[i];
 			// on commence par dessiner les pattern avec un cadre,
 			// on prend donc leur taille et on les place en parsant en
 			// int(contraintes)
@@ -97,15 +97,16 @@ public class Affichage extends JFrame
 		TypeImage typeA=new TypeImage(1,50,75,20);
 		List<TypeImage> typesImages = new ArrayList<TypeImage>();
 		typesImages.add(typeA);
-		List<Pattern> patterns = new ArrayList<Pattern>();
+		int maxPattern=11;
+		Pattern[] patterns = new Pattern[maxPattern];
 		List<Item> images = new ArrayList<Item>();
 		Item image1=new Item(typeA,new Point(0,0),false);
 		images.add(image1);
 		Map<TypeImage, Integer> imgsNb = null;
-		for (int i = 0; i < 11; i++)
+		for (int i = 0; i < maxPattern; i++)
 		{
-			patterns.add(new Pattern(i, images, imgsNb));
-			patterns.get(i).setImages(images);
+			patterns[i]= new Pattern(i, images, imgsNb);
+			patterns[i].setImages(images);
 		}
 		final Solution solution = new Solution(typesImages, patterns, 0);
 		JFrame frame = new Affichage(solution,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
