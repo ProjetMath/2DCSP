@@ -31,7 +31,6 @@ public class Tabou {
 	public Solution generatedTabou(Solution s1)
 	{
 		listTabou = new ListTabou(maxSizeListTabou);
-		
 		Solution sMin = s1;
 		Solution sCurrent = s1;
 		
@@ -43,7 +42,6 @@ public class Tabou {
 				break;						// plus de voisins
 			
 			sCurrent = bestNeighbor;
-			sCurrent.calculFitness();
 			
 			if (sCurrent.getFitness() > sMin.getFitness())
 			{ //Remplir liste tabou 
@@ -81,8 +79,6 @@ public class Tabou {
 						Solution s1 = transform.transform(s); //transformer la solution 
 						if (s1 != null)
 						{
-							s1.calculFitness();
-
 							//System.out.println("f="+s1.getFitness());
 							
 							//Si meilleur voisin trouvé le remplacer

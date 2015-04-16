@@ -22,7 +22,7 @@ public class ListTabou {
 		if (tbl != null)
 		{
 			iTbl++;
-			if (iTbl > maxSize)
+			if (iTbl >= maxSize)
 				iTbl = 0; //cyclique
 			
 			tbl[iTbl] = t;

@@ -14,6 +14,7 @@ import org.apache.commons.math3.optim.PointValuePair;
 import org.apache.commons.math3.optim.linear.LinearConstraint;
 import org.apache.commons.math3.optim.linear.LinearConstraintSet;
 import org.apache.commons.math3.optim.linear.LinearObjectiveFunction;
+import org.apache.commons.math3.optim.linear.NoFeasibleSolutionException;
 import org.apache.commons.math3.optim.linear.NonNegativeConstraint;
 import org.apache.commons.math3.optim.linear.Relationship;
 import org.apache.commons.math3.optim.linear.SimplexSolver;
@@ -37,6 +38,8 @@ public class Solution {
 		this.elapsedTime = elapsedTime;
 		this.fitness = 0;
 		this.fromTransform = null;
+		
+		calculFitness();
 	}
 	
 	public Solution(List<TypeImage> typesImages, Pattern[] patterns, long elapsedTime, Transformation fromTransform) {
@@ -68,7 +71,7 @@ public class Solution {
 		this.fromTransform = fromTransform;
 	}
 
-	public double calculFitness()
+	private double calculFitness()
 	{
 		nbPrintPattern.clear();
 		
@@ -110,21 +113,26 @@ public class Solution {
 		
 		// create and run the solver
 		SimplexSolver solver = new SimplexSolver();
-		PointValuePair optSolution = solver.optimize(new MaxIter(100),
-													f, 
-													new LinearConstraintSet(constraints),               
-													GoalType.MINIMIZE, 
-													new NonNegativeConstraint(true)
-													);
-
-		double[] solution = optSolution.getPoint();
-		for (int i=0; i<solution.length; ++i)
-		{
-			int s = (int) Math.ceil(solution[i]); //prendre la valeur superieur
-			nbPrintPattern.put(patterns[i], s);
-		}
 		
-		fitness = optSolution.getValue();
+		try {
+			PointValuePair optSolution = solver.optimize(new MaxIter(100),
+														f, 
+														new LinearConstraintSet(constraints),               
+														GoalType.MINIMIZE, 
+														new NonNegativeConstraint(true)
+														);
+
+			double[] solution = optSolution.getPoint();
+			for (int i=0; i<solution.length; ++i)
+			{
+				int s = (int) Math.ceil(solution[i]); //prendre la valeur superieur
+				nbPrintPattern.put(patterns[i], s);
+			}
+		
+			fitness = optSolution.getValue();
+		} catch (NoFeasibleSolutionException ex) {
+			fitness = Double.MAX_VALUE;
+		}
 		
 		return fitness;
 	}

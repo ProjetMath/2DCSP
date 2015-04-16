@@ -2,6 +2,7 @@ package main;
 
 import image.TypeImage;
 
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -9,7 +10,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 
+import javax.swing.JFrame;
+
 import placement.Placement;
+import vue.Affichage;
 
 public class GenerateRandomSolution {
 	private final List<TypeImage> tImages;	
@@ -210,13 +214,11 @@ public class GenerateRandomSolution {
 		
 		Solution s = new GenerateRandomSolution(tit).generate(nbMaxPat);
 		if (s != null)
-		{
-			s.calculFitness();
-			
+		{	
 			//Affichage
 			System.out.println(s);
-			//JFrame frame = new Affichage(s,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
-			//Affichage.affiche(frame);
+			JFrame frame = new Affichage(s,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
+			Affichage.affiche(frame);
 		} else 
 			System.out.println("Aucune solution");
 	}
