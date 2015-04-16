@@ -44,7 +44,7 @@ public class ListTabou {
 		
 		for (int i=0; i<maxSize; ++i) 
 		{
-			if (tbl[i].equals(t))
+			if (t.equals(tbl[i]))
 				return true;
 		}
 		

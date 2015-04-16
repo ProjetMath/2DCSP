@@ -90,9 +90,7 @@ public class Tabou {
 									|| (bestNeightbor != null && s1.getFitness() < bestNeightbor.getFitness()))
 								bestNeightbor = s1;
 						}
-					} else {
-						System.out.println("Transformation contenu !");
-					}
+					} 
 					
 					t = -t; //-1
 				}
