@@ -148,7 +148,7 @@ public class GenerateRandomSolution {
 			
 			if(checkNbTypeImage) break;
 			
-			System.out.println("#GenerateSolution# Bad solution");
+			//System.out.println("#GenerateSolution# Bad solution");
 			nbTryGenSol++;
 			if (nbTryGenSol >= nbMaxTryGenerateSolution) 
 			{
