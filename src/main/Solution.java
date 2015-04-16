@@ -19,13 +19,13 @@ import org.apache.commons.math3.optim.linear.SimplexSolver;
 import org.apache.commons.math3.optim.nonlinear.scalar.GoalType;
 
 public class Solution {
-	private List<Pattern> patterns;
+	private Pattern[] patterns;
 	private List<TypeImage> typesImages; //types d'images utilisés dans l'ensemble des patterns
 	private Map<Pattern, Integer> nbPrintPattern; //nombre d'impression pour chaque pattern
 	private long elapsedTime; //temps pour obtenir la solution
 	private double fitness; 
 
-	public Solution(List<TypeImage> typesImages, List<Pattern> patterns, long elapsedTime) {
+	public Solution(List<TypeImage> typesImages, Pattern[] patterns, long elapsedTime) {
 		super();
 		this.patterns = patterns;
 		this.typesImages = typesImages;
@@ -33,7 +33,7 @@ public class Solution {
 		this.elapsedTime = elapsedTime;
 		this.fitness = 0;
 	}
-	public List<Pattern> getPatterns(){
+	public Pattern[] getPatterns(){
 		return this.patterns;
 	}
 	public long getElapsedTime() {
@@ -54,7 +54,7 @@ public class Solution {
 		
 		// describe the optimization problem : x1 + x2 + x3 + xn 
 		//où xi est le nombre d'impression du pattern i
-		int nbPattern = this.getPatterns().size();
+		int nbPattern = this.getPatterns().length;
 		double[] coefficients = new double[nbPattern];
 		for (int i=0; i<nbPattern ; ++i)
 			coefficients[i] = 1; //init
@@ -68,7 +68,7 @@ public class Solution {
 			double[] coefs = new double[nbPattern];
 			
 			for (int i=0; i < nbPattern; ++i) 
-				coefs[i] = patterns.get(i).getImgsNb().get(ti);
+				coefs[i] = patterns[i].getImgsNb().get(ti);
 			
 			constraints.add(new LinearConstraint(coefs, Relationship.GEQ, ti.getDemand()));
 		}
@@ -101,7 +101,7 @@ public class Solution {
 		for (int i=0; i<solution.length; ++i)
 		{
 			int s = (int) Math.ceil(solution[i]); //prendre la valeur superieur
-			nbPrintPattern.put(patterns.get(i), s);
+			nbPrintPattern.put(patterns[i], s);
 		}
 		
 		fitness = optSolution.getValue();
@@ -121,10 +121,10 @@ public class Solution {
 	public String toString() {
 		String s = "Solution = [pW="+Pattern.getWidth()+", pH="+Pattern.getHeight()+", t="+elapsedTime+", f="+fitness+"] {\r\n";
 		
-		for (int i=0; i<patterns.size(); ++i)
+		for (int i=0; i<patterns.length; ++i)
 		{
-			s += patterns.get(i)+"";
-			s += ", [printed= "+nbPrintPattern.get(patterns.get(i))+"]"; 
+			s += i+": "+patterns[i]+"";
+			s += ", [printed= "+nbPrintPattern.get(patterns[i])+"]"; 
 			s += "\r\n"; 
 			//example : "p0 : 10 [t=2.2, lf=4.3, gf=4.3]"
 		} 

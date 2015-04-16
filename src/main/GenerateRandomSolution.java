@@ -35,15 +35,13 @@ public class GenerateRandomSolution {
 	public Solution generate(int nbMaxPat) {
 		long timeStart = System.currentTimeMillis();
 		
-		List<Pattern> listPattern =  new ArrayList<>();
+		Pattern[] listPattern =  new Pattern[nbMaxPat];
 		//création d'une première solution aléatoire
 		Random rand = new Random();
 		
 		//System.out.println("#GenerateSolution# liste image size = "+tImages.size()+", maxTypePerPattern size = "+maxTypePerPattern.length);
 		for (;;)
 		{
-			int cptPattern = 0;
-			listPattern.clear();
 			int[] cptTypeImage = new int[tImages.size()]; //To check if every type of picture has been place at least once
 			
 			for(int i=0; i<nbMaxPat; ++i)
@@ -69,7 +67,10 @@ public class GenerateRandomSolution {
 					// Vérifier qu'existe pas déjà 
 					boolean exist = false;
 					for (Pattern pa : listPattern)
-					{
+					{	
+						if (pa == null)
+							break;
+						
 						//Pas la même taille
 						if (imgsNb.size() != pa.getImgsNb().size())
 							continue;
@@ -96,11 +97,10 @@ public class GenerateRandomSolution {
 								
 					//checker placement
 					Placement pl = new Placement(imgsNb);
-					p = pl.place(cptPattern);
+					p = pl.place(i);
 				} while(p == null);
 				
-				listPattern.add(p);
-				cptPattern++;
+				listPattern[i] = p;
 				
 				int k = 0;
 				for (Entry<TypeImage, Integer> e : p.getImgsNb().entrySet())
