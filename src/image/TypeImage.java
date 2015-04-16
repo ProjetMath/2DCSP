@@ -69,4 +69,17 @@ public class TypeImage {
 		}
 		return false;
 	};
+	
+	@Override
+	public String toString() {
+		String s = "";
+		
+		s += "TypeImage = [";
+		s += "h="+height+", ";
+		s += "w="+width+", ";
+		s += "s="+surface+", ";
+		s += "dem="+demand+"]";
+		
+		return s;
+	}
 }
