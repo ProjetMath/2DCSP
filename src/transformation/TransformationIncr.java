@@ -39,6 +39,13 @@ public class TransformationIncr implements Transformation {
 		Pattern p = s.getPatterns()[idPattern]; //recuperer pattern
 		int nbTypeImage = p.getImgsNb().get(tI); //recuperer le nombre du type d'image correspondant dans le pattern
 
+		/**
+		 * Quand transformation = -1 et que nbTypeImage = 1 => nbTypeImage = 0
+		 * Au lieu de vérifier qu'aucun type d'image n'a été supprimé de la solution, 
+		 * le calcul de la fitness de la solution incorrect déclenche une exception 
+		 * et la fitness est égal à la plus grande valeur possible ce qui élime la solution
+		 */
+		
 		if ((transformation < 0 && nbTypeImage > 0) || 
 				(transformation > 0 && (((int) (Pattern.getSurface() / tI.getSurface())) > nbTypeImage + transformation)))
 		{ 
