@@ -18,7 +18,7 @@ public class Execute {
 		this.nbPattern = nbPattern;
 	}
 	
-	public double execute() {
+	public Solution execute() {
 		List<TypeImage> imagesToPlace = new ArrayList<>();
 		
 		//TODO  Charger les images depuis les fichiers de données
@@ -50,34 +50,46 @@ public class Execute {
 		GenerateRandomSolution generator = new GenerateRandomSolution(tit);
 		Solution sRandom = generator.generate(nbPattern);
 		
-		System.out.println(sRandom);
-		System.out.println("prix sRandom = "+sRandom.calculPrice());
+		//System.out.println(sRandom);
+		//System.out.println("prix sRandom = "+sRandom.calculPrice());
 		
-		Tabou algoTabou = new Tabou(2, 10); //taille liste tabou, nombre de level
+		Tabou algoTabou = new Tabou(1000, 1500); //taille liste tabou, nombre de level
 		Solution bestSol = algoTabou.generatedTabou(sRandom);
-		System.out.println(bestSol);
+		//System.out.println(bestSol);
 		
-		return bestSol.calculPrice();
+		return bestSol;
 	}
 
 	public static void main(String[] args) {
 		System.out.println("Welcome on board ! .. Someone !\r\n");
 
 		//Avec 1 pattern
-		double prix1 = new Execute(1).execute();
-		System.out.println("\r\nPrix avec 1 pattern = "+prix1+"\r\n"); //3518
+		//double prix1 = new Execute(1).execute();
+		//System.out.println("\r\nPrix avec 1 pattern = "+prix1+"\r\n"); //3518
 		
 		//Avec 2 pattern
-		double prix2 = new Execute(2).execute();
-		System.out.println("\r\nPrix avec 2 pattern = "+prix2+"\r\n"); //848
+		//double prix2 = new Execute(2).execute();
+		//System.out.println("\r\nPrix avec 2 pattern = "+prix2+"\r\n"); //848
 		
 		//Avec 3 pattern 
-		double prix3 = new Execute(3).execute();
-		System.out.println("\r\nPrix avec 3 pattern = "+prix3+"\r\n"); //826
+		//double prix3 = new Execute(3).execute();
+		//System.out.println("\r\nPrix avec 3 pattern = "+prix3+"\r\n"); //826
 		
 		//Avec 4 pattern
-		double prix4 = new Execute(4).execute();
-		System.out.println("\r\nPrix avec 4 pattern = "+prix4+"\r\n"); //839
+		//double prix4 = new Execute(4).execute();
+		//System.out.println("\r\nPrix avec 4 pattern = "+prix4+"\r\n"); //839
+		
+		Solution minSol = null;
+		for (int k=0; k<10000; k++)
+		{
+			for (int i=2; i < 4; ++i)
+			{
+				Solution s = new Execute(i).execute();
+				if (minSol == null || (minSol != null && s.calculPrice() < minSol.calculPrice()))
+					minSol = s;
+			}
+		}	
+		System.out.println(minSol);
 	}
 
 }

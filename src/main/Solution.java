@@ -162,7 +162,7 @@ public class Solution {
 	
 	@Override
 	public String toString() {
-		String s = "Solution = [pW="+Pattern.getWidth()+", pH="+Pattern.getHeight()+", t="+elapsedTime+", f="+fitness+"] {\r\n";
+		String s = "Solution = [pW="+Pattern.getWidth()+", pH="+Pattern.getHeight()+", t="+elapsedTime+", f="+fitness+", price="+calculPrice()+"] {\r\n";
 		
 		for (int i=0; i<patterns.length; ++i)
 		{
