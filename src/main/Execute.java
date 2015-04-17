@@ -79,17 +79,20 @@ public class Execute {
 		//double prix4 = new Execute(4).execute();
 		//System.out.println("\r\nPrix avec 4 pattern = "+prix4+"\r\n"); //839
 		
-		Solution minSol = null;
-		for (int k=0; k<10000; k++)
+		//NbMax = NbMaxImage
+		for (int i=1; i < 5; ++i)
 		{
-			for (int i=2; i < 4; ++i)
+			Solution minSol = null;
+			
+			for (int k=0; k<1000; k++)
 			{
 				Solution s = new Execute(i).execute();
 				if (minSol == null || (minSol != null && s.calculPrice() < minSol.calculPrice()))
 					minSol = s;
 			}
-		}	
-		System.out.println(minSol);
+			
+			System.out.println(minSol);
+		}
 	}
 
 }
