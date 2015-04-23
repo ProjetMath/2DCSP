@@ -24,6 +24,7 @@ public class Affichage extends JFrame
 	private JPanel panel;
 	private JScrollPane scrollPane;
 	private int positionnementPattern;
+	
 	// la methode paintComponent n'appel que des methode avec des attribue
 	// finaux
 	public Affichage(final Solution solution,Dimension patternSize)
