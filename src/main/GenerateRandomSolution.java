@@ -40,24 +40,20 @@ public class GenerateRandomSolution {
 			
 			for(int i=0; i<nbMaxPat; ++i)
 			{
-				System.out.println("#GenerateSolution# Debut "+i+" liste pattern size="+listPattern.length);
+				//System.out.println("#GenerateSolution# Debut "+i+" liste pattern size="+listPattern.length);
 				
 				Pattern p = null;
 				
-				int cptPlacement = 0;
-				do
+				//random nb image par type image dans pattern
+				Map<TypeImage, Integer> imgsNb = new LinkedHashMap<TypeImage, Integer>();
+				
+				do 
 				{
-					System.out.println("Placement essai = "+cptPlacement++);
+					for (TypeImage t : tImages)
+						imgsNb.put(t, 0);
 					
-					//random nb image par type image dans pattern
-					Map<TypeImage, Integer> imgsNb = new LinkedHashMap<TypeImage, Integer>();
 					int cptAtLeastOne = tImages.size()-1;
 					double spaceFree = Pattern.getSurface();
-					if (nbMaxPat == 1)
-					{ //Cas special generaton avec 1 pattern => tous les types d'images doivent être dans ce pattern
-						for (TypeImage ti : tImages)
-							spaceFree -= ti.getSurface();
-					}
 					
 					for (TypeImage ti : tImages)
 					{	
@@ -67,68 +63,72 @@ public class GenerateRandomSolution {
 						int max = (int)(spaceFree/ti.getSurface()); //nb image max de ce type dans l'espace libre
 						int r = incr;
 						if (max > 0)
-						{
 							r =  rand.nextInt(max+1-incr) + incr;
-						}
 						
 						if (r == 0) cptAtLeastOne--; //aucune image => decrement compteur
+						else if (r > 0) 
+						{ //Placement
+							imgsNb.put(ti, r);
+							Placement pl = new Placement(imgsNb);
+							p = pl.place();
+							if (p == null) 
+							{
+								imgsNb.put(ti, 0);
+								continue;
+							}
+						}
 						
-						imgsNb.put(ti, r);
 						spaceFree -= ti.getSurface() * (double)r;
 						if (spaceFree < 0) spaceFree = 0;
 					}
+				} while(p == null);
+				
+				// Vérifier qu'existe pas déjà 
+				boolean exist = false;
+				for (Pattern pa : listPattern)
+				{	
+					if (pa == null)
+						break;
 					
-					// Vérifier qu'existe pas déjà 
-					boolean exist = false;
-					for (Pattern pa : listPattern)
-					{	
-						if (pa == null)
-							break;
-						
-						//Pas la même taille
-						if (imgsNb.size() != pa.getImgsNb().size())
-							continue;
-						
-						//Chaque type d'image a le même nombre d'images
-						exist = true;
-						for(Entry<TypeImage, Integer> entry : pa.getImgsNb().entrySet())  
-						{
-							Integer v = imgsNb.get(entry.getKey());
-							if (v != entry.getValue())
-							{
-								exist = false;
-								break;
-							}
-						}
-						if (!exist) continue;
-						
-						//System.out.println("#GenerateSolution# Ce pattern existe déjà !");
-						break; //exist !
-					}				
-					if (exist) continue; //re generation aleatoire d'un autre pattern
+					//Pas la même taille
+					if (imgsNb.size() != pa.getImgsNb().size())
+						continue;
 					
-					System.out.println("#GenerateSolution# Exist boolean = "+exist);
-					
-					for (Entry<TypeImage, Integer> mTi : imgsNb.entrySet())
+					//Chaque type d'image a le même nombre d'images
+					exist = true;
+					for(Entry<TypeImage, Integer> entry : pa.getImgsNb().entrySet())  
 					{
-						System.out.println(mTi.getKey() + " NB = "+mTi.getValue());
+						Integer v = imgsNb.get(entry.getKey());
+						if (v != entry.getValue())
+						{
+							exist = false;
+							break;
+						}
 					}
+					if (!exist) continue;
 					
-					Placement pl = new Placement(imgsNb);
-					p = pl.place();
-					
-				} while(p == null && cptPlacement < 10);
+					//System.out.println("#GenerateSolution# Ce pattern existe déjà !");
+					break; //exist !
+				}				
+				if (exist) continue; //re generation aleatoire d'un autre pattern
+				
+				//System.out.println("#GenerateSolution# Exist boolean = "+exist);
+				
+				/*for (Entry<TypeImage, Integer> mTi : imgsNb.entrySet())
+				{
+					System.out.println(mTi.getKey() + " NB = "+mTi.getValue());
+				}*/
 				
 				
 				listPattern[i] = p;
-				System.out.println("#GenerateSolution# New pattern add"); 
+				//System.out.println("#GenerateSolution# New pattern add"); 
 				
 				//Incrémenter compteur type d'image pour ce pattern
 				int k = 0;
 				for (Entry<TypeImage, Integer> e : p.getImgsNb().entrySet())
 					cptTypeImage[k++] += e.getValue();
 			}
-			System.out.println("#GenerateSolution# End -  creating solution");
+			//System.out.println("#GenerateSolution# End -  creating solution");
 			
 			boolean checkNbTypeImage = true;
 			
@@ -141,7 +141,7 @@ public class GenerateRandomSolution {
 			
 			if(checkNbTypeImage) break;
 			
-			System.out.println("#GenerateSolution# Bad solution");
+			//System.out.println("#GenerateSolution# Bad solution");
 			
 		}
 		

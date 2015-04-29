@@ -30,7 +30,7 @@ public class Execute {
 		imagesToPlace.add(new TypeImage(3, 23, 9, 3498));*/
 		
 		try {
-			List<TypeImage> imagesToPlace = LoadFile.lectureFichier("data/data_20Lalpha.txt");
+			List<TypeImage> imagesToPlace = LoadFile.lectureFichier("data/data_50Lalpha.txt");
 			
 			//trier les images
 			List<TypeImage> tempListTi = new ArrayList<TypeImage>(imagesToPlace);
@@ -56,13 +56,14 @@ public class Execute {
 			}*/
 			
 			//Pattern.setSize(40, 60); 
-			Pattern.setPrice(20);
+				Pattern.setPrice(20);
 			
 			//Chercher la solution 
 			//Generer une solution aleatoire
 			int nbPattern = imagesToPlace.size();
 			GenerateRandomSolution generator = new GenerateRandomSolution(tit);
 			Solution sRandom = generator.generate(nbPattern);
+			sRandom = sRandom.reconstruct();
 			
 			System.out.println(sRandom);
 			//System.out.println("prix sRandom = "+sRandom.calculPrice());
