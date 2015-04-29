@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JViewport;
 
+import main.GenerateRandomSolution;
 import main.Pattern;
 import main.Solution;
 
@@ -93,23 +94,37 @@ public class Affichage extends JFrame
 	{
 		//TODO faire le traitement correct pour une image avec un boolean true(position(x,y)->(y,x))
 		//donner une couleur a un type d'image simple mais utile
-		Pattern.setSize(200, 300);
-		TypeImage typeA=new TypeImage(1,50,75,20);
-		List<TypeImage> typesImages = new ArrayList<TypeImage>();
-		typesImages.add(typeA);
-		int maxPattern=11;
-		Pattern[] patterns = new Pattern[maxPattern];
-		List<Item> images = new ArrayList<Item>();
-		Item image1=new Item(typeA,new Point(0,0),false);
-		images.add(image1);
-		Map<TypeImage, Integer> imgsNb = null;
-		for (int i = 0; i < maxPattern; i++)
+		
+		Pattern.setSize(400, 600); 
+		final int nbMaxPat = 6;
+		
+		//list types images
+		List<TypeImage> tImages = new ArrayList<>();
+		tImages.add(new TypeImage(1, 130, 56, 562));
+		tImages.add(new TypeImage(0, 240, 30, 246));
+		tImages.add(new TypeImage(2, 140, 22, 1000));
+		tImages.add(new TypeImage(3, 90, 23, 3498));	
+		
+		//trier les images
+		List<TypeImage> tempListTi = new ArrayList<TypeImage>(tImages);
+		List<TypeImage> tit = new ArrayList<TypeImage>();
+		while (tit.size() <= tImages.size())
 		{
-			patterns[i]= new Pattern(images, imgsNb);
-			patterns[i].setImages(images);
+			if (tempListTi.size() == 0) break;
+			
+			TypeImage bigest = tempListTi.get(0);
+			for (TypeImage ti : tempListTi)
+				if (bigest.getSurface() < ti.getSurface())
+					bigest = ti;
+			
+			tempListTi.remove(bigest);
+			tit.add(bigest);
 		}
-		final Solution solution = new Solution(typesImages, patterns, 0);
-		JFrame frame = new Affichage(solution,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
+		
+		Solution s = new GenerateRandomSolution(tit).generate(nbMaxPat);
+		
+		JFrame frame = new Affichage(s,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
 		affiche(frame);
+		System.out.println(s);
 	}
 }
