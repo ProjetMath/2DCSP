@@ -25,7 +25,7 @@ import transformation.Transformation;
 public class Solution {
 	private Pattern[] patterns;
 	private List<TypeImage> typesImages; //types d'images utilisés dans l'ensemble des patterns
-	private Map<Pattern, Integer> nbPrintPattern; //nombre d'impression pour chaque pattern
+	private int[] nbPrintPattern; //nombre d'impression pour chaque pattern
 	private long elapsedTime; //temps pour obtenir la solution
 	private double fitness; 
 	private Transformation fromTransform;	//Transformation d'ou provient la solution
@@ -34,7 +34,7 @@ public class Solution {
 		super();
 		this.patterns = patterns;
 		this.typesImages = typesImages;
-		this.nbPrintPattern = new HashMap<Pattern, Integer>();
+		this.nbPrintPattern = new int[patterns.length];
 		this.elapsedTime = elapsedTime;
 		this.fitness = 0;
 		this.fromTransform = null;
@@ -72,9 +72,7 @@ public class Solution {
 	}
 
 	private double calculFitness()
-	{
-		nbPrintPattern.clear();
-		
+	{		
 		// describe the optimization problem : x1 + x2 + x3 + xn 
 		//où xi est le nombre d'impression du pattern i
 		int nbPattern = this.getPatterns().length;
@@ -97,7 +95,7 @@ public class Solution {
 		}
 		
 		//coefs patterns doivent être supérieurs à 0 (on veut que tous les patterns sont imprimés au moins 1 fois)
-		for (int i=0; i < nbPattern; ++i) 
+		/*for (int i=0; i < nbPattern; ++i) 
 		{
 			double[] coefsP = new double[nbPattern];
 			for (int j=0; j < nbPattern; ++j) 
@@ -109,7 +107,7 @@ public class Solution {
 			}
 			
 			constraints.add(new LinearConstraint(coefsP, Relationship.GEQ, 1));
-		}
+		}*/
 		
 		// create and run the solver
 		SimplexSolver solver = new SimplexSolver();
@@ -126,7 +124,7 @@ public class Solution {
 			for (int i=0; i<solution.length; ++i)
 			{
 				int s = (int) Math.ceil(solution[i]); //prendre la valeur superieur
-				nbPrintPattern.put(patterns[i], s);
+				nbPrintPattern[i] = s;
 			}
 		
 			fitness = optSolution.getValue();
@@ -137,7 +135,7 @@ public class Solution {
 		return fitness;
 	}
 	
-	public Map<Pattern, Integer> getNbPrintPattern() {
+	public int[] getNbPrintPattern() {
 		return nbPrintPattern;
 	}
 	
@@ -154,10 +152,37 @@ public class Solution {
 		
 		total += Pattern.getPrice() * (double)(patterns.length); //prix des patterns 
 	
-		for (Entry<Pattern, Integer> e : nbPrintPattern.entrySet())
-			total += (double)e.getValue(); //some des impressions des patterns (impression coute 1)
+		for (int i : nbPrintPattern)
+			total += (double)i; //some des impressions des patterns (impression coute 1)
 		
 		return total;
+	}
+	
+	public Solution reconstruct() {
+		int nbPattern = 0;
+		
+		for (int print : nbPrintPattern)
+			if (print > 0)
+				nbPattern++;
+		
+		Pattern[] newPattern = new Pattern[nbPattern];
+		int[] newPrint = new int[nbPattern];
+		
+		int incrP = 0;
+		for (int i =0; i<patterns.length; ++i)
+		{
+			if (nbPrintPattern[i] > 0)
+			{
+				newPattern[incrP] = patterns[i];
+				newPrint[incrP] = nbPrintPattern[i];
+				incrP++;
+			}
+		}
+		
+		patterns = newPattern;
+		nbPrintPattern = newPrint;
+		
+		return this;
 	}
 	
 	@Override
@@ -167,7 +192,7 @@ public class Solution {
 		for (int i=0; i<patterns.length; ++i)
 		{
 			s += i+": "+patterns[i]+"";
-			s += ", [printed= "+nbPrintPattern.get(patterns[i])+"]"; 
+			s += ", [printed= "+nbPrintPattern[i]+"]"; 
 			s += "\r\n"; 
 			//example : "p0 : 10 [t=2.2, lf=4.3, gf=4.3]"
 		} 

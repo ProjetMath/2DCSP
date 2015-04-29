@@ -5,6 +5,8 @@ import image.TypeImage;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.lang.model.element.NestingKind;
+
 import tabou.Tabou;
 
 /**
@@ -12,13 +14,15 @@ import tabou.Tabou;
  *
  */
 public class Execute {
-	private final int nbPattern;
-	
-	public Execute(int nbPattern) {
-		this.nbPattern = nbPattern;
-	}
-	
-	public Solution execute() {
+	public static void main(String[] args) {
+		System.out.println("Welcome on board ! .. Someone !\r\n");
+
+		//Taille liste = nb de type d'image * 2
+		//1 pattern = 3518
+		//2 pattern = 848
+		//3 pattern = 826
+		//4 pattern = 839
+		
 		List<TypeImage> imagesToPlace = new ArrayList<>();
 		
 		//TODO  Charger les images depuis les fichiers de données
@@ -46,53 +50,24 @@ public class Execute {
 		Pattern.setSize(40, 60); 
 		Pattern.setPrice(20);
 		
+		//Chercher la solution 
 		//Generer une solution aleatoire
+		int nbPattern = imagesToPlace.size();
 		GenerateRandomSolution generator = new GenerateRandomSolution(tit);
 		Solution sRandom = generator.generate(nbPattern);
 		
 		//System.out.println(sRandom);
 		//System.out.println("prix sRandom = "+sRandom.calculPrice());
 		
-		Tabou algoTabou = new Tabou(1000, 1500); //taille liste tabou, nombre de level
+		//Premier algo tabou rapide
+		Tabou algoTabou = new Tabou(nbPattern*imagesToPlace.size()*2, 100000); //taille liste tabou, nombre de level
+		
 		Solution bestSol = algoTabou.generatedTabou(sRandom);
-		//System.out.println(bestSol);
 		
-		return bestSol;
-	}
-
-	public static void main(String[] args) {
-		System.out.println("Welcome on board ! .. Someone !\r\n");
-
-		//Avec 1 pattern
-		//double prix1 = new Execute(1).execute();
-		//System.out.println("\r\nPrix avec 1 pattern = "+prix1+"\r\n"); //3518
+		System.out.println("nbPat="+nbPattern+", nbIteration = "+algoTabou.getNbIteration());
 		
-		//Avec 2 pattern
-		//double prix2 = new Execute(2).execute();
-		//System.out.println("\r\nPrix avec 2 pattern = "+prix2+"\r\n"); //848
-		
-		//Avec 3 pattern 
-		//double prix3 = new Execute(3).execute();
-		//System.out.println("\r\nPrix avec 3 pattern = "+prix3+"\r\n"); //826
-		
-		//Avec 4 pattern
-		//double prix4 = new Execute(4).execute();
-		//System.out.println("\r\nPrix avec 4 pattern = "+prix4+"\r\n"); //839
-		
-		//NbMax = NbMaxImage
-		for (int i=1; i < 5; ++i)
-		{
-			Solution minSol = null;
-			
-			for (int k=0; k<1000; k++)
-			{
-				Solution s = new Execute(i).execute();
-				if (minSol == null || (minSol != null && s.calculPrice() < minSol.calculPrice()))
-					minSol = s;
-			}
-			
-			System.out.println(minSol);
-		}
+		System.out.println(bestSol.reconstruct());
+		System.out.println("Price = "+bestSol.calculPrice());
 	}
 
 }

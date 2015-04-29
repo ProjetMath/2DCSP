@@ -12,6 +12,7 @@ public class Tabou {
 	private int maxLevel;
 	private final int maxSizeListTabou;
 	private ListTabou listTabou;
+	private int nbIteration;
 	
 	/**
 	 * Constructor
@@ -21,6 +22,7 @@ public class Tabou {
 	public Tabou(int maxSizeListTabou, int maxLevel) {
 		this.maxSizeListTabou = maxSizeListTabou;
 		this.maxLevel = maxLevel;
+		this.nbIteration = 0;
 	}
 	
 	/**
@@ -41,15 +43,17 @@ public class Tabou {
 			if (bestNeighbor == null)
 				break;						// plus de voisins
 			
+			nbIteration++;
+			
 			sCurrent = bestNeighbor;
 			
-			if (sCurrent.getFitness() > sMin.getFitness())
+			if (sCurrent.getFitness() >= sMin.getFitness())
 			{ //Remplir liste tabou 
-				
 				listTabou.add(sCurrent.getFromTransform());
 			}
 			else 
 			{ //meilleur solution que la precedente ne pas modifier la liste tabou
+				//System.out.println(sCurrent);
 				sMin = sCurrent;
 			}	
 		}
@@ -102,5 +106,9 @@ public class Tabou {
 
 	public void setMaxLevel(int maxLevel) {
 		this.maxLevel = maxLevel;
+	}
+	
+	public int getNbIteration() {
+		return nbIteration;
 	}
 }
