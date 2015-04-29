@@ -17,20 +17,13 @@ import vue.Affichage;
 
 public class GenerateRandomSolution {
 	private final List<TypeImage> tImages;	
-	private int nbMaxTryPlacePattern;
-	private int nbMaxTryGenerateSolution;
 	
 	public GenerateRandomSolution(List<TypeImage> tImages) {
-		this.tImages = tImages;
-		this.nbMaxTryPlacePattern = 1000;
-		this.nbMaxTryGenerateSolution = 1000;		
+		this.tImages = tImages;	
 	}
 	
 	public GenerateRandomSolution(List<TypeImage> tImages, int maxTryPlacePattern, int maxTryGenerateSolution) {
 		this(tImages);
-		
-		this.nbMaxTryPlacePattern = maxTryPlacePattern;
-		this.nbMaxTryGenerateSolution = maxTryGenerateSolution;
 	}
 	
 	public Solution generate(int nbMaxPat) {
@@ -41,20 +34,21 @@ public class GenerateRandomSolution {
 		Random rand = new Random();
 		
 		//System.out.println("#GenerateSolution# liste image size = "+tImages.size()+", maxTypePerPattern size = "+maxTypePerPattern.length);
-		int nbTryGenSol = 0;
 		for (;;)
 		{
 			int[] cptTypeImage = new int[tImages.size()]; //To check if every type of picture has been place at least once
 			
 			for(int i=0; i<nbMaxPat; ++i)
 			{
-				//System.out.println("#GenerateSolution# Debut "+i+" liste pattern size="+listPattern.length);
+				System.out.println("#GenerateSolution# Debut "+i+" liste pattern size="+listPattern.length);
 				
 				Pattern p = null;
-				int nbTryPlacePattern = 0; //compter le nombre d'essai pour creer le pattern
 				
+				int cptPlacement = 0;
 				do
 				{
+					System.out.println("Placement essai = "+cptPlacement++);
+					
 					//random nb image par type image dans pattern
 					Map<TypeImage, Integer> imgsNb = new LinkedHashMap<TypeImage, Integer>();
 					int cptAtLeastOne = tImages.size()-1;
@@ -113,29 +107,28 @@ public class GenerateRandomSolution {
 					}				
 					if (exist) continue; //re generation aleatoire d'un autre pattern
 					
-					//System.out.println("#GenerateSolution# Exist boolean = "+exist);
-								
+					System.out.println("#GenerateSolution# Exist boolean = "+exist);
+					
+					for (Entry<TypeImage, Integer> mTi : imgsNb.entrySet())
+					{
+						System.out.println(mTi.getKey() + " NB = "+mTi.getValue());
+					}
+					
 					Placement pl = new Placement(imgsNb);
 					p = pl.place();
 					
-					nbTryPlacePattern++; 
-				} while(p == null && nbTryPlacePattern < nbMaxTryPlacePattern);
+				} while(p == null && cptPlacement < 10);
 				
-				if (nbTryPlacePattern >= nbMaxTryPlacePattern)
-				{
-					System.out.println("#GenerateSolution# Place pattern Maximum of "+nbMaxTryPlacePattern+" iteration reached");
-					return null;
-				}
 				
 				listPattern[i] = p;
-				//System.out.println("#GenerateSolution# New pattern add nbTry = "+nbTryPlacePattern); 
+				System.out.println("#GenerateSolution# New pattern add"); 
 				
 				//Incrémenter compteur type d'image pour ce pattern
 				int k = 0;
 				for (Entry<TypeImage, Integer> e : p.getImgsNb().entrySet())
 					cptTypeImage[k++] += e.getValue();
 			}
-			//System.out.println("#GenerateSolution# End -  creating solution");
+			System.out.println("#GenerateSolution# End -  creating solution");
 			
 			boolean checkNbTypeImage = true;
 			
@@ -148,13 +141,8 @@ public class GenerateRandomSolution {
 			
 			if(checkNbTypeImage) break;
 			
-			//System.out.println("#GenerateSolution# Bad solution");
-			nbTryGenSol++;
-			if (nbTryGenSol >= nbMaxTryGenerateSolution) 
-			{
-				System.out.println("#GenerateSolution# Maximum of "+nbTryGenSol+" iteration reached");
-				return null;
-			}
+			System.out.println("#GenerateSolution# Bad solution");
+			
 		}
 		
 		//Solution
