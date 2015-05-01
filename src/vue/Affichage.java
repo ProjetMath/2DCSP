@@ -77,10 +77,20 @@ public class Affichage extends JFrame
 			for(int j=0;j<pattern.getImages().size();j++)
 			{
 				Item image=pattern.getImages().get(j);
+				if(image.isRotated())
+				{
+					composant.drawRect((int) (i%positionnementPattern * Pattern.getWidth() + 50)+image.getPosition().x,
+							hauteur - (int) (((i/positionnementPattern)+1) *Pattern.getHeight()+20)
+							+(int)(Pattern.getHeight()-image.getPosition().y-image.getType().getWidth()),
+							(int)image.getType().getHeight(), (int)image.getType().getWidth());
+				}
+				else
+				{
 				composant.drawRect((int) (i%positionnementPattern * Pattern.getWidth() + 50)+image.getPosition().x,
 						hauteur - (int) (((i/positionnementPattern)+1) *Pattern.getHeight()+20)
 						+(int)(Pattern.getHeight()-image.getPosition().y-image.getType().getHeight()),
 						(int)image.getType().getWidth() , (int)image.getType().getHeight());
+				}
 			}
 		}
 	}
