@@ -32,118 +32,116 @@ public class GenerateRandomSolution {
 		Pattern[] listPattern =  new Pattern[nbMaxPat];
 		//création d'une première solution aléatoire
 		Random rand = new Random();
-		
-		//System.out.println("#GenerateSolution# liste image size = "+tImages.size()+", maxTypePerPattern size = "+maxTypePerPattern.length);
-		for (;;)
+	
+		Map<TypeImage, Integer> cptTypeImage = new LinkedHashMap<TypeImage, Integer>();//To check if every type of picture has been place at least once
+		for (TypeImage t : tImages)
+			cptTypeImage.put(t, 0); //remplir la map typeImage => compteur 
+
+		for(int i=0; i<nbMaxPat; ++i)
 		{
-			int[] cptTypeImage = new int[tImages.size()]; //To check if every type of picture has been place at least once
+			//System.out.println("#GenerateSolution# Debut "+i+" liste pattern size="+listPattern.length);
 			
-			for(int i=0; i<nbMaxPat; ++i)
+			Pattern p = null;
+			
+			//random nb image par type image dans pattern
+			Map<TypeImage, Integer> imgsNb = new LinkedHashMap<TypeImage, Integer>();
+			
+			do 
 			{
-				//System.out.println("#GenerateSolution# Debut "+i+" liste pattern size="+listPattern.length);
+				for (TypeImage t : tImages)
+					imgsNb.put(t, 0); //remplir la map typeImage => nb 
 				
-				Pattern p = null;
-				
-				//random nb image par type image dans pattern
-				Map<TypeImage, Integer> imgsNb = new LinkedHashMap<TypeImage, Integer>();
-				
-				do 
-				{
-					for (TypeImage t : tImages)
-						imgsNb.put(t, 0);
-					
-					int cptAtLeastOne = tImages.size()-1;
-					double spaceFree = Pattern.getSurface();
-					
-					for (TypeImage ti : tImages)
-					{	
-						int incr = 0;
-						if (cptAtLeastOne == 0 || nbMaxPat == 1) incr = 1; //at least one image place must be place
-						
-						int max = (int)(spaceFree/ti.getSurface()); //nb image max de ce type dans l'espace libre
-						int r = incr;
-						if (max > 0)
-							r =  rand.nextInt(max+1-incr) + incr;
-						
-						if (r == 0) cptAtLeastOne--; //aucune image => decrement compteur
-						else if (r > 0) 
-						{ //Placement
-							imgsNb.put(ti, r);
-							Placement pl = new Placement(imgsNb);
-							p = pl.place();
-							if (p == null) 
-							{
-								imgsNb.put(ti, 0);
-								continue;
-							}
-						}
-						
-						spaceFree -= ti.getSurface() * (double)r;
-						if (spaceFree < 0) spaceFree = 0;
+				int cptAtLeastOne = tImages.size()-1; 
+				double spaceFree = Pattern.getSurface();
+			
+				TypeImage tiChecked = null; //num du type d'image dans le tbl cptTypeImage que l'on va placé en premier pour être sûre de le placer
+		
+				//Checker si un type d'images n'est pas placés au moins 1 fois
+				for (TypeImage ti : tImages)
+					if (cptTypeImage.get(ti) <= 0)
+					{ //Un type d'image encore non placé à été trouvé
+						tiChecked = ti;
+						imgsNb.put(ti, 1); //init à 1
+						//System.out.println("#GenerateSolution# Type d'image "+iTi+" must be placed!");
+						break; 
 					}
-				} while(p == null);
 				
-				// Vérifier qu'existe pas déjà 
-				boolean exist = false;
-				for (Pattern pa : listPattern)
+				for (TypeImage ti : tImages)
 				{	
-					if (pa == null)
-						break;
+					int incr = 0;
 					
-					//Pas la même taille
-					if (imgsNb.size() != pa.getImgsNb().size())
-						continue;
+					/*
+					 * au moins 1 type d'image doit être placer dans le pattern (si nbPat == 1 on doit placer tout les types images)
+					 * ou bien le type d'image selectionné (pour être sûr de le placer dans la solution) doit être forcement placé
+					 */
+					if (cptAtLeastOne == 0 || nbMaxPat == 1 || ti.equals(tiChecked)) incr = 1; 
 					
-					//Chaque type d'image a le même nombre d'images
-					exist = true;
-					for(Entry<TypeImage, Integer> entry : pa.getImgsNb().entrySet())  
-					{
-						Integer v = imgsNb.get(entry.getKey());
-						if (v != entry.getValue())
+					int max = (int)(spaceFree/ti.getSurface()); //nb image max de ce type dans l'espace libre
+					int r = incr;
+					if (max > 0)
+						r =  rand.nextInt(max+1-incr) + incr;
+					
+					if (r == 0) cptAtLeastOne--; //aucune image => decrement compteur
+					else if (r > 0) 
+					{ //Placement
+						imgsNb.put(ti, r);
+						Placement pl = new Placement(imgsNb);
+						p = pl.place();
+						if (p == null) 
 						{
-							exist = false;
-							break;
+							imgsNb.put(ti, 0);
+							continue;
 						}
 					}
-					if (!exist) continue;
 					
-					//System.out.println("#GenerateSolution# Ce pattern existe déjà !");
-					break; //exist !
-				}				
-				if (exist) continue; //re generation aleatoire d'un autre pattern
-				
-				//System.out.println("#GenerateSolution# Exist boolean = "+exist);
-				
-				/*for (Entry<TypeImage, Integer> mTi : imgsNb.entrySet())
-				{
-					System.out.println(mTi.getKey() + " NB = "+mTi.getValue());
-				}*/
-				
-				
-				listPattern[i] = p;
-				//System.out.println("#GenerateSolution# New pattern add"); 
-				
-				//Incrémenter compteur type d'image pour ce pattern
-				int k = 0;
-				for (Entry<TypeImage, Integer> e : p.getImgsNb().entrySet())
-					cptTypeImage[k++] += e.getValue();
-			}
-			//System.out.println("#GenerateSolution# End -  creating solution");
-			
-			boolean checkNbTypeImage = true;
-			
-			for (int i=0; i<cptTypeImage.length; ++i)
-				if (cptTypeImage[i] == 0)
-				{
-					checkNbTypeImage = false;
-					break;
+					spaceFree -= ti.getSurface() * (double)r;
+					if (spaceFree < 0) spaceFree = 0;
 				}
+			} while(p == null);
 			
-			if(checkNbTypeImage) break;
+			// Vérifier qu'existe pas déjà 
+			boolean exist = false;
+			for (Pattern pa : listPattern)
+			{	
+				if (pa == null)
+					break;
+				
+				//Pas la même taille
+				if (imgsNb.size() != pa.getImgsNb().size())
+					continue;
+				
+				//Chaque type d'image a le même nombre d'images
+				exist = true;
+				for(Entry<TypeImage, Integer> entry : pa.getImgsNb().entrySet())  
+				{
+					Integer v = imgsNb.get(entry.getKey());
+					if (v != entry.getValue())
+					{
+						exist = false;
+						break;
+					}
+				}
+				if (!exist) continue;
+				
+				//System.out.println("#GenerateSolution# Ce pattern existe déjà !");
+				break; //exist !
+			}				
+			if (exist) continue; //re generation aleatoire d'un autre pattern
 			
-			//System.out.println("#GenerateSolution# Bad solution");
+			//System.out.println("#GenerateSolution# Exist boolean = "+exist);
 			
+			listPattern[i] = p;
+			//System.out.println("#GenerateSolution# New pattern add"); 
+			
+			//Incrémenter compteur type d'image pour ce pattern
+			for (Entry<TypeImage, Integer> e : p.getImgsNb().entrySet())
+				cptTypeImage.put(e.getKey(), cptTypeImage.get(e.getKey())+e.getValue());
 		}
+		//System.out.println("#GenerateSolution# End -  creating solution");
+					
+		//for (Entry<TypeImage, Integer> e : cptTypeImage.entrySet())
+		//	System.out.println(e.getKey()+" // "+e.getValue());			
+		
 		
 		//Solution
 		Solution s = new Solution(tImages, listPattern, System.currentTimeMillis()-timeStart);
@@ -154,26 +152,7 @@ public class GenerateRandomSolution {
 		/**
 		 * TEST GENERATE RANDOM SOLUTION
 		 */
-		
-		/*
-		 * ----1--------------------------
-		 * Sans contrainte au moins une image dans un pattern
-		 * Et un type d'image pouvais ne pas être dans la solution 
-		 * FIXED
-		 * 
-		 * ----2----------------
-		 * Probleme avec la generation quand 1 pattern : tourne en boucle sans trouver de solution
-		 *=> ajout compteur nb iteration (placement pattern et solution) pour stopper
-		 * 
-		 * ----3-----------------
-		 * La borne max lors du tirage aleatoire est trop grande pour les petites images alors que des grandes images ont déjà été choisi
-		 * ce qui augmente de façon conséquente le nombre d'itération empêchant même de trouvé des solutions avec 1 pattern par exemple
-		 * => adapter la generation en fonction du nombre d'image déjà généré (implique liste triée!!)
-		 * en fonction de lespace deja occupé
-		 * 
-		 * ---4---------------
-		 * Pour map trié dans l'ordre d'insertion : LinkedHashMap
-		 */
+
 		Pattern.setSize(40, 60); 
 		final int nbMaxPat = 1;
 		

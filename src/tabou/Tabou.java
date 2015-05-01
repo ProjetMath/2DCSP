@@ -36,6 +36,8 @@ public class Tabou {
 		Solution sMin = s1;
 		Solution sCurrent = s1;
 		
+		long timeStart = System.currentTimeMillis();
+		
 		//Condition d'arrêt = nombre maximum de noeud parcouru
 		for (int i=0; i < maxLevel; i++)
 		{ 
@@ -46,6 +48,7 @@ public class Tabou {
 			nbIteration++;
 			
 			sCurrent = bestNeighbor;
+			sCurrent.setElapsedTime(System.currentTimeMillis()-timeStart);
 			
 			if (sCurrent.getFitness() >= sMin.getFitness())
 			{ //Remplir liste tabou 

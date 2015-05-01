@@ -34,8 +34,6 @@ public class TransformationIncr implements Transformation {
 	 */
 	public Solution transform(Solution s)
 	{
-		long timeStart = System.currentTimeMillis();
-		
 		Pattern p = s.getPatterns()[idPattern]; //recuperer pattern
 		int nbTypeImage = p.getImgsNb().get(tI); //recuperer le nombre du type d'image correspondant dans le pattern
 
@@ -63,7 +61,7 @@ public class TransformationIncr implements Transformation {
 				newListPatterns[idPattern] = newPattern;
 				
 				//new Solution
-				return new Solution(s.getTypesImages(), newListPatterns, timeStart-System.currentTimeMillis(), this);
+				return new Solution(s.getTypesImages(), newListPatterns, 0, this);
 			}		
 		}
 		return null;	

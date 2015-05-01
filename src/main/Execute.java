@@ -16,18 +16,6 @@ import tabou.Tabou;
 public class Execute {
 	public static void main(String[] args) {
 		System.out.println("Welcome on board ! .. Someone !\r\n");
-
-		//Taille liste = nb de type d'image * 2
-		//1 pattern = 3518
-		//2 pattern = 848
-		//3 pattern = 826
-		//4 pattern = 839
-				
-		//TODO  Charger les images depuis les fichiers de données
-		/*imagesToPlace.add(new TypeImage(0, 30, 24, 246));
-		imagesToPlace.add(new TypeImage(1, 56, 13, 562));
-		imagesToPlace.add(new TypeImage(2, 22, 14, 1000));
-		imagesToPlace.add(new TypeImage(3, 23, 9, 3498));*/
 		
 		try {
 			List<TypeImage> imagesToPlace = LoadFile.lectureFichier("data/data_50Lalpha.txt");
@@ -48,15 +36,18 @@ public class Execute {
 				tit.add(bigest);
 			}
 			
-			//System.out.println("Pattern x = "+Pattern.getWidth()+" / Pattern y = "+Pattern.getHeight());
+			System.out.println("Pattern x = "+Pattern.getWidth()+" / Pattern y = "+Pattern.getHeight());
 			
-			/*for (TypeImage ti : imagesToPlace) 
+			for (TypeImage ti : imagesToPlace) 
 			{
 				System.out.println(ti);
-			}*/
+			}
 			
-			//Pattern.setSize(40, 60); 
-				Pattern.setPrice(20);
+			Pattern.setPrice(20);
+			
+			System.out.println("\nPress enter to continue ...");
+			System.in.read();
+			System.out.println();
 			
 			//Chercher la solution 
 			//Generer une solution aleatoire
@@ -65,9 +56,11 @@ public class Execute {
 			Solution sRandom = generator.generate(nbPattern);
 			sRandom = sRandom.reconstruct();
 			
+			System.out.println("Solution aléatoire : ");
 			System.out.println(sRandom);
-			//System.out.println("prix sRandom = "+sRandom.calculPrice());
+			System.out.println("prix sRandom = "+sRandom.calculPrice());
 			
+						
 			//Premier algo tabou rapide
 			Tabou algoTabou = new Tabou(nbPattern*imagesToPlace.size()*2, 100000); //taille liste tabou, nombre de level
 			

@@ -89,8 +89,9 @@ public class Solution {
 			double[] coefs = new double[nbPattern];
 			
 			for (int i=0; i < nbPattern; ++i) 
+			{				
 				coefs[i] = patterns[i].getImgsNb().get(ti);
-			
+			}
 			constraints.add(new LinearConstraint(coefs, Relationship.GEQ, ti.getDemand()));
 		}
 		
@@ -113,7 +114,7 @@ public class Solution {
 		SimplexSolver solver = new SimplexSolver();
 		
 		try {
-			PointValuePair optSolution = solver.optimize(new MaxIter(100),
+			PointValuePair optSolution = solver.optimize(new MaxIter(9999),
 														f, 
 														new LinearConstraintSet(constraints),               
 														GoalType.MINIMIZE, 
