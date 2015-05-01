@@ -37,7 +37,7 @@ public class GenerateRandomSolution {
 		for (TypeImage t : tImages)
 			cptTypeImage.put(t, 0); //remplir la map typeImage => compteur 
 
-		for(int i=0; i<nbMaxPat; ++i)
+		for(int iP=0; iP<nbMaxPat; )
 		{
 			//System.out.println("#GenerateSolution# Debut "+i+" liste pattern size="+listPattern.length);
 			
@@ -130,17 +130,15 @@ public class GenerateRandomSolution {
 			
 			//System.out.println("#GenerateSolution# Exist boolean = "+exist);
 			
-			listPattern[i] = p;
+			listPattern[iP++] = p;
 			//System.out.println("#GenerateSolution# New pattern add"); 
+			
 			
 			//Incrémenter compteur type d'image pour ce pattern
 			for (Entry<TypeImage, Integer> e : p.getImgsNb().entrySet())
 				cptTypeImage.put(e.getKey(), cptTypeImage.get(e.getKey())+e.getValue());
 		}
 		//System.out.println("#GenerateSolution# End -  creating solution");
-					
-		//for (Entry<TypeImage, Integer> e : cptTypeImage.entrySet())
-		//	System.out.println(e.getKey()+" // "+e.getValue());			
 		
 		
 		//Solution
