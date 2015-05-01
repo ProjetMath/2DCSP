@@ -5,9 +5,8 @@ import image.TypeImage;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.lang.model.element.NestingKind;
-
 import tabou.Tabou;
+import vue.FenetreChoix;
 
 /**
  * Execution general
@@ -18,7 +17,11 @@ public class Execute {
 		System.out.println("Welcome on board ! .. Someone !\r\n");
 		
 		try {
-			List<TypeImage> imagesToPlace = LoadFile.lectureFichier("data/data_50Lalpha.txt");
+			// chemin [0] nom [1]
+			String [] infoFichier=new FenetreChoix().choisir();
+			String cheminFichier=infoFichier[0];
+			System.out.println("Le fichier "+infoFichier[1]+" va etre traité");
+			List<TypeImage> imagesToPlace = LoadFile.lectureFichier(cheminFichier);
 			
 			//trier les images
 			List<TypeImage> tempListTi = new ArrayList<TypeImage>(imagesToPlace);
