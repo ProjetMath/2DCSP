@@ -76,6 +76,7 @@ public class Execute {
 		int nbPattern = imagesToPlace.size();
 		GenerateRandomSolution generator = new GenerateRandomSolution(imagesToPlace);
 		Solution sRandom = generator.generate(nbPattern);
+		
 		sRandom = sRandom.reconstruct();
 		
 		return sRandom;
@@ -84,7 +85,7 @@ public class Execute {
 	/*
 	 * Recherche de la meilleure solution
 	 */
-	private Solution lookup(Solution first) {
+	private Solution lookup(Solution first) {		
 		//Premier algo tabou rapide
 		int nbTransPossible = first.getPatterns().length*first.getTypesImages().size()*2;
 		
@@ -125,7 +126,6 @@ public class Execute {
 		System.out.println();
 		System.out.println("Price = "+bestSol.calculPrice());
 		
-		
 		return bestSol;
 	}
 	
@@ -135,8 +135,8 @@ public class Execute {
 		try {
 			Solution bestSol = new Execute().execute();			
 			
-			JFrame frame = new Affichage(bestSol,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
-			Affichage.affiche(frame);
+			//JFrame frame = new Affichage(bestSol,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
+			//Affichage.affiche(frame);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
