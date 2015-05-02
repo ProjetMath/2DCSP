@@ -10,6 +10,7 @@ import java.util.List;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 
+import tabou.ListElite;
 import tabou.Tabou;
 import vue.Affichage;
 
@@ -85,18 +86,27 @@ public class Execute {
 	/*
 	 * Recherche de la meilleure solution
 	 */
-	private Solution lookup(Solution first) {		
-		//Premier algo tabou rapide
+	private List<Solution> lookup(Solution first, int level, int sizeListElite) {
+		if (level <= 0) level = 1;
+		if (sizeListElite <= 0) sizeListElite = 1;
+		
+		//Toutes les transactions possibles au level 1 pour avoir une recherche rapide, 
+		//plus le level augmente plus la taille de la liste tabou diminue (/level) et la recherche deviens précise
+		
 		int nbTransPossible = first.getPatterns().length*first.getTypesImages().size()*2;
 		
-		Tabou algoTabou = new Tabou(nbTransPossible, 100000); //taille liste tabou, nombre de level
+		Tabou algoTabou = new Tabou(nbTransPossible / level, 100000, sizeListElite); //taille liste tabou, nombre max de level, taille liste elite
 		
-		Solution bestSol = algoTabou.generatedTabou(first);
-		bestSol = bestSol.reconstruct();
+		List<Solution> listElit = algoTabou.generatedTabou(first);
 		
-		System.out.println("nbPat="+bestSol.getPatterns().length+", nbIteration = "+algoTabou.getNbIteration());
-		
-		return bestSol;
+		System.out.println("#Tabou# nbIteration = "+algoTabou.getNbIteration());
+				
+		return listElit;
+	}
+	
+	private Solution lookup(Solution first)
+	{
+		return this.lookup(first, 1, 1).get(0);
 	}
 	
 	/*
@@ -120,7 +130,7 @@ public class Execute {
 		System.out.println(sRandom);
 		System.out.println("prix sRandom = "+sRandom.calculPrice());
 				
-		Solution bestSol = this.lookup(sRandom);
+		Solution bestSol = this.lookup(sRandom); //1, 1
 		
 		System.out.println(bestSol);
 		System.out.println();

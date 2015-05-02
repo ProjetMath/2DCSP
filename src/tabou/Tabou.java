@@ -2,6 +2,7 @@ package tabou;
 
 import image.TypeImage;
 
+import java.util.List;
 import java.util.Map.Entry;
 
 import main.Solution;
@@ -13,16 +14,19 @@ public class Tabou {
 	private final int maxSizeListTabou;
 	private ListTabou listTabou;
 	private int nbIteration;
+	private final int maxSizeListElite;
+	private ListElite listElite;
 	
 	/**
 	 * Constructor
 	 * @param sizeListTabou Taille maximum de la liste tabou à créer
 	 * @param maxLevel
 	 */
-	public Tabou(int maxSizeListTabou, int maxLevel) {
+	public Tabou(int maxSizeListTabou, int maxLevel, int maxSizeListElite) {
 		this.maxSizeListTabou = maxSizeListTabou;
 		this.maxLevel = maxLevel;
 		this.nbIteration = 0;
+		this.maxSizeListElite = maxSizeListElite;
 	}
 	
 	/**
@@ -30,9 +34,10 @@ public class Tabou {
 	 * @param s1 : solution initial
 	 * @return meilleur solution
 	 */
-	public Solution generatedTabou(Solution s1)
+	public List<Solution> generatedTabou(Solution s1)
 	{
 		listTabou = new ListTabou(maxSizeListTabou);
+		listElite = new ListElite(maxSizeListElite);
 		Solution sMin = s1;
 		Solution sCurrent = s1;
 		
@@ -50,6 +55,9 @@ public class Tabou {
 			sCurrent = bestNeighbor;
 			sCurrent.setElapsedTime(System.currentTimeMillis()-timeStart);
 			
+			if (maxSizeListElite > 1)
+				listElite.add(sCurrent); //essayer d'ajouter la solution à la liste d'élite
+			
 			if (sCurrent.getFitness() >= sMin.getFitness())
 			{ //Remplir liste tabou 
 				listTabou.add(sCurrent.getFromTransform());
@@ -60,7 +68,11 @@ public class Tabou {
 				sMin = sCurrent;
 			}	
 		}
-		return sMin;
+		
+		if (maxSizeListElite == 1)
+			listElite.add(sMin);
+		
+		return listElite.getList()	;
 	}
 
 	/**

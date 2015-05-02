@@ -64,7 +64,7 @@ public class GenerateRandomSolution {
 						imgsNb.put(ti, 1); //init à 1
 						spaceFree -= ti.getSurface();
 						
-						System.out.println("#GenerateSolution# Type d'image "+ti+" must be placed!");
+						//System.out.println("#GenerateSolution# Type d'image "+ti+" must be placed!");
 						break; 
 					}
 				
@@ -133,7 +133,7 @@ public class GenerateRandomSolution {
 			//System.out.println("#GenerateSolution# Exist boolean = "+exist);
 			
 			listPattern[iP++] = p;
-			System.out.println("#GenerateSolution# New pattern add"); 
+			//System.out.println("#GenerateSolution# New pattern add"); 
 			
 			
 			//Incrémenter compteur type d'image pour ce pattern
@@ -141,9 +141,6 @@ public class GenerateRandomSolution {
 				cptTypeImage.put(e.getKey(), cptTypeImage.get(e.getKey())+e.getValue());
 		}
 		//System.out.println("#GenerateSolution# End -  creating solution");
-		
-		for(Entry<TypeImage, Integer> e : cptTypeImage.entrySet())
-			System.out.println(e.getValue());
 		
 		//Solution
 		Solution s = new Solution(tImages, listPattern, System.currentTimeMillis()-timeStart);
