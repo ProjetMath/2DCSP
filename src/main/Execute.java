@@ -78,7 +78,7 @@ public class Execute {
 		GenerateRandomSolution generator = new GenerateRandomSolution(imagesToPlace);
 		Solution sRandom = generator.generate(nbPattern);
 		
-		sRandom = sRandom.reconstruct();
+		//sRandom = sRandom.reconstruct();
 		
 		return sRandom;
 	}
@@ -99,7 +99,7 @@ public class Execute {
 		
 		List<Solution> listElit = algoTabou.generatedTabou(first);
 		
-		System.out.println("#Tabou# nbIteration = "+algoTabou.getNbIteration());
+		System.out.println("#Tabou niv "+level+" # nbIteration = "+algoTabou.getNbIteration());
 				
 		return listElit;
 	}
@@ -129,14 +129,27 @@ public class Execute {
 		System.out.println("Solution aléatoire : ");
 		System.out.println(sRandom);
 		System.out.println("prix sRandom = "+sRandom.calculPrice());
+		
+		Solution sBest = sRandom;
+		for (Solution sNiv1 : lookup(sRandom, 1, 2))
+		{
+			//sNiv1.reconstruct();
+			
+			for (Solution sNiv2 : lookup(sNiv1, 2, 2))
+			{
+				Solution bS = lookup(sNiv2, 4, 1).get(0);
 				
-		Solution bestSol = this.lookup(sRandom); //1, 1
+				if (bS.getFitness() < sBest.getFitness()) //Meilleure
+					sBest = bS;
+			}
+		}
 		
-		System.out.println(bestSol);
+		System.out.println("Meilleure solution !");
+		System.out.println(sBest.reconstruct());
 		System.out.println();
-		System.out.println("Price = "+bestSol.calculPrice());
+		System.out.println("Price = "+sBest.calculPrice());
 		
-		return bestSol;
+		return sBest;
 	}
 	
 	public static void main(String[] args) {
