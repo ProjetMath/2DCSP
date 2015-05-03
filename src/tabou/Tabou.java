@@ -16,6 +16,8 @@ public class Tabou {
 	private int nbIteration;
 	private final int maxSizeListElite;
 	private ListElite listElite;
+		
+	private long timeEllapsed;
 	
 	/**
 	 * Constructor
@@ -27,6 +29,7 @@ public class Tabou {
 		this.maxLevel = maxLevel;
 		this.nbIteration = 0;
 		this.maxSizeListElite = maxSizeListElite;
+		this.timeEllapsed= 0;
 	}
 	
 	/**
@@ -42,10 +45,12 @@ public class Tabou {
 		Solution sCurrent = s1;
 		
 		long timeStart = System.currentTimeMillis();
+		timeEllapsed = 0;
 		
 		//Condition d'arrêt = nombre maximum de noeud parcouru
 		for (int i=0; i < maxLevel; i++)
 		{ 
+			System.out.println("#Tabou#It "+i);
 			Solution bestNeighbor = bestNeighbor(sCurrent);
 			if (bestNeighbor == null)
 				break;						// plus de voisins
@@ -72,6 +77,8 @@ public class Tabou {
 		if (maxSizeListElite == 1)
 			listElite.add(sMin);
 		
+		timeEllapsed = System.currentTimeMillis() - timeStart;
+		
 		return listElite.getList()	;
 	}
 
@@ -80,7 +87,7 @@ public class Tabou {
 	 * @param s : Solution de départ
 	 * @return Solution : meilleur voisin selon la fitness
 	 */
-	public Solution bestNeighbor(Solution s)
+	private Solution bestNeighbor(Solution s)
 	{
 		Solution bestNeightbor = null; 
 		
@@ -126,4 +133,10 @@ public class Tabou {
 	public int getNbIteration() {
 		return nbIteration;
 	}
+
+	public long getTimeEllapsed() {
+		return timeEllapsed;
+	}
+	
+	
 }

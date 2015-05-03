@@ -99,7 +99,7 @@ public class Execute {
 		
 		List<Solution> listElit = algoTabou.generatedTabou(first);
 		
-		System.out.println("#Tabou niv "+level+" # nbIteration = "+algoTabou.getNbIteration());
+		System.out.println("#Tabou niv "+level+" # nbIteration = "+algoTabou.getNbIteration()+", timeEllapsed = "+algoTabou.getTimeEllapsed());
 				
 		return listElit;
 	}
