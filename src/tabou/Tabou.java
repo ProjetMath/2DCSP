@@ -50,7 +50,7 @@ public class Tabou {
 		//Condition d'arrêt = nombre maximum de noeud parcouru
 		for (int i=0; i < maxLevel; i++)
 		{ 
-			System.out.println("#Tabou#It "+i);
+			//System.out.println("#Tabou#It "+i);
 			Solution bestNeighbor = bestNeighbor(sCurrent);
 			if (bestNeighbor == null)
 				break;						// plus de voisins

@@ -80,7 +80,8 @@ public class Solution {
 		for (int i=0; i<nbPattern ; ++i)
 			coefficients[i] = 1; //init
 		
-		LinearObjectiveFunction f = new LinearObjectiveFunction(coefficients, 0.0);
+		LinearObjectiveFunction f = new LinearObjectiveFunction(coefficients, 
+				(double)this.getPatterns().length*Pattern.getPrice());
 		
 		//constraints selon les quantités à distribuer
 		Collection<LinearConstraint> constraints = new ArrayList<>();
