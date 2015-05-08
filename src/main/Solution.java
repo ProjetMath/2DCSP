@@ -30,6 +30,15 @@ public class Solution {
 	private double fitness; 
 	private Transformation fromTransform;	//Transformation d'ou provient la solution
 
+	public Solution() {
+		this.patterns = null;
+		this.typesImages = null;
+		this.nbPrintPattern = null;
+		this.elapsedTime = 0;
+		this.fitness = 0;
+		this.fromTransform = null;
+	}
+	
 	public Solution(List<TypeImage> typesImages, Pattern[] patterns, long elapsedTime) {
 		super();
 		this.patterns = patterns;
@@ -70,6 +79,22 @@ public class Solution {
 	public void setFromTransform(Transformation fromTransform) {
 		this.fromTransform = fromTransform;
 	}
+	
+	public void setPatterns(Pattern[] patterns) {
+		this.patterns = patterns;
+	}
+
+	public void setTypesImages(List<TypeImage> typesImages) {
+		this.typesImages = typesImages;
+	}
+
+	public void setNbPrintPattern(int[] nbPrintPattern) {
+		this.nbPrintPattern = nbPrintPattern;
+	}
+
+	public void setFitness(double fitness) {
+		this.fitness = fitness;
+	}
 
 	private double calculFitness()
 	{		
@@ -95,21 +120,6 @@ public class Solution {
 			}
 			constraints.add(new LinearConstraint(coefs, Relationship.GEQ, ti.getDemand()));
 		}
-		
-		//coefs patterns doivent être supérieurs à 0 (on veut que tous les patterns sont imprimés au moins 1 fois)
-		/*for (int i=0; i < nbPattern; ++i) 
-		{
-			double[] coefsP = new double[nbPattern];
-			for (int j=0; j < nbPattern; ++j) 
-			{
-				if (i == j)
-					coefsP[j] = 1;
-				else
-					coefsP[j] = 0;
-			}
-			
-			constraints.add(new LinearConstraint(coefsP, Relationship.GEQ, 1));
-		}*/
 		
 		// create and run the solver
 		SimplexSolver solver = new SimplexSolver();

@@ -59,16 +59,12 @@ public class GenerateRandomSolution {
 				TypeImage tiChecked = null; //num du type d'image dans le tbl cptTypeImage que l'on va placé en premier pour être sûre de le placer
 		
 				//Checker si un type d'images n'est pas placés au moins 1 fois
-				for (TypeImage ti : tImages)
-					if (verifTIListe.contains(ti))
-					{ //Un type d'image encore non placé à été trouvé
-						tiChecked = ti;
-						imgsNb.put(ti, 1); //init à 1
-						spaceFree -= ti.getSurface();
-						
-						//System.out.println("#GenerateSolution# Type d'image "+ti+" must be placed!");
-						break; 
-					}
+				if (!verifTIListe.isEmpty())
+				{
+					tiChecked = verifTIListe.get(0);
+					imgsNb.put(verifTIListe.get(0), 1); //init à 1
+					spaceFree -= verifTIListe.get(0).getSurface();
+				}
 				
 				for (TypeImage ti : tImages)
 				{	
@@ -102,7 +98,7 @@ public class GenerateRandomSolution {
 					spaceFree -= ti.getSurface() * (double)r;
 					if (spaceFree < 0) spaceFree = 0;
 				}
-			} while(p == null && (cptFail++) < nbMaxPat*1000); //TODO
+			} while(p == null && (cptFail++) < nbMaxPat*10000); //TODO
 			
 			if (p == null) return null; //Impossible de former un pattern //TODO
 			
@@ -133,7 +129,7 @@ public class GenerateRandomSolution {
 				//System.out.println("#GenerateSolution# Ce pattern existe déjà !");
 				break; //exist !
 			}				
-			if (exist && (cptFailExist++) < 1000 * nbMaxPat) continue; //re generation aleatoire d'un autre pattern //TODO
+			if (exist && (cptFailExist++) < 10000 * nbMaxPat) continue; //re generation aleatoire d'un autre pattern //TODO
 			if (exist) return null; //TODO
 			
 			//System.out.println("#GenerateSolution# Exist boolean = "+exist);
