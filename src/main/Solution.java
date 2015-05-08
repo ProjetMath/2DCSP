@@ -184,6 +184,8 @@ public class Solution {
 		patterns = newPattern;
 		nbPrintPattern = newPrint;
 		
+		calculFitness();
+		
 		return this;
 	}
 	

@@ -1,0 +1,259 @@
+
+
+Le fichier data_30Salpha.txt va etre traité
+
+Pattern x = 1400.0 / Pattern y = 700.0
+TypeImage = [h=417.0, w=894.0, s=372798.0, dem=25]
+TypeImage = [h=433.0, w=763.0, s=330379.0, dem=13]
+TypeImage = [h=430.0, w=624.0, s=268320.0, dem=19]
+TypeImage = [h=262.0, w=949.0, s=248638.0, dem=2]
+TypeImage = [h=318.0, w=778.0, s=247404.0, dem=22]
+TypeImage = [h=415.0, w=593.0, s=246095.0, dem=23]
+TypeImage = [h=256.0, w=960.0, s=245760.0, dem=7]
+TypeImage = [h=248.0, w=907.0, s=224936.0, dem=17]
+TypeImage = [h=468.0, w=462.0, s=216216.0, dem=4]
+TypeImage = [h=234.0, w=873.0, s=204282.0, dem=15]
+TypeImage = [h=333.0, w=595.0, s=198135.0, dem=16]
+TypeImage = [h=246.0, w=673.0, s=165558.0, dem=23]
+TypeImage = [h=185.0, w=844.0, s=156140.0, dem=12]
+TypeImage = [h=174.0, w=894.0, s=155556.0, dem=23]
+TypeImage = [h=323.0, w=422.0, s=136306.0, dem=24]
+TypeImage = [h=318.0, w=344.0, s=109392.0, dem=7]
+TypeImage = [h=263.0, w=385.0, s=101255.0, dem=8]
+TypeImage = [h=380.0, w=260.0, s=98800.0, dem=17]
+TypeImage = [h=118.0, w=778.0, s=91804.0, dem=2]
+TypeImage = [h=126.0, w=663.0, s=83538.0, dem=5]
+TypeImage = [h=489.0, w=158.0, s=77262.0, dem=1]
+TypeImage = [h=83.0, w=810.0, s=67230.0, dem=20]
+TypeImage = [h=229.0, w=248.0, s=56792.0, dem=5]
+TypeImage = [h=179.0, w=259.0, s=46361.0, dem=6]
+TypeImage = [h=177.0, w=233.0, s=41241.0, dem=1]
+TypeImage = [h=281.0, w=143.0, s=40183.0, dem=10]
+TypeImage = [h=87.0, w=384.0, s=33408.0, dem=15]
+TypeImage = [h=173.0, w=165.0, s=28545.0, dem=11]
+TypeImage = [h=175.0, w=162.0, s=28350.0, dem=24]
+TypeImage = [h=98.0, w=208.0, s=20384.0, dem=24]
+Gen sol alea nb pattern = 1
+Gen sol alea nb pattern = 2
+Gen sol alea nb pattern = 3
+Gen sol alea nb pattern = 4
+Gen sol alea nb pattern = 5
+Gen sol alea nb pattern = 6
+Gen sol alea nb pattern = 7
+Gen sol alea nb pattern = 8
+Gen sol alea nb pattern = 9
+Gen sol alea nb pattern = 10
+Gen sol alea nb pattern = 11
+Gen sol alea nb pattern = 12
+Solution aléatoire : 
+
+Solution = [pW=1400.0, pH=700.0, t=24, f=354.0, price=354.0] {
+0: pattern = {
+   [3, dem=19, x=0.0, y=0.0, w=624.0, h=430.0, rot=true]
+   [5, dem=22, x=430.0, y=0.0, w=778.0, h=318.0, rot=false]
+   [12, dem=23, x=430.0, y=318.0, w=673.0, h=246.0, rot=false]
+   [29, dem=24, x=1208.0, y=0.0, w=162.0, h=175.0, rot=false]
+}, [printed= 24]
+1: pattern = {
+   [4, dem=2, x=0.0, y=0.0, w=949.0, h=262.0, rot=false]
+   [4, dem=2, x=0.0, y=262.0, w=949.0, h=262.0, rot=false]
+   [12, dem=23, x=949.0, y=0.0, w=673.0, h=246.0, rot=true]
+   [22, dem=20, x=0.0, y=524.0, w=810.0, h=83.0, rot=false]
+}, [printed= 20]
+2: pattern = {
+   [7, dem=7, x=0.0, y=0.0, w=960.0, h=256.0, rot=false]
+   [7, dem=7, x=0.0, y=256.0, w=960.0, h=256.0, rot=false]
+   [11, dem=16, x=960.0, y=0.0, w=595.0, h=333.0, rot=true]
+   [28, dem=11, x=0.0, y=512.0, w=165.0, h=173.0, rot=false]
+}, [printed= 16]
+3: pattern = {
+   [8, dem=17, x=0.0, y=0.0, w=907.0, h=248.0, rot=false]
+   [8, dem=17, x=0.0, y=248.0, w=907.0, h=248.0, rot=false]
+   [14, dem=23, x=0.0, y=496.0, w=894.0, h=174.0, rot=false]
+   [15, dem=24, x=907.0, y=0.0, w=422.0, h=323.0, rot=false]
+}, [printed= 23]
+4: pattern = {
+   [1, dem=25, x=0.0, y=0.0, w=894.0, h=417.0, rot=false]
+   [6, dem=23, x=894.0, y=0.0, w=593.0, h=415.0, rot=true]
+   [10, dem=15, x=0.0, y=417.0, w=873.0, h=234.0, rot=false]
+}, [printed= 15]
+5: pattern = {
+   [1, dem=25, x=0.0, y=0.0, w=894.0, h=417.0, rot=false]
+   [6, dem=23, x=894.0, y=0.0, w=593.0, h=415.0, rot=true]
+   [13, dem=12, x=0.0, y=417.0, w=844.0, h=185.0, rot=false]
+   [27, dem=15, x=1309.0, y=0.0, w=384.0, h=87.0, rot=true]
+}, [printed= 15]
+6: pattern = {
+   [3, dem=19, x=0.0, y=0.0, w=624.0, h=430.0, rot=true]
+   [3, dem=19, x=430.0, y=0.0, w=624.0, h=430.0, rot=false]
+   [16, dem=7, x=1054.0, y=0.0, w=344.0, h=318.0, rot=false]
+   [18, dem=17, x=1054.0, y=318.0, w=260.0, h=380.0, rot=false]
+   [23, dem=5, x=430.0, y=430.0, w=248.0, h=229.0, rot=false]
+   [23, dem=5, x=678.0, y=430.0, w=248.0, h=229.0, rot=true]
+}, [printed= 17]
+7: pattern = {
+   [1, dem=25, x=0.0, y=0.0, w=894.0, h=417.0, rot=false]
+   [3, dem=19, x=894.0, y=0.0, w=624.0, h=430.0, rot=true]
+   [17, dem=8, x=0.0, y=417.0, w=385.0, h=263.0, rot=false]
+   [17, dem=8, x=385.0, y=417.0, w=385.0, h=263.0, rot=false]
+   [30, dem=24, x=770.0, y=417.0, w=208.0, h=98.0, rot=true]
+}, [printed= 4]
+8: pattern = {
+   [1, dem=25, x=0.0, y=0.0, w=894.0, h=417.0, rot=false]
+   [9, dem=4, x=894.0, y=0.0, w=462.0, h=468.0, rot=false]
+   [19, dem=2, x=0.0, y=417.0, w=778.0, h=118.0, rot=false]
+   [19, dem=2, x=0.0, y=535.0, w=778.0, h=118.0, rot=false]
+   [24, dem=6, x=894.0, y=468.0, w=259.0, h=179.0, rot=false]
+   [25, dem=1, x=1153.0, y=468.0, w=233.0, h=177.0, rot=false]
+   [30, dem=24, x=778.0, y=417.0, w=208.0, h=98.0, rot=true]
+}, [printed= 6]
+9: pattern = {
+   [2, dem=13, x=0.0, y=0.0, w=763.0, h=433.0, rot=false]
+   [15, dem=24, x=763.0, y=0.0, w=422.0, h=323.0, rot=false]
+   [20, dem=5, x=0.0, y=433.0, w=663.0, h=126.0, rot=false]
+   [20, dem=5, x=0.0, y=559.0, w=663.0, h=126.0, rot=false]
+   [21, dem=1, x=763.0, y=323.0, w=158.0, h=489.0, rot=true]
+   [25, dem=1, x=1185.0, y=0.0, w=233.0, h=177.0, rot=true]
+   [26, dem=10, x=1252.0, y=323.0, w=143.0, h=281.0, rot=false]
+   [30, dem=24, x=663.0, y=433.0, w=208.0, h=98.0, rot=true]
+}, [printed= 14]
+
+}
+prix sRandom = 354.0
+
+Recherche de solution ..
+#Tabou demarrage : fSBase = 354.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 600 (100%), max iteration = 10000
+#Tabou fin : fSResult = 297.0, nbIteration = 318, timeEllapsed = 21002
+#Tabou demarrage : fSBase = 297.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 291.0, nbIteration = 500, timeEllapsed = 50599
+#Tabou demarrage : fSBase = 291.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 291.0, nbIteration = 500, timeEllapsed = 54911
+#Tabou demarrage : fSBase = 291.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 288.5, nbIteration = 500, timeEllapsed = 62448
+#Tabou demarrage : fSBase = 291.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 286.5, nbIteration = 500, timeEllapsed = 49654
+#Tabou demarrage : fSBase = 297.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 295.0, nbIteration = 500, timeEllapsed = 61909
+#Tabou demarrage : fSBase = 295.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 292.875, nbIteration = 500, timeEllapsed = 62651
+#Tabou demarrage : fSBase = 295.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 294.9999999999999, nbIteration = 500, timeEllapsed = 78051
+#Tabou demarrage : fSBase = 295.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 292.5, nbIteration = 500, timeEllapsed = 79590
+#Tabou demarrage : fSBase = 297.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 297.0, nbIteration = 500, timeEllapsed = 74589
+#Tabou demarrage : fSBase = 297.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 290.16666666666663, nbIteration = 500, timeEllapsed = 68294
+#Tabou demarrage : fSBase = 297.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 289.66666666666663, nbIteration = 500, timeEllapsed = 65920
+#Tabou demarrage : fSBase = 297.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 291.5, nbIteration = 500, timeEllapsed = 69756
+#Tabou demarrage : fSBase = 297.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 291.66666666666663, nbIteration = 500, timeEllapsed = 57698
+#Tabou demarrage : fSBase = 291.66666666666663, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 291.66666666666663, nbIteration = 500, timeEllapsed = 50667
+#Tabou demarrage : fSBase = 291.66666666666663, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 291.66666666666663, nbIteration = 500, timeEllapsed = 54294
+#Tabou demarrage : fSBase = 291.66666666666663, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 291.66666666666663, nbIteration = 500, timeEllapsed = 53715
+#Tabou demarrage : fSBase = 297.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 288.0, nbIteration = 500, timeEllapsed = 67291
+#Tabou demarrage : fSBase = 288.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 287.625, nbIteration = 500, timeEllapsed = 59761
+#Tabou demarrage : fSBase = 288.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 287.9999999999999, nbIteration = 500, timeEllapsed = 71833
+#Tabou demarrage : fSBase = 288.0, nb pattern = 10, nbTransPossible = 600, taille liste tabou = 60 (10%), max iteration = 500
+#Tabou fin : fSResult = 287.25, nbIteration = 500, timeEllapsed = 64192
+
+
+Meilleure solution !
+Solution = [pW=1400.0, pH=700.0, t=41072, f=286.5, price=289.0] {
+0: pattern = {
+   [5, dem=22, x=0.0, y=0.0, w=778.0, h=318.0, rot=false]
+   [11, dem=16, x=0.0, y=318.0, w=595.0, h=333.0, rot=false]
+   [12, dem=23, x=778.0, y=0.0, w=673.0, h=246.0, rot=true]
+   [29, dem=24, x=595.0, y=318.0, w=162.0, h=175.0, rot=false]
+   [27, dem=15, x=1024.0, y=0.0, w=384.0, h=87.0, rot=true]
+   [24, dem=6, x=1024.0, y=384.0, w=259.0, h=179.0, rot=true]
+   [18, dem=17, x=1111.0, y=0.0, w=260.0, h=380.0, rot=false]
+}, [printed= 22]
+1: pattern = {
+   [30, dem=24, x=0.0, y=0.0, w=208.0, h=98.0, rot=false]
+   [27, dem=15, x=0.0, y=98.0, w=384.0, h=87.0, rot=true]
+   [27, dem=15, x=87.0, y=98.0, w=384.0, h=87.0, rot=true]
+   [28, dem=11, x=0.0, y=482.0, w=165.0, h=173.0, rot=true]
+   [4, dem=2, x=208.0, y=0.0, w=949.0, h=262.0, rot=false]
+   [4, dem=2, x=208.0, y=262.0, w=949.0, h=262.0, rot=false]
+   [22, dem=20, x=208.0, y=524.0, w=810.0, h=83.0, rot=false]
+   [22, dem=20, x=208.0, y=607.0, w=810.0, h=83.0, rot=false]
+   [26, dem=10, x=1157.0, y=0.0, w=143.0, h=281.0, rot=false]
+}, [printed= 1]
+2: pattern = {
+   [30, dem=24, x=0.0, y=0.0, w=208.0, h=98.0, rot=true]
+   [27, dem=15, x=0.0, y=208.0, w=384.0, h=87.0, rot=true]
+   [7, dem=7, x=98.0, y=0.0, w=960.0, h=256.0, rot=false]
+   [7, dem=7, x=98.0, y=256.0, w=960.0, h=256.0, rot=false]
+   [16, dem=7, x=1058.0, y=0.0, w=344.0, h=318.0, rot=true]
+   [16, dem=7, x=1058.0, y=344.0, w=344.0, h=318.0, rot=true]
+   [19, dem=2, x=98.0, y=512.0, w=778.0, h=118.0, rot=false]
+}, [printed= 4]
+3: pattern = {
+   [8, dem=17, x=0.0, y=0.0, w=907.0, h=248.0, rot=false]
+   [14, dem=23, x=0.0, y=248.0, w=894.0, h=174.0, rot=false]
+   [14, dem=23, x=0.0, y=422.0, w=894.0, h=174.0, rot=false]
+   [15, dem=24, x=907.0, y=0.0, w=422.0, h=323.0, rot=false]
+   [15, dem=24, x=907.0, y=323.0, w=422.0, h=323.0, rot=false]
+   [22, dem=20, x=0.0, y=596.0, w=810.0, h=83.0, rot=false]
+}, [printed= 12]
+4: pattern = {
+   [1, dem=25, x=0.0, y=0.0, w=894.0, h=417.0, rot=false]
+   [6, dem=23, x=894.0, y=0.0, w=593.0, h=415.0, rot=true]
+   [10, dem=15, x=0.0, y=417.0, w=873.0, h=234.0, rot=false]
+}, [printed= 19]
+5: pattern = {
+   [1, dem=25, x=0.0, y=0.0, w=894.0, h=417.0, rot=false]
+   [13, dem=12, x=0.0, y=417.0, w=844.0, h=185.0, rot=false]
+   [6, dem=23, x=894.0, y=0.0, w=593.0, h=415.0, rot=true]
+   [22, dem=20, x=0.0, y=602.0, w=810.0, h=83.0, rot=false]
+}, [printed= 7]
+6: pattern = {
+   [3, dem=19, x=0.0, y=0.0, w=624.0, h=430.0, rot=true]
+   [3, dem=19, x=430.0, y=0.0, w=624.0, h=430.0, rot=true]
+   [30, dem=24, x=860.0, y=0.0, w=208.0, h=98.0, rot=true]
+   [30, dem=24, x=958.0, y=0.0, w=208.0, h=98.0, rot=true]
+   [25, dem=1, x=1056.0, y=0.0, w=233.0, h=177.0, rot=false]
+   [9, dem=4, x=860.0, y=208.0, w=462.0, h=468.0, rot=true]
+}, [printed= 10]
+7: pattern = {
+   [20, dem=5, x=0.0, y=0.0, w=663.0, h=126.0, rot=true]
+   [17, dem=8, x=126.0, y=0.0, w=385.0, h=263.0, rot=true]
+   [29, dem=24, x=126.0, y=385.0, w=162.0, h=175.0, rot=true]
+   [13, dem=12, x=389.0, y=0.0, w=844.0, h=185.0, rot=false]
+   [2, dem=13, x=389.0, y=185.0, w=763.0, h=433.0, rot=false]
+   [28, dem=11, x=1233.0, y=0.0, w=165.0, h=173.0, rot=false]
+   [28, dem=11, x=1233.0, y=173.0, w=165.0, h=173.0, rot=false]
+   [26, dem=10, x=1233.0, y=346.0, w=143.0, h=281.0, rot=false]
+}, [printed= 8]
+8: pattern = {
+   [8, dem=17, x=0.0, y=0.0, w=907.0, h=248.0, rot=false]
+   [12, dem=23, x=907.0, y=0.0, w=673.0, h=246.0, rot=true]
+   [28, dem=11, x=1153.0, y=0.0, w=165.0, h=173.0, rot=false]
+   [19, dem=2, x=0.0, y=248.0, w=778.0, h=118.0, rot=false]
+   [15, dem=24, x=0.0, y=366.0, w=422.0, h=323.0, rot=false]
+   [26, dem=10, x=422.0, y=366.0, w=143.0, h=281.0, rot=true]
+   [21, dem=1, x=1153.0, y=173.0, w=158.0, h=489.0, rot=false]
+}, [printed= 1]
+9: pattern = {
+   [8, dem=17, x=0.0, y=0.0, w=907.0, h=248.0, rot=false]
+   [30, dem=24, x=907.0, y=0.0, w=208.0, h=98.0, rot=true]
+   [30, dem=24, x=1005.0, y=0.0, w=208.0, h=98.0, rot=true]
+   [29, dem=24, x=1103.0, y=0.0, w=162.0, h=175.0, rot=false]
+   [2, dem=13, x=0.0, y=248.0, w=763.0, h=433.0, rot=false]
+   [25, dem=1, x=907.0, y=208.0, w=233.0, h=177.0, rot=true]
+   [23, dem=5, x=1084.0, y=208.0, w=248.0, h=229.0, rot=false]
+}, [printed= 5]
+
+}
+Price = 289.0
+
+Total time : 1291240

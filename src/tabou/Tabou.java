@@ -2,8 +2,10 @@ package tabou;
 
 import image.TypeImage;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.Random;
 
 import main.Solution;
 import transformation.Transformation;
@@ -89,7 +91,8 @@ public class Tabou {
 	 */
 	private Solution bestNeighbor(Solution s)
 	{
-		Solution bestNeightbor = null; 
+		double bestF = Double.MAX_VALUE; 
+		List<Solution> bestNeightbors = new ArrayList<Solution>(); 
 		
 		for(int i=0; i < s.getPatterns().length ; i++)
 		{
@@ -108,9 +111,14 @@ public class Tabou {
 							//System.out.println("f="+s1.getFitness());
 							
 							//Si meilleur voisin trouvé le remplacer
-							if (bestNeightbor == null 
-									|| (bestNeightbor != null && s1.getFitness() < bestNeightbor.getFitness()))
-								bestNeightbor = s1;
+							if (s1.getFitness() < bestF)
+							{
+								bestF = s1.getFitness();
+								bestNeightbors.clear();
+							}
+							
+							if (bestF == s1.getFitness())
+								bestNeightbors.add(s1);
 						}
 					} 
 					
@@ -119,7 +127,11 @@ public class Tabou {
 			}
 		}
 		
-		return bestNeightbor;
+		if (bestNeightbors.size() == 0)
+			return null;
+		
+		//random parmi les meilleurs voisins
+		return bestNeightbors.get(new Random().nextInt(bestNeightbors.size()));
 	}
 
 	public int getMaxLevel() {

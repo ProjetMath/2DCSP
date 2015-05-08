@@ -75,22 +75,19 @@ public class Execute {
 	/*
 	 * Recherche de la meilleure solution
 	 */
-	private List<Solution> lookup(Solution first, int level, int sizeListElite, int nbIteration) {
-		if (level <= 0) level = 1;
+	private List<Solution> lookup(Solution first, int ltPercent, int sizeListElite, int nbIteration) {
+		if (ltPercent <= 0) ltPercent = 1;
 		if (sizeListElite <= 0) sizeListElite = 1;
 		
-		//Toutes les transactions possibles au level 1 pour avoir une recherche rapide, 
-		//plus le level augmente plus la taille de la liste tabou diminue (/level) et la recherche deviens précise
-		
 		int nbTransPossible = first.getPatterns().length*first.getTypesImages().size()*2;
-		int sizeListTabou = nbTransPossible / level;
+		int sizeListTabou = nbTransPossible * ltPercent / 100;
 		
-		System.out.println("#Tabou demarrage : nbTransPossible = "+nbTransPossible+", taille liste tabou = "+sizeListTabou+", max iteration = "+nbIteration);
-		Tabou algoTabou = new Tabou(nbTransPossible / level, nbIteration, sizeListElite); //taille liste tabou, nombre max de level, taille liste elite
+		System.out.println("#Tabou demarrage : fSBase = "+first.getFitness()+", nb pattern = "+first.getPatterns().length+", nbTransPossible = "+nbTransPossible+", taille liste tabou = "+sizeListTabou+" ("+ltPercent+"%), max iteration = "+nbIteration);
+		Tabou algoTabou = new Tabou(sizeListTabou, nbIteration, sizeListElite); //taille liste tabou, nombre max de level, taille liste elite
 		
 		List<Solution> listElit = algoTabou.generatedTabou(first);
 		
-		System.out.println("#Tabou fin : nbIteration = "+algoTabou.getNbIteration()+", timeEllapsed = "+algoTabou.getTimeEllapsed());
+		System.out.println("#Tabou fin : fSResult = "+listElit.get(0).getFitness()+", nbIteration = "+algoTabou.getNbIteration()+", timeEllapsed = "+algoTabou.getTimeEllapsed());
 				
 		return listElit;
 	}
@@ -98,7 +95,7 @@ public class Execute {
 	/*
 	 * Fonctionnement global
 	 */
-	public Solution execute(File f) throws Exception {	
+	public Solution execute(File f) {//, int ltPercentNiv1, int nbIteNiv1, int ltPercentNiv2, int nbIteNiv2) throws Exception {	
 		System.out.println("\r\n");
 		System.out.println("Le fichier "+f.getName()+" va etre traité\r\n");
 	
@@ -127,33 +124,43 @@ public class Execute {
 		System.out.println("prix sRandom = "+sRandom.calculPrice());
 		System.out.println("\r\nRecherche de solution ..");
 		
-		Solution sBest = sRandom;
-		/*for (int nbPattern =  sRandom.getPatterns().length; ; nbPattern++)
-		{
-			System.out.println("Nombre pattern = "+nbPattern);
-			
-			
-			Solution sb = lookup(sRandom, nbPattern, 1, 1000).get(0).reconstruct();
-			
-			System.out.println(sb);
-			if (sBest == null || (sBest != null && sb.calculPrice() < sBest.calculPrice()))
-			{
-				sBest = sb;
-				if (sb.getPatterns().length < nbPattern)
-					nbPattern = sb.getPatterns().length-1;
-			} else 
-				break;
-		}*/
-		
-		for (Solution sNiv1 : lookup(sRandom, 1, 3, 10000))
-		{
+		//Solution sBest = sRandom;
+		/*for (Solution sNiv1 : lookup(sRandom, ltPercentNiv1, 3, nbIteNiv1))
+		{ //Prendre les 3 meilleures solutions et refaire un tabou dessus
 			sNiv1.reconstruct();
 			
-			Solution s = lookup(sNiv1, sNiv1.getPatterns().length, 1, 2000).get(0);
+			Solution s = lookup(sNiv1, ltPercentNiv2, 1, nbIteNiv2).get(0);
 			s.reconstruct();
 			
 			if (s.getFitness() < sBest.getFitness())
 				sBest = s;
+		}*/
+		
+		//Solution sBest = lookup(sRandom, 100, 1, 10000).get(0);
+		//sBest.reconstruct();
+		
+		/*for (int i = 1; i <= 2; ++i)
+		{
+			Solution s = lookup(sBest, 25-i*10, 1, 2500*i).get(0);
+			s.reconstruct();
+			
+			if (s.getFitness() < sBest.getFitness())
+				sBest = s;
+		}*/
+		
+		Solution s1 = lookup(sRandom, 100, 1, 10000).get(0).reconstruct();
+		Solution sBest = s1;
+		for (int i=0; i<5; ++i)
+		{
+			Solution s2 = lookup(s1, 10, 1, 500).get(0).reconstruct();
+			
+			for (int j=0; j<3; ++j)
+			{
+				Solution s = lookup(s2, 10, 1, 500).get(0).reconstruct();
+				
+				if (s.getFitness() < sBest.getFitness())
+					sBest = s;
+			}
 		}
 		
 		System.out.println("\r\n");
@@ -173,8 +180,8 @@ public class Execute {
 		new File("dataOut").mkdir(); //dossier dataOut
 		new File("dataOut/"+f.getName()).mkdir(); //dossier avec nom fichier
 		
-		for (int i = 0; i < 5; ++i)
-		{
+		//for (int i = 0; i < 3; ++i)
+		{	
 			SimpleDateFormat filePattern = new SimpleDateFormat("ddMMyyyy_HHmmss");
 			String filename = filePattern.format(new Date()) + ".txt";
 			
@@ -189,7 +196,6 @@ public class Execute {
 				Solution bestSol = exec.execute(f);			
 				
 				System.out.println("\r\nTotal time : "+(System.currentTimeMillis()-startTime));
-				//143 a 4 p
 				
 				//JFrame frame = new Affichage(bestSol,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
 				//Affichage.affiche(frame);

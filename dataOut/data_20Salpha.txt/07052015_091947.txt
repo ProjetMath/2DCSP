@@ -1,0 +1,136 @@
+
+
+Le fichier data_20Salpha.txt va etre traité
+
+Pattern x = 1400.0 / Pattern y = 700.0
+TypeImage = [h=468.0, w=832.0, s=389376.0, dem=18]
+TypeImage = [h=391.0, w=866.0, s=338606.0, dem=14]
+TypeImage = [h=292.0, w=920.0, s=268640.0, dem=14]
+TypeImage = [h=326.0, w=787.0, s=256562.0, dem=22]
+TypeImage = [h=347.0, w=721.0, s=250187.0, dem=12]
+TypeImage = [h=270.0, w=782.0, s=211140.0, dem=9]
+TypeImage = [h=185.0, w=933.0, s=172605.0, dem=5]
+TypeImage = [h=173.0, w=903.0, s=156219.0, dem=11]
+TypeImage = [h=461.0, w=282.0, s=130002.0, dem=3]
+TypeImage = [h=141.0, w=839.0, s=118299.0, dem=7]
+TypeImage = [h=178.0, w=650.0, s=115700.0, dem=22]
+TypeImage = [h=211.0, w=516.0, s=108876.0, dem=21]
+TypeImage = [h=338.0, w=306.0, s=103428.0, dem=10]
+TypeImage = [h=389.0, w=219.0, s=85191.0, dem=18]
+TypeImage = [h=303.0, w=265.0, s=80295.0, dem=5]
+TypeImage = [h=318.0, w=252.0, s=80136.0, dem=6]
+TypeImage = [h=401.0, w=196.0, s=78596.0, dem=12]
+TypeImage = [h=146.0, w=310.0, s=45260.0, dem=6]
+TypeImage = [h=124.0, w=247.0, s=30628.0, dem=6]
+TypeImage = [h=106.0, w=245.0, s=25970.0, dem=4]
+Gen sol alea nb pattern = 1
+Gen sol alea nb pattern = 2
+Gen sol alea nb pattern = 3
+Gen sol alea nb pattern = 4
+Gen sol alea nb pattern = 5
+Gen sol alea nb pattern = 6
+Solution aléatoire : 
+
+Solution = [pW=1400.0, pH=700.0, t=1, f=222.0, price=222.0] {
+0: pattern = {
+   [1, dem=18, x=0.0, y=0.0, w=832.0, h=468.0, rot=false]
+   [9, dem=3, x=832.0, y=0.0, w=282.0, h=461.0, rot=true]
+   [18, dem=6, x=0.0, y=468.0, w=310.0, h=146.0, rot=false]
+   [20, dem=4, x=1293.0, y=0.0, w=245.0, h=106.0, rot=true]
+}, [printed= 18]
+1: pattern = {
+   [2, dem=14, x=0.0, y=0.0, w=866.0, h=391.0, rot=false]
+   [6, dem=9, x=0.0, y=391.0, w=782.0, h=270.0, rot=false]
+   [16, dem=6, x=866.0, y=0.0, w=252.0, h=318.0, rot=true]
+}, [printed= 14]
+2: pattern = {
+   [3, dem=14, x=0.0, y=0.0, w=920.0, h=292.0, rot=false]
+   [8, dem=11, x=0.0, y=292.0, w=903.0, h=173.0, rot=false]
+   [8, dem=11, x=0.0, y=465.0, w=903.0, h=173.0, rot=false]
+   [9, dem=3, x=920.0, y=0.0, w=282.0, h=461.0, rot=false]
+}, [printed= 14]
+3: pattern = {
+   [4, dem=22, x=0.0, y=0.0, w=787.0, h=326.0, rot=false]
+   [5, dem=12, x=0.0, y=326.0, w=721.0, h=347.0, rot=false]
+   [13, dem=10, x=787.0, y=0.0, w=306.0, h=338.0, rot=true]
+   [13, dem=10, x=787.0, y=306.0, w=306.0, h=338.0, rot=true]
+}, [printed= 22]
+4: pattern = {
+   [7, dem=5, x=0.0, y=0.0, w=933.0, h=185.0, rot=false]
+   [7, dem=5, x=0.0, y=185.0, w=933.0, h=185.0, rot=false]
+   [11, dem=22, x=0.0, y=370.0, w=650.0, h=178.0, rot=false]
+   [12, dem=21, x=933.0, y=0.0, w=516.0, h=211.0, rot=true]
+   [14, dem=18, x=1144.0, y=0.0, w=219.0, h=389.0, rot=false]
+   [15, dem=5, x=650.0, y=370.0, w=265.0, h=303.0, rot=false]
+   [18, dem=6, x=933.0, y=516.0, w=310.0, h=146.0, rot=false]
+}, [printed= 22]
+5: pattern = {
+   [7, dem=5, x=0.0, y=0.0, w=933.0, h=185.0, rot=false]
+   [10, dem=7, x=0.0, y=185.0, w=839.0, h=141.0, rot=false]
+   [10, dem=7, x=0.0, y=326.0, w=839.0, h=141.0, rot=false]
+   [12, dem=21, x=0.0, y=467.0, w=516.0, h=211.0, rot=false]
+   [12, dem=21, x=933.0, y=0.0, w=516.0, h=211.0, rot=true]
+   [17, dem=12, x=1144.0, y=0.0, w=196.0, h=401.0, rot=false]
+   [19, dem=6, x=516.0, y=467.0, w=247.0, h=124.0, rot=false]
+   [19, dem=6, x=933.0, y=516.0, w=247.0, h=124.0, rot=false]
+   [20, dem=4, x=516.0, y=591.0, w=245.0, h=106.0, rot=false]
+}, [printed= 12]
+
+}
+prix sRandom = 222.0
+
+Recherche de solution ..
+#Tabou demarrage : fSBase = 222.0, nb pattern = 6, nbTransPossible = 240, taille liste tabou = 240 (100%), max iteration = 10000
+#Tabou fin : nbIteration = 132, timeEllapsed = 2295
+#Tabou demarrage : fSBase = 190.5, nb pattern = 6, nbTransPossible = 240, taille liste tabou = 36 (15%), max iteration = 2500
+#Tabou fin : nbIteration = 2500, timeEllapsed = 85533
+#Tabou demarrage : fSBase = 188.0, nb pattern = 5, nbTransPossible = 200, taille liste tabou = 10 (5%), max iteration = 5000
+#Tabou fin : nbIteration = 5000, timeEllapsed = 107656
+
+
+Meilleure solution !
+Solution = [pW=1400.0, pH=700.0, t=40, f=168.0, price=169.0] {
+0: pattern = {
+   [18, dem=6, x=0.0, y=0.0, w=310.0, h=146.0, rot=false]
+   [7, dem=5, x=310.0, y=0.0, w=933.0, h=185.0, rot=false]
+   [1, dem=18, x=310.0, y=185.0, w=832.0, h=468.0, rot=false]
+   [20, dem=4, x=1243.0, y=0.0, w=245.0, h=106.0, rot=true]
+   [14, dem=18, x=0.0, y=146.0, w=219.0, h=389.0, rot=false]
+}, [printed= 18]
+1: pattern = {
+   [16, dem=6, x=0.0, y=0.0, w=252.0, h=318.0, rot=true]
+   [11, dem=22, x=318.0, y=0.0, w=650.0, h=178.0, rot=true]
+   [2, dem=14, x=496.0, y=0.0, w=866.0, h=391.0, rot=false]
+   [6, dem=9, x=496.0, y=391.0, w=782.0, h=270.0, rot=false]
+   [17, dem=12, x=0.0, y=252.0, w=196.0, h=401.0, rot=false]
+}, [printed= 14]
+2: pattern = {
+   [9, dem=3, x=0.0, y=0.0, w=282.0, h=461.0, rot=false]
+   [3, dem=14, x=282.0, y=0.0, w=920.0, h=292.0, rot=false]
+   [11, dem=22, x=1202.0, y=0.0, w=650.0, h=178.0, rot=true]
+   [20, dem=4, x=0.0, y=461.0, w=245.0, h=106.0, rot=false]
+   [8, dem=11, x=282.0, y=292.0, w=903.0, h=173.0, rot=false]
+   [8, dem=11, x=282.0, y=465.0, w=903.0, h=173.0, rot=false]
+}, [printed= 11]
+3: pattern = {
+   [19, dem=6, x=0.0, y=0.0, w=247.0, h=124.0, rot=false]
+   [12, dem=21, x=0.0, y=124.0, w=516.0, h=211.0, rot=true]
+   [4, dem=22, x=247.0, y=0.0, w=787.0, h=326.0, rot=false]
+   [15, dem=5, x=1034.0, y=0.0, w=265.0, h=303.0, rot=true]
+   [5, dem=12, x=247.0, y=326.0, w=721.0, h=347.0, rot=false]
+   [13, dem=10, x=1034.0, y=265.0, w=306.0, h=338.0, rot=true]
+}, [printed= 22]
+4: pattern = {
+   [19, dem=6, x=0.0, y=0.0, w=247.0, h=124.0, rot=true]
+   [19, dem=6, x=0.0, y=247.0, w=247.0, h=124.0, rot=true]
+   [3, dem=14, x=124.0, y=0.0, w=920.0, h=292.0, rot=false]
+   [12, dem=21, x=1044.0, y=0.0, w=516.0, h=211.0, rot=true]
+   [10, dem=7, x=124.0, y=292.0, w=839.0, h=141.0, rot=false]
+   [10, dem=7, x=124.0, y=433.0, w=839.0, h=141.0, rot=false]
+   [20, dem=4, x=1044.0, y=516.0, w=245.0, h=106.0, rot=false]
+}, [printed= 4]
+
+}
+Price = 169.0
+
+Total time : 197342
