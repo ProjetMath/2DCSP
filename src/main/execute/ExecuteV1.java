@@ -46,7 +46,7 @@ public class ExecuteV1 extends Execute {
 		System.out.println("prix sRandom = "+sRandom.calculPrice());
 		System.out.println("\r\nRecherche de solution ..");
 		
-		Solution sBest = lookup(sRandom, 50, 1, 10000).get(0);
+		Solution sBest = lookup(sRandom, 50, 1, 10000).get(0).reconstruct();
 		
 		System.out.println("\r\n");
 		System.out.println("Meilleure solution !");
