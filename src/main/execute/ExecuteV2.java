@@ -50,7 +50,7 @@ public class ExecuteV2 extends Execute {
 		Solution sBest = lookup(sRandom, 100, 1, 10000).get(0).reconstruct();;
 		for (int i=0; i<5; ++i)
 		{
-			Solution s = lookup(sBest, 20, 1, 5000).get(0).reconstruct();
+			Solution s = lookup(sBest, 10, 1, 5000).get(0).reconstruct();
 			
 			if (s.getFitness() <= sBest.getFitness())
 			{
@@ -67,7 +67,7 @@ public class ExecuteV2 extends Execute {
 	}
 	
 	public static void main(String[] args) throws FileNotFoundException {
-		Execute exec = new ExecuteV3();
+		Execute exec = new ExecuteV2();
 		
 		File f = exec.chooseFile();
 		if (f == null) return;
