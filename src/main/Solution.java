@@ -132,14 +132,20 @@ public class Solution {
 														new NonNegativeConstraint(true)
 														);
 
+			fitness = optSolution.getValue();
+			
 			double[] solution = optSolution.getPoint();
 			for (int i=0; i<solution.length; ++i)
 			{
 				int s = (int) Math.ceil(solution[i]); //prendre la valeur superieur
+				
+				if (s == 0)
+					fitness -= Pattern.getPrice();
+				
 				nbPrintPattern[i] = s;
 			}
 		
-			fitness = optSolution.getValue();
+			
 		} catch (NoFeasibleSolutionException ex) {
 			fitness = Double.MAX_VALUE;
 		}
