@@ -48,15 +48,23 @@ public class ExecuteV3 extends Execute  {
 		
 
 		Solution sBest = sRandom;
-		for (Solution sNiv1 : lookup(sRandom, 100, 3, 10000))
-		{ //Prendre les 3 meilleures solutions et refaire un tabou dessus
+		for (Solution sNiv1 : lookup(sRandom, 80, 50, 100000))
+		{ // Prendre les 3 meilleures solutions et refaire un tabou dessus
 			sNiv1.reconstruct();
-			
-			Solution s = lookup(sNiv1, 20, 1, 5000).get(0);
-			s.reconstruct();
-			
-			if (s.getFitness() < sBest.getFitness())
-				sBest = s;
+			for (Solution sNiv2 : lookup(sNiv1, 65, 25,100000))
+			{ // Prendre les 3 meilleures solutions et refaire un tabou dessus
+				sNiv2.reconstruct();
+			for (Solution sNiv3 : lookup(sNiv2, 45, 3,178*2))
+			{ // Prendre les 3 meilleures solutions et refaire un tabou dessus
+				sNiv2.reconstruct();
+				
+					Solution s = lookup(sNiv3, 25, 3, 178*4).get(0);
+					s.reconstruct();
+
+					if (s.getFitness() < sBest.getFitness())
+						sBest = s;
+			}
+			}
 		}
 		
 		System.out.println("\r\n");
