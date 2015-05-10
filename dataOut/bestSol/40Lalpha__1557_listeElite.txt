@@ -1,0 +1,287 @@
+
+
+Le fichier data_40Lalpha.txt va etre traité
+
+Pattern x = 1400.0 / Pattern y = 700.0
+TypeImage = [h=439.0, w=915.0, s=401685.0, dem=129]
+TypeImage = [h=498.0, w=722.0, s=359556.0, dem=182]
+TypeImage = [h=399.0, w=882.0, s=351918.0, dem=181]
+TypeImage = [h=355.0, w=884.0, s=313820.0, dem=154]
+TypeImage = [h=344.0, w=873.0, s=300312.0, dem=169]
+TypeImage = [h=339.0, w=868.0, s=294252.0, dem=102]
+TypeImage = [h=422.0, w=676.0, s=285272.0, dem=171]
+TypeImage = [h=332.0, w=776.0, s=257632.0, dem=147]
+TypeImage = [h=336.0, w=765.0, s=257040.0, dem=170]
+TypeImage = [h=332.0, w=764.0, s=253648.0, dem=114]
+TypeImage = [h=418.0, w=536.0, s=224048.0, dem=141]
+TypeImage = [h=476.0, w=464.0, s=220864.0, dem=147]
+TypeImage = [h=231.0, w=831.0, s=191961.0, dem=193]
+TypeImage = [h=202.0, w=927.0, s=187254.0, dem=146]
+TypeImage = [h=225.0, w=810.0, s=182250.0, dem=117]
+TypeImage = [h=339.0, w=529.0, s=179331.0, dem=140]
+TypeImage = [h=324.0, w=542.0, s=175608.0, dem=134]
+TypeImage = [h=306.0, w=529.0, s=161874.0, dem=198]
+TypeImage = [h=242.0, w=659.0, s=159478.0, dem=195]
+TypeImage = [h=447.0, w=348.0, s=155556.0, dem=191]
+TypeImage = [h=208.0, w=722.0, s=150176.0, dem=141]
+TypeImage = [h=156.0, w=913.0, s=142428.0, dem=127]
+TypeImage = [h=403.0, w=327.0, s=131781.0, dem=164]
+TypeImage = [h=217.0, w=542.0, s=117614.0, dem=182]
+TypeImage = [h=157.0, w=745.0, s=116965.0, dem=141]
+TypeImage = [h=301.0, w=363.0, s=109263.0, dem=195]
+TypeImage = [h=112.0, w=940.0, s=105280.0, dem=122]
+TypeImage = [h=173.0, w=604.0, s=104492.0, dem=157]
+TypeImage = [h=110.0, w=804.0, s=88440.0, dem=122]
+TypeImage = [h=94.0, w=913.0, s=85822.0, dem=161]
+TypeImage = [h=132.0, w=593.0, s=78276.0, dem=151]
+TypeImage = [h=125.0, w=603.0, s=75375.0, dem=111]
+TypeImage = [h=385.0, w=169.0, s=65065.0, dem=185]
+TypeImage = [h=138.0, w=390.0, s=53820.0, dem=175]
+TypeImage = [h=77.0, w=666.0, s=51282.0, dem=168]
+TypeImage = [h=107.0, w=367.0, s=39269.0, dem=168]
+TypeImage = [h=72.0, w=472.0, s=33984.0, dem=128]
+TypeImage = [h=83.0, w=408.0, s=33864.0, dem=168]
+TypeImage = [h=219.0, w=154.0, s=33726.0, dem=102]
+TypeImage = [h=142.0, w=208.0, s=29536.0, dem=131]
+Gen sol alea nb pattern = 1
+Gen sol alea nb pattern = 2
+Gen sol alea nb pattern = 3
+Gen sol alea nb pattern = 4
+Gen sol alea nb pattern = 5
+Gen sol alea nb pattern = 6
+Gen sol alea nb pattern = 7
+Gen sol alea nb pattern = 8
+Gen sol alea nb pattern = 9
+Gen sol alea nb pattern = 10
+Gen sol alea nb pattern = 11
+Gen sol alea nb pattern = 12
+Gen sol alea nb pattern = 13
+Gen sol alea nb pattern = 14
+Gen sol alea nb pattern = 15
+Gen sol alea nb pattern = 16
+Gen sol alea nb pattern = 17
+Gen sol alea nb pattern = 18
+Gen sol alea nb pattern = 19
+Gen sol alea nb pattern = 20
+Solution aléatoire : 
+
+Solution = [pW=1400.0, pH=700.0, t=2, f=2758.5, price=2760.0] {
+0: pattern = {
+   [1, dem=129, x=0.0, y=0.0, w=915.0, h=439.0, rot=false]
+   [17, dem=134, x=915.0, y=0.0, w=542.0, h=324.0, rot=true]
+}, [printed= 134]
+1: pattern = {
+   [3, dem=181, x=0.0, y=0.0, w=882.0, h=399.0, rot=false]
+   [12, dem=147, x=882.0, y=0.0, w=464.0, h=476.0, rot=false]
+   [34, dem=175, x=882.0, y=476.0, w=390.0, h=138.0, rot=false]
+}, [printed= 181]
+2: pattern = {
+   [5, dem=169, x=0.0, y=0.0, w=873.0, h=344.0, rot=false]
+   [5, dem=169, x=0.0, y=344.0, w=873.0, h=344.0, rot=false]
+   [31, dem=151, x=873.0, y=0.0, w=593.0, h=132.0, rot=true]
+}, [printed= 151]
+3: pattern = {
+   [4, dem=154, x=0.0, y=0.0, w=884.0, h=355.0, rot=false]
+   [8, dem=147, x=0.0, y=355.0, w=776.0, h=332.0, rot=false]
+   [26, dem=195, x=884.0, y=0.0, w=363.0, h=301.0, rot=true]
+   [38, dem=168, x=884.0, y=363.0, w=408.0, h=83.0, rot=false]
+}, [printed= 195]
+4: pattern = {
+   [6, dem=102, x=0.0, y=0.0, w=868.0, h=339.0, rot=false]
+   [7, dem=171, x=868.0, y=0.0, w=676.0, h=422.0, rot=true]
+   [9, dem=170, x=0.0, y=339.0, w=765.0, h=336.0, rot=false]
+}, [printed= 170]
+5: pattern = {
+   [4, dem=154, x=0.0, y=0.0, w=884.0, h=355.0, rot=false]
+   [7, dem=171, x=884.0, y=0.0, w=676.0, h=422.0, rot=true]
+   [10, dem=114, x=0.0, y=355.0, w=764.0, h=332.0, rot=false]
+}, [printed= 114]
+6: pattern = {
+   [5, dem=169, x=0.0, y=0.0, w=873.0, h=344.0, rot=false]
+   [11, dem=141, x=873.0, y=0.0, w=536.0, h=418.0, rot=true]
+   [13, dem=193, x=0.0, y=344.0, w=831.0, h=231.0, rot=false]
+   [37, dem=128, x=1291.0, y=0.0, w=472.0, h=72.0, rot=true]
+   [37, dem=128, x=873.0, y=536.0, w=472.0, h=72.0, rot=false]
+}, [printed= 64]
+7: pattern = {
+   [14, dem=146, x=0.0, y=0.0, w=927.0, h=202.0, rot=false]
+   [14, dem=146, x=0.0, y=202.0, w=927.0, h=202.0, rot=false]
+   [14, dem=146, x=0.0, y=404.0, w=927.0, h=202.0, rot=false]
+   [16, dem=140, x=927.0, y=0.0, w=529.0, h=339.0, rot=true]
+   [35, dem=168, x=0.0, y=606.0, w=666.0, h=77.0, rot=false]
+}, [printed= 140]
+8: pattern = {
+   [1, dem=129, x=0.0, y=0.0, w=915.0, h=439.0, rot=false]
+   [7, dem=171, x=915.0, y=0.0, w=676.0, h=422.0, rot=true]
+   [15, dem=117, x=0.0, y=439.0, w=810.0, h=225.0, rot=false]
+}, [printed= 117]
+9: pattern = {
+   [1, dem=129, x=0.0, y=0.0, w=915.0, h=439.0, rot=false]
+   [13, dem=193, x=0.0, y=439.0, w=831.0, h=231.0, rot=false]
+   [18, dem=198, x=915.0, y=0.0, w=529.0, h=306.0, rot=true]
+   [34, dem=175, x=915.0, y=529.0, w=390.0, h=138.0, rot=false]
+}, [printed= 198]
+10: pattern = {
+   [2, dem=182, x=0.0, y=0.0, w=722.0, h=498.0, rot=false]
+   [19, dem=195, x=722.0, y=0.0, w=659.0, h=242.0, rot=false]
+   [20, dem=191, x=722.0, y=242.0, w=348.0, h=447.0, rot=false]
+   [28, dem=157, x=0.0, y=498.0, w=604.0, h=173.0, rot=false]
+   [36, dem=168, x=1070.0, y=242.0, w=367.0, h=107.0, rot=true]
+}, [printed= 195]
+11: pattern = {
+   [1, dem=129, x=0.0, y=0.0, w=915.0, h=439.0, rot=false]
+   [7, dem=171, x=915.0, y=0.0, w=676.0, h=422.0, rot=true]
+   [21, dem=141, x=0.0, y=439.0, w=722.0, h=208.0, rot=false]
+}, [printed= 141]
+12: pattern = {
+   [22, dem=127, x=0.0, y=0.0, w=913.0, h=156.0, rot=false]
+   [23, dem=164, x=913.0, y=0.0, w=327.0, h=403.0, rot=true]
+   [24, dem=182, x=0.0, y=156.0, w=542.0, h=217.0, rot=true]
+   [24, dem=182, x=217.0, y=156.0, w=542.0, h=217.0, rot=true]
+   [33, dem=185, x=913.0, y=327.0, w=169.0, h=385.0, rot=true]
+   [33, dem=185, x=913.0, y=496.0, w=169.0, h=385.0, rot=true]
+   [36, dem=168, x=434.0, y=156.0, w=367.0, h=107.0, rot=true]
+   [36, dem=168, x=434.0, y=523.0, w=367.0, h=107.0, rot=false]
+   [36, dem=168, x=541.0, y=156.0, w=367.0, h=107.0, rot=false]
+   [39, dem=102, x=541.0, y=263.0, w=154.0, h=219.0, rot=true]
+   [40, dem=131, x=760.0, y=263.0, w=208.0, h=142.0, rot=true]
+}, [printed= 164]
+13: pattern = {
+   [1, dem=129, x=0.0, y=0.0, w=915.0, h=439.0, rot=false]
+   [7, dem=171, x=915.0, y=0.0, w=676.0, h=422.0, rot=true]
+   [25, dem=141, x=0.0, y=439.0, w=745.0, h=157.0, rot=false]
+   [40, dem=131, x=745.0, y=439.0, w=208.0, h=142.0, rot=true]
+}, [printed= 141]
+14: pattern = {
+   [7, dem=171, x=0.0, y=0.0, w=676.0, h=422.0, rot=true]
+   [27, dem=122, x=422.0, y=0.0, w=940.0, h=112.0, rot=false]
+   [27, dem=122, x=422.0, y=112.0, w=940.0, h=112.0, rot=false]
+   [27, dem=122, x=422.0, y=224.0, w=940.0, h=112.0, rot=false]
+   [27, dem=122, x=422.0, y=336.0, w=940.0, h=112.0, rot=false]
+   [35, dem=168, x=422.0, y=448.0, w=666.0, h=77.0, rot=false]
+   [35, dem=168, x=422.0, y=525.0, w=666.0, h=77.0, rot=false]
+   [35, dem=168, x=422.0, y=602.0, w=666.0, h=77.0, rot=false]
+}, [printed= 31]
+15: pattern = {
+   [1, dem=129, x=0.0, y=0.0, w=915.0, h=439.0, rot=false]
+   [12, dem=147, x=915.0, y=0.0, w=464.0, h=476.0, rot=true]
+   [29, dem=122, x=0.0, y=439.0, w=804.0, h=110.0, rot=false]
+   [33, dem=185, x=915.0, y=464.0, w=169.0, h=385.0, rot=true]
+   [34, dem=175, x=0.0, y=549.0, w=390.0, h=138.0, rot=false]
+   [34, dem=175, x=390.0, y=549.0, w=390.0, h=138.0, rot=false]
+}, [printed= 122]
+16: pattern = {
+   [1, dem=129, x=0.0, y=0.0, w=915.0, h=439.0, rot=false]
+   [11, dem=141, x=915.0, y=0.0, w=536.0, h=418.0, rot=true]
+   [30, dem=161, x=0.0, y=439.0, w=913.0, h=94.0, rot=false]
+   [32, dem=111, x=0.0, y=533.0, w=603.0, h=125.0, rot=false]
+   [39, dem=102, x=603.0, y=533.0, w=154.0, h=219.0, rot=true]
+   [40, dem=131, x=915.0, y=536.0, w=208.0, h=142.0, rot=false]
+   [40, dem=131, x=1123.0, y=536.0, w=208.0, h=142.0, rot=false]
+}, [printed= 162]
+
+}
+prix sRandom = 2760.0
+
+Recherche de solution ..
+#Tabou demarrage : fSBase = 2758.5, nb pattern = 17, nbTransPossible = 1360, taille liste tabou = 1360 (100%), max iteration = 10000
+#Tabou fin : fSResult = 1697.9999999999995, nbIteration = 682, timeEllapsed = 11605
+#Tabou demarrage : fSBase = 1698.0, nb pattern = 13, nbTransPossible = 1040, taille liste tabou = 208 (20%), max iteration = 10000
+#Tabou fin : fSResult = 1555.9999999999995, nbIteration = 10000, timeEllapsed = 122535
+#Tabou demarrage : fSBase = 1698.0, nb pattern = 13, nbTransPossible = 1040, taille liste tabou = 208 (20%), max iteration = 10000
+#Tabou fin : fSResult = 1587.4999999999995, nbIteration = 10000, timeEllapsed = 118886
+#Tabou demarrage : fSBase = 1698.0, nb pattern = 13, nbTransPossible = 1040, taille liste tabou = 208 (20%), max iteration = 10000
+#Tabou fin : fSResult = 1560.0, nbIteration = 10000, timeEllapsed = 118277
+
+
+Meilleure solution !
+Solution = [pW=1400.0, pH=700.0, t=60860, f=1556.0, price=1557.0] {
+0: pattern = {
+   [20, dem=191, x=0.0, y=0.0, w=348.0, h=447.0, rot=true]
+   [30, dem=161, x=447.0, y=0.0, w=913.0, h=94.0, rot=false]
+   [15, dem=117, x=447.0, y=94.0, w=810.0, h=225.0, rot=false]
+   [15, dem=117, x=447.0, y=319.0, w=810.0, h=225.0, rot=false]
+   [29, dem=122, x=447.0, y=544.0, w=804.0, h=110.0, rot=false]
+}, [printed= 27]
+1: pattern = {
+   [3, dem=181, x=0.0, y=0.0, w=882.0, h=399.0, rot=false]
+   [39, dem=102, x=0.0, y=399.0, w=154.0, h=219.0, rot=true]
+   [12, dem=147, x=882.0, y=0.0, w=464.0, h=476.0, rot=false]
+   [19, dem=195, x=219.0, y=399.0, w=659.0, h=242.0, rot=false]
+   [36, dem=168, x=882.0, y=476.0, w=367.0, h=107.0, rot=false]
+}, [printed= 181]
+2: pattern = {
+   [31, dem=151, x=0.0, y=0.0, w=593.0, h=132.0, rot=true]
+   [31, dem=151, x=132.0, y=0.0, w=593.0, h=132.0, rot=true]
+   [5, dem=169, x=264.0, y=0.0, w=873.0, h=344.0, rot=false]
+   [5, dem=169, x=264.0, y=344.0, w=873.0, h=344.0, rot=false]
+   [19, dem=195, x=1137.0, y=0.0, w=659.0, h=242.0, rot=true]
+}, [printed= 85]
+3: pattern = {
+   [34, dem=175, x=0.0, y=0.0, w=390.0, h=138.0, rot=false]
+   [40, dem=131, x=0.0, y=138.0, w=208.0, h=142.0, rot=true]
+   [32, dem=111, x=390.0, y=0.0, w=603.0, h=125.0, rot=true]
+   [4, dem=154, x=515.0, y=0.0, w=884.0, h=355.0, rot=false]
+   [26, dem=195, x=0.0, y=346.0, w=363.0, h=301.0, rot=false]
+   [8, dem=147, x=515.0, y=355.0, w=776.0, h=332.0, rot=false]
+}, [printed= 154]
+4: pattern = {
+   [7, dem=171, x=0.0, y=0.0, w=676.0, h=422.0, rot=true]
+   [35, dem=168, x=422.0, y=0.0, w=666.0, h=77.0, rot=true]
+   [6, dem=102, x=499.0, y=0.0, w=868.0, h=339.0, rot=false]
+   [9, dem=170, x=499.0, y=339.0, w=765.0, h=336.0, rot=false]
+}, [printed= 171]
+5: pattern = {
+   [24, dem=182, x=0.0, y=0.0, w=542.0, h=217.0, rot=true]
+   [18, dem=198, x=217.0, y=0.0, w=529.0, h=306.0, rot=true]
+   [10, dem=114, x=523.0, y=0.0, w=764.0, h=332.0, rot=false]
+   [10, dem=114, x=523.0, y=332.0, w=764.0, h=332.0, rot=false]
+   [36, dem=168, x=1287.0, y=0.0, w=367.0, h=107.0, rot=true]
+}, [printed= 57]
+6: pattern = {
+   [30, dem=161, x=0.0, y=0.0, w=913.0, h=94.0, rot=false]
+   [11, dem=141, x=913.0, y=0.0, w=536.0, h=418.0, rot=true]
+   [37, dem=128, x=913.0, y=536.0, w=472.0, h=72.0, rot=false]
+   [38, dem=168, x=913.0, y=608.0, w=408.0, h=83.0, rot=false]
+   [24, dem=182, x=0.0, y=94.0, w=542.0, h=217.0, rot=false]
+   [18, dem=198, x=0.0, y=311.0, w=529.0, h=306.0, rot=false]
+   [16, dem=140, x=542.0, y=94.0, w=529.0, h=339.0, rot=true]
+}, [printed= 141]
+7: pattern = {
+   [37, dem=128, x=0.0, y=0.0, w=472.0, h=72.0, rot=true]
+   [27, dem=122, x=72.0, y=0.0, w=940.0, h=112.0, rot=false]
+   [14, dem=146, x=72.0, y=112.0, w=927.0, h=202.0, rot=false]
+   [17, dem=134, x=1012.0, y=0.0, w=542.0, h=324.0, rot=true]
+   [22, dem=127, x=72.0, y=314.0, w=913.0, h=156.0, rot=false]
+   [21, dem=141, x=72.0, y=470.0, w=722.0, h=208.0, rot=false]
+}, [printed= 146]
+8: pattern = {
+   [34, dem=175, x=0.0, y=0.0, w=390.0, h=138.0, rot=false]
+   [1, dem=129, x=390.0, y=0.0, w=915.0, h=439.0, rot=false]
+   [13, dem=193, x=390.0, y=439.0, w=831.0, h=231.0, rot=false]
+   [26, dem=195, x=0.0, y=138.0, w=363.0, h=301.0, rot=true]
+   [33, dem=185, x=0.0, y=501.0, w=169.0, h=385.0, rot=true]
+}, [printed= 129]
+9: pattern = {
+   [20, dem=191, x=0.0, y=0.0, w=348.0, h=447.0, rot=true]
+   [23, dem=164, x=0.0, y=348.0, w=327.0, h=403.0, rot=true]
+   [28, dem=157, x=447.0, y=0.0, w=604.0, h=173.0, rot=true]
+   [25, dem=141, x=620.0, y=0.0, w=745.0, h=157.0, rot=false]
+   [2, dem=182, x=620.0, y=157.0, w=722.0, h=498.0, rot=false]
+}, [printed= 182]
+10: pattern = {
+   [38, dem=168, x=0.0, y=0.0, w=408.0, h=83.0, rot=true]
+   [40, dem=131, x=83.0, y=0.0, w=208.0, h=142.0, rot=false]
+   [40, dem=131, x=83.0, y=142.0, w=208.0, h=142.0, rot=false]
+   [13, dem=193, x=291.0, y=0.0, w=831.0, h=231.0, rot=false]
+   [19, dem=195, x=1122.0, y=0.0, w=659.0, h=242.0, rot=true]
+   [33, dem=185, x=83.0, y=284.0, w=169.0, h=385.0, rot=false]
+   [15, dem=117, x=291.0, y=231.0, w=810.0, h=225.0, rot=false]
+   [29, dem=122, x=291.0, y=456.0, w=804.0, h=110.0, rot=false]
+   [29, dem=122, x=291.0, y=566.0, w=804.0, h=110.0, rot=false]
+}, [printed= 64]
+
+}
+Price = 1557.0
+
+Total time : 432096
