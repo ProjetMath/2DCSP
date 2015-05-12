@@ -2,102 +2,125 @@ package main.execute;
 
 import image.TypeImage;
 
+import java.awt.Dimension;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import main.Execute;
-import main.GenerateRandomSolution;
-import main.Solution;
+import javax.swing.JFrame;
 
-public class ExecuteV2 extends Execute {
-	/*
-	 * Fonctionnement global
-	 */
-	public Solution execute(File f) {//, int ltPercentNiv1, int nbIteNiv1, int ltPercentNiv2, int nbIteNiv2) throws Exception {	
-		System.out.println("\r\n");
-		System.out.println("Le fichier "+f.getName()+" va etre traité\r\n");
-	
-		List<TypeImage> imagesToPlace = this.setup(f); //chargement fichier, ..
-		
-		/* 
-		 * Generation d'une solution aléatoire
-		 * Incrementer le nombre de pattern jusqu'à trouver la première 
-		 * solution qui fonctionne aléatoire
-		 */
-		Solution sRandom = null;
-		GenerateRandomSolution generator = new GenerateRandomSolution(imagesToPlace);
-		for (int nbPattern = 1;; nbPattern++)
-		{
-			System.out.println("Gen sol alea nb pattern = "+nbPattern);
-			Solution sR = generator.generate(nbPattern);
-			if (sR != null)
-			{
-				sRandom = sR;
-				break;
-			}
-		}
-		sRandom.reconstruct(); //recontruire la solution pour réduire le nombre de pattern
-		System.out.println("Solution aléatoire : \r\n");
-		System.out.println(sRandom);
-		System.out.println("prix sRandom = "+sRandom.calculPrice());
-		System.out.println("\r\nRecherche de solution ..");
-		
-				
-		Solution sBest = lookup(sRandom, 100, 1, 10000).get(0).reconstruct();;
-		for (int i=0; i<5; ++i)
-		{
-			Solution s = lookup(sBest, 10, 1, 5000).get(0).reconstruct();
-			
-			if (s.getFitness() <= sBest.getFitness())
-			{
-				sBest = s;
-			}
-		}
-		
-		System.out.println("\r\n");
-		System.out.println("Meilleure solution !");
-		System.out.println(sBest);
-		System.out.println("Price = "+sBest.calculPrice());
-		
-		return sBest;
-	}
-	
+import main.Execute;
+import main.Pattern;
+import main.Solution;
+import vue.Affichage;
+
+public class ExecuteV2 {
 	public static void main(String[] args) throws FileNotFoundException {
-		Execute exec = new ExecuteV2();
+		PrintStream stdout = System.out;
+		System.out.println("Recherche d'une solution avec plusieurs tabou (en commencant avec un tabou rapide) en reprenant la meilleure solution ...\r\n");
+		try {
+			/*
+			 * Ask parameter 
+			 */
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			int tailleBoucle = 0;
+			do {
+				try {
+					System.out.print("Nombre de tabou [1-Inf] : ");
+					String line = br.readLine();
+					tailleBoucle = Integer.valueOf(line);
+				} catch (Exception e) 
+				{
+					tailleBoucle = 0;
+				}
+			} while(tailleBoucle <= 0);
+			
+			int tailleTabou = 0;
+			do {
+				try {
+					System.out.print("Taille de la liste tabou (pourcentage du nombre total de transformation max) [1;100] : ");
+					String line = br.readLine();
+					tailleTabou = Integer.valueOf(line);
+				} catch (Exception e) 
+				{
+					tailleTabou = 0;
+				}
+			} while(tailleTabou <= 0  || tailleTabou > 100);
+			 
+			
+			int nbIteration = 0;
+			do {
+				try {
+					System.out.print("Nombre d'itération [1;Inf] : ");
+					String line = br.readLine();
+					nbIteration = Integer.valueOf(line);
+				} catch (Exception e) 
+				{
+					nbIteration = 0;
+				}
+			} while(nbIteration <= 0);
 		
-		File f = exec.chooseFile();
-		if (f == null) return;
+			Execute exec = new Execute();
 		
-		new File("dataOut").mkdir(); //dossier dataOut
-		new File("dataOut/executeV2").mkdir(); //dossier execute v2
-		new File("dataOut/executeV2/"+f.getName()).mkdir(); //dossier avec nom fichier
-		
-		for (int i = 0; i < 3; ++i)
-		{	
+			File f = exec.chooseFile();
+			if (f == null) return;
+			
+			new File("dataOutput").mkdir(); //dossier dataOut
+			String nameFile = f.getName().substring(0, f.getName().length()-4);
+			new File("dataOutput/"+nameFile).mkdir(); //dossier avec nom fichier
+			
 			SimpleDateFormat filePattern = new SimpleDateFormat("ddMMyyyy_HHmmss");
-			String filename = filePattern.format(new Date()) + ".txt";
+			String filename = filePattern.format(new Date()) + "__"+nameFile+".txt";
 			
-			File file = new File("dataOut/executeV2/"+f.getName()+"/"+filename); //fichier avec date
-			
+			File file = new File("dataOutput/"+nameFile+"/"+filename); //fichier avec date
+			System.out.println("\r\nLe fichier "+f.getName()+" est en traitement");
+			System.out.println("Wait ..");
 			PrintStream printStream = new PrintStream(file);
 			System.setOut(printStream);
 	
-			try {
-				long startTime = System.currentTimeMillis();
+			long startTime = System.currentTimeMillis();
+			
+			System.out.println("\r\n");
+			System.out.println("Le fichier "+f.getName()+" va etre traité\r\n");
+		
+			List<TypeImage> imagesToPlace = exec.setup(f); //chargement fichier, ..
+			
+			Solution sRandom = exec.firstSolution(imagesToPlace);
+			
+			System.out.println("\r\nRecherche de solution ..");
+			
+			Solution sBest = exec.lookup(sRandom, 100, 1, 10000).get(0).reconstruct();;
+			for (int i=0; i<tailleBoucle; ++i)
+			{
+				Solution s = exec.lookup(sBest, tailleTabou, 1, nbIteration).get(0).reconstruct();
 				
-				Solution bestSol = exec.execute(f);			
-				
-				System.out.println("\r\nTotal time : "+(System.currentTimeMillis()-startTime));
-				
-				//JFrame frame = new Affichage(bestSol,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
-				//Affichage.affiche(frame);
-			} catch(Exception e) {
-				e.printStackTrace();
+				if (s.getFitness() <= sBest.getFitness())
+				{
+					sBest = s;
+				}
 			}
+			
+			System.out.println("\r\n");
+			System.out.println("Meilleure solution !");
+			System.out.println(sBest);
+			System.out.println("Price = "+sBest.calculPrice());		
+			
+			System.out.println("\r\nTotal time : "+(System.currentTimeMillis()-startTime));
+			System.setOut(stdout); //reset
+			System.out.println("\r\nTotal time : "+(System.currentTimeMillis()-startTime));
+			System.out.println("File in 'dataOut/"+nameFile+"/"+filename+"'");
+			
+			JFrame frame = new Affichage(sBest,new Dimension((int)Pattern.getWidth(),(int)Pattern.getHeight()));
+			Affichage.affiche(frame);
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 }
+
+
