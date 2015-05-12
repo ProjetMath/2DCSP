@@ -1,0 +1,639 @@
+
+
+Le fichier data_30Lalpha.txt va etre traité
+
+Pattern x = 1400.0 / Pattern y = 700.0
+TypeImage = [h=466.0, w=904.0, s=421264.0, dem=134]
+TypeImage = [h=472.0, w=849.0, s=400728.0, dem=141]
+TypeImage = [h=421.0, w=934.0, s=393214.0, dem=187]
+TypeImage = [h=436.0, w=887.0, s=386732.0, dem=131]
+TypeImage = [h=439.0, w=811.0, s=356029.0, dem=134]
+TypeImage = [h=341.0, w=991.0, s=337931.0, dem=146]
+TypeImage = [h=367.0, w=903.0, s=331401.0, dem=178]
+TypeImage = [h=342.0, w=898.0, s=307116.0, dem=162]
+TypeImage = [h=423.0, w=722.0, s=305406.0, dem=185]
+TypeImage = [h=284.0, w=813.0, s=230892.0, dem=109]
+TypeImage = [h=245.0, w=915.0, s=224175.0, dem=162]
+TypeImage = [h=329.0, w=610.0, s=200690.0, dem=110]
+TypeImage = [h=408.0, w=437.0, s=178296.0, dem=188]
+TypeImage = [h=186.0, w=912.0, s=169632.0, dem=125]
+TypeImage = [h=198.0, w=819.0, s=162162.0, dem=131]
+TypeImage = [h=323.0, w=450.0, s=145350.0, dem=147]
+TypeImage = [h=332.0, w=335.0, s=111220.0, dem=113]
+TypeImage = [h=211.0, w=469.0, s=98959.0, dem=107]
+TypeImage = [h=205.0, w=469.0, s=96145.0, dem=151]
+TypeImage = [h=393.0, w=219.0, s=86067.0, dem=133]
+TypeImage = [h=105.0, w=795.0, s=83475.0, dem=117]
+TypeImage = [h=370.0, w=183.0, s=67710.0, dem=149]
+TypeImage = [h=341.0, w=193.0, s=65813.0, dem=179]
+TypeImage = [h=271.0, w=242.0, s=65582.0, dem=165]
+TypeImage = [h=180.0, w=354.0, s=63720.0, dem=103]
+TypeImage = [h=70.0, w=876.0, s=61320.0, dem=168]
+TypeImage = [h=118.0, w=425.0, s=50150.0, dem=186]
+TypeImage = [h=162.0, w=225.0, s=36450.0, dem=134]
+TypeImage = [h=76.0, w=462.0, s=35112.0, dem=168]
+TypeImage = [h=115.0, w=242.0, s=27830.0, dem=156]
+Gen sol alea nb pattern = 1
+Gen sol alea nb pattern = 2
+Gen sol alea nb pattern = 3
+Gen sol alea nb pattern = 4
+Gen sol alea nb pattern = 5
+Gen sol alea nb pattern = 6
+Gen sol alea nb pattern = 7
+Gen sol alea nb pattern = 8
+Gen sol alea nb pattern = 9
+Gen sol alea nb pattern = 10
+Gen sol alea nb pattern = 11
+Gen sol alea nb pattern = 12
+Gen sol alea nb pattern = 13
+Gen sol alea nb pattern = 14
+Solution aléatoire : 
+
+Solution = [pW=1400.0, pH=700.0, t=0, f=1982.5, price=1983.0] {
+0: pattern = {
+   [2, dem=141, x=0.0, y=0.0, w=849.0, h=472.0, rot=false]
+   [13, dem=188, x=849.0, y=0.0, w=437.0, h=408.0, rot=true]
+}, [printed= 7]
+1: pattern = {
+   [3, dem=187, x=0.0, y=0.0, w=934.0, h=421.0, rot=false]
+   [14, dem=125, x=0.0, y=421.0, w=912.0, h=186.0, rot=false]
+}, [printed= 19]
+2: pattern = {
+   [4, dem=131, x=0.0, y=0.0, w=887.0, h=436.0, rot=false]
+   [12, dem=110, x=887.0, y=0.0, w=610.0, h=329.0, rot=true]
+}, [printed= 131]
+3: pattern = {
+   [5, dem=134, x=0.0, y=0.0, w=811.0, h=439.0, rot=false]
+   [12, dem=110, x=811.0, y=0.0, w=610.0, h=329.0, rot=true]
+   [29, dem=168, x=811.0, y=610.0, w=462.0, h=76.0, rot=false]
+   [30, dem=156, x=1140.0, y=0.0, w=242.0, h=115.0, rot=false]
+}, [printed= 168]
+4: pattern = {
+   [6, dem=146, x=0.0, y=0.0, w=991.0, h=341.0, rot=false]
+   [11, dem=162, x=0.0, y=341.0, w=915.0, h=245.0, rot=false]
+   [22, dem=149, x=991.0, y=0.0, w=183.0, h=370.0, rot=false]
+}, [printed= 162]
+5: pattern = {
+   [7, dem=178, x=0.0, y=0.0, w=903.0, h=367.0, rot=false]
+   [10, dem=109, x=0.0, y=367.0, w=813.0, h=284.0, rot=false]
+   [20, dem=133, x=903.0, y=0.0, w=219.0, h=393.0, rot=false]
+}, [printed= 178]
+6: pattern = {
+   [6, dem=146, x=0.0, y=0.0, w=991.0, h=341.0, rot=false]
+   [8, dem=162, x=0.0, y=341.0, w=898.0, h=342.0, rot=false]
+   [30, dem=156, x=991.0, y=0.0, w=242.0, h=115.0, rot=true]
+}, [printed= 162]
+7: pattern = {
+   [9, dem=185, x=0.0, y=0.0, w=722.0, h=423.0, rot=false]
+   [12, dem=110, x=722.0, y=0.0, w=610.0, h=329.0, rot=true]
+   [18, dem=107, x=0.0, y=423.0, w=469.0, h=211.0, rot=false]
+   [18, dem=107, x=1051.0, y=0.0, w=469.0, h=211.0, rot=true]
+   [30, dem=156, x=1051.0, y=469.0, w=242.0, h=115.0, rot=false]
+   [30, dem=156, x=1262.0, y=0.0, w=242.0, h=115.0, rot=true]
+   [30, dem=156, x=469.0, y=423.0, w=242.0, h=115.0, rot=true]
+}, [printed= 185]
+8: pattern = {
+   [2, dem=141, x=0.0, y=0.0, w=849.0, h=472.0, rot=false]
+   [12, dem=110, x=849.0, y=0.0, w=610.0, h=329.0, rot=true]
+   [15, dem=131, x=0.0, y=472.0, w=819.0, h=198.0, rot=false]
+   [28, dem=134, x=1178.0, y=0.0, w=225.0, h=162.0, rot=true]
+}, [printed= 134]
+9: pattern = {
+   [1, dem=134, x=0.0, y=0.0, w=904.0, h=466.0, rot=false]
+   [15, dem=131, x=0.0, y=466.0, w=819.0, h=198.0, rot=false]
+   [16, dem=147, x=904.0, y=0.0, w=450.0, h=323.0, rot=true]
+   [18, dem=107, x=904.0, y=450.0, w=469.0, h=211.0, rot=false]
+}, [printed= 147]
+10: pattern = {
+   [3, dem=187, x=0.0, y=0.0, w=934.0, h=421.0, rot=false]
+   [14, dem=125, x=0.0, y=421.0, w=912.0, h=186.0, rot=false]
+   [17, dem=113, x=934.0, y=0.0, w=335.0, h=332.0, rot=true]
+   [25, dem=103, x=934.0, y=335.0, w=354.0, h=180.0, rot=true]
+   [26, dem=168, x=0.0, y=607.0, w=876.0, h=70.0, rot=false]
+   [30, dem=156, x=1266.0, y=0.0, w=242.0, h=115.0, rot=true]
+   [30, dem=156, x=1114.0, y=335.0, w=242.0, h=115.0, rot=true]
+}, [printed= 168]
+11: pattern = {
+   [1, dem=134, x=0.0, y=0.0, w=904.0, h=466.0, rot=false]
+   [15, dem=131, x=0.0, y=466.0, w=819.0, h=198.0, rot=false]
+   [19, dem=151, x=904.0, y=0.0, w=469.0, h=205.0, rot=true]
+   [19, dem=151, x=904.0, y=469.0, w=469.0, h=205.0, rot=false]
+   [25, dem=103, x=1109.0, y=0.0, w=354.0, h=180.0, rot=true]
+   [30, dem=156, x=1109.0, y=354.0, w=242.0, h=115.0, rot=false]
+}, [printed= 76]
+12: pattern = {
+   [5, dem=134, x=0.0, y=0.0, w=811.0, h=439.0, rot=false]
+   [13, dem=188, x=811.0, y=0.0, w=437.0, h=408.0, rot=false]
+   [21, dem=117, x=0.0, y=439.0, w=795.0, h=105.0, rot=false]
+   [23, dem=179, x=811.0, y=408.0, w=193.0, h=341.0, rot=true]
+   [24, dem=165, x=1152.0, y=408.0, w=242.0, h=271.0, rot=false]
+   [27, dem=186, x=0.0, y=544.0, w=425.0, h=118.0, rot=false]
+   [30, dem=156, x=425.0, y=544.0, w=242.0, h=115.0, rot=false]
+}, [printed= 186]
+
+}
+prix sRandom = 1983.0
+
+Recherche de solution ..
+#Tabou demarrage : fSBase = 1982.5, nb pattern = 13, nbTransPossible = 780, taille liste tabou = 624 (80%), max iteration = 100000
+#Tabou fin : fSResult = 1425.0, nbIteration = 409, timeEllapsed = 3046
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 240 (50%), max iteration = 178
+#Tabou fin : fSResult = 1425.0, nbIteration = 178, timeEllapsed = 489
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1425.0, nbIteration = 356, timeEllapsed = 1172
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3296
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3097
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3006
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 875
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3058
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3130
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3176
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1191
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2944
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2850
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3067
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1425.0, nbIteration = 356, timeEllapsed = 795
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3228
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3083
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2899
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1425.0, nbIteration = 356, timeEllapsed = 1201
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3523
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3235
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3282
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 240 (50%), max iteration = 178
+#Tabou fin : fSResult = 1412.0, nbIteration = 178, timeEllapsed = 547
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1294
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999982, nbIteration = 712, timeEllapsed = 3192
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3173
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3954
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1341
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3274
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3250
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3025
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 850
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3175
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999986, nbIteration = 712, timeEllapsed = 2958
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3761
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1401
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3840
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3423
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3619
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1470
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 3721
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 4471
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 4142
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 240 (50%), max iteration = 178
+#Tabou fin : fSResult = 1412.0, nbIteration = 178, timeEllapsed = 404
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1192
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2842
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3198
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2956
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1139
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3064
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2840
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3189
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 851
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3122
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2999
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2920
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1187
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 2886
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2948
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3175
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1082
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3336
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3014
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3176
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 240 (50%), max iteration = 178
+#Tabou fin : fSResult = 1412.0, nbIteration = 178, timeEllapsed = 522
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1259
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3532
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3145
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2807
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1260
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3057
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3128
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 3076
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1228
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3113
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3337
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3145
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1054
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3263
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3135
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3045
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1077
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3135
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3197
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2932
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 240 (50%), max iteration = 178
+#Tabou fin : fSResult = 1412.0, nbIteration = 178, timeEllapsed = 460
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1153
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3019
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3038
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3652
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 954
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3072
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2836
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 2864
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1179
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2917
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3081
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2952
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 356, timeEllapsed = 698
+#Tabou demarrage : fSBase = 1411.9999999999998, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2937
+#Tabou demarrage : fSBase = 1411.9999999999998, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2855
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2800
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1271
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2908
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2919
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 3059
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 240 (50%), max iteration = 178
+#Tabou fin : fSResult = 1412.0, nbIteration = 178, timeEllapsed = 441
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1195
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3019
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3186
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2807
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1176
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2825
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2765
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2793
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1199
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3029
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2778
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2849
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1178
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2922
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 2777
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2780
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 759
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2828
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.999999999999, nbIteration = 712, timeEllapsed = 2949
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 2934
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 240 (50%), max iteration = 178
+#Tabou fin : fSResult = 1412.0, nbIteration = 178, timeEllapsed = 470
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1063
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2753
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 2872
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2721
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1198
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2935
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2842
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2889
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1073
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3012
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2798
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2928
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 120, timeEllapsed = 273
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2806
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 3027
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2573
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 981
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2991
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2840
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3078
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 240 (50%), max iteration = 178
+#Tabou fin : fSResult = 1412.0, nbIteration = 178, timeEllapsed = 448
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1220
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2969
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2870
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3015
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1231
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3034
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3010
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3155
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1021
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 2792
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2973
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3354
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1466
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3202
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3295
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3367
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1328
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3181
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3358
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3041
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 240 (50%), max iteration = 178
+#Tabou fin : fSResult = 1412.0, nbIteration = 178, timeEllapsed = 465
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1233
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3035
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2838
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2837
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1073
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3147
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3290
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999993, nbIteration = 712, timeEllapsed = 3183
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1153
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2896
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2847
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3153
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 779
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3390
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3203
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3216
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1168
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3000
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2963
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2796
+#Tabou demarrage : fSBase = 1425.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 240 (50%), max iteration = 178
+#Tabou fin : fSResult = 1412.0, nbIteration = 178, timeEllapsed = 547
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1166
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3052
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3253
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3132
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1127
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3129
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2900
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2932
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1358
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 2972
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2972
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999995, nbIteration = 712, timeEllapsed = 2986
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1206
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2910
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 2856
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 2924
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 120 (25%), max iteration = 356
+#Tabou fin : fSResult = 1412.0, nbIteration = 356, timeEllapsed = 1286
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3222
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1411.9999999999998, nbIteration = 712, timeEllapsed = 3173
+#Tabou demarrage : fSBase = 1412.0, nb pattern = 8, nbTransPossible = 480, taille liste tabou = 4 (1%), max iteration = 712
+#Tabou fin : fSResult = 1412.0, nbIteration = 712, timeEllapsed = 3323
+
+
+Meilleure solution !
+Solution = [pW=1400.0, pH=700.0, t=3145, f=1411.9999999999982, price=1412.0] {
+0: pattern = {
+   [13, dem=188, x=0.0, y=0.0, w=437.0, h=408.0, rot=true]
+   [2, dem=141, x=408.0, y=0.0, w=849.0, h=472.0, rot=false]
+   [15, dem=131, x=408.0, y=472.0, w=819.0, h=198.0, rot=false]
+   [22, dem=149, x=0.0, y=437.0, w=183.0, h=370.0, rot=true]
+}, [printed= 141]
+1: pattern = {
+   [4, dem=131, x=0.0, y=0.0, w=887.0, h=436.0, rot=false]
+   [21, dem=117, x=0.0, y=436.0, w=795.0, h=105.0, rot=false]
+   [29, dem=168, x=0.0, y=541.0, w=462.0, h=76.0, rot=false]
+   [29, dem=168, x=0.0, y=617.0, w=462.0, h=76.0, rot=false]
+   [29, dem=168, x=887.0, y=0.0, w=462.0, h=76.0, rot=false]
+   [12, dem=110, x=887.0, y=76.0, w=610.0, h=329.0, rot=true]
+   [28, dem=134, x=1216.0, y=76.0, w=225.0, h=162.0, rot=true]
+}, [printed= 131]
+2: pattern = {
+   [27, dem=186, x=0.0, y=0.0, w=425.0, h=118.0, rot=false]
+   [27, dem=186, x=0.0, y=118.0, w=425.0, h=118.0, rot=false]
+   [11, dem=162, x=425.0, y=0.0, w=915.0, h=245.0, rot=false]
+   [16, dem=147, x=0.0, y=236.0, w=450.0, h=323.0, rot=true]
+   [9, dem=185, x=425.0, y=245.0, w=722.0, h=423.0, rot=false]
+   [23, dem=179, x=1147.0, y=245.0, w=193.0, h=341.0, rot=false]
+}, [printed= 185]
+3: pattern = {
+   [24, dem=165, x=0.0, y=0.0, w=242.0, h=271.0, rot=false]
+   [19, dem=151, x=242.0, y=0.0, w=469.0, h=205.0, rot=true]
+   [7, dem=178, x=447.0, y=0.0, w=903.0, h=367.0, rot=false]
+   [28, dem=134, x=242.0, y=469.0, w=225.0, h=162.0, rot=true]
+   [28, dem=134, x=0.0, y=271.0, w=225.0, h=162.0, rot=true]
+   [28, dem=134, x=0.0, y=496.0, w=225.0, h=162.0, rot=false]
+   [10, dem=109, x=447.0, y=367.0, w=813.0, h=284.0, rot=false]
+}, [printed= 178]
+4: pattern = {
+   [6, dem=146, x=0.0, y=0.0, w=991.0, h=341.0, rot=false]
+   [8, dem=162, x=0.0, y=341.0, w=898.0, h=342.0, rot=false]
+   [29, dem=168, x=991.0, y=0.0, w=462.0, h=76.0, rot=true]
+   [28, dem=134, x=991.0, y=462.0, w=225.0, h=162.0, rot=false]
+   [28, dem=134, x=1216.0, y=462.0, w=225.0, h=162.0, rot=true]
+   [28, dem=134, x=1067.0, y=0.0, w=225.0, h=162.0, rot=false]
+}, [printed= 162]
+5: pattern = {
+   [25, dem=103, x=0.0, y=0.0, w=354.0, h=180.0, rot=true]
+   [5, dem=134, x=180.0, y=0.0, w=811.0, h=439.0, rot=false]
+   [13, dem=188, x=991.0, y=0.0, w=437.0, h=408.0, rot=true]
+   [18, dem=107, x=180.0, y=439.0, w=469.0, h=211.0, rot=false]
+   [28, dem=134, x=0.0, y=354.0, w=225.0, h=162.0, rot=true]
+   [28, dem=134, x=649.0, y=439.0, w=225.0, h=162.0, rot=true]
+   [28, dem=134, x=811.0, y=439.0, w=225.0, h=162.0, rot=true]
+   [20, dem=133, x=991.0, y=437.0, w=219.0, h=393.0, rot=true]
+}, [printed= 134]
+6: pattern = {
+   [25, dem=103, x=0.0, y=0.0, w=354.0, h=180.0, rot=true]
+   [1, dem=134, x=180.0, y=0.0, w=904.0, h=466.0, rot=false]
+   [22, dem=149, x=180.0, y=466.0, w=183.0, h=370.0, rot=true]
+   [22, dem=149, x=550.0, y=466.0, w=183.0, h=370.0, rot=true]
+   [29, dem=168, x=1084.0, y=0.0, w=462.0, h=76.0, rot=true]
+   [29, dem=168, x=1160.0, y=0.0, w=462.0, h=76.0, rot=true]
+   [28, dem=134, x=920.0, y=466.0, w=225.0, h=162.0, rot=true]
+   [28, dem=134, x=0.0, y=354.0, w=225.0, h=162.0, rot=true]
+   [28, dem=134, x=1084.0, y=462.0, w=225.0, h=162.0, rot=false]
+   [28, dem=134, x=1236.0, y=0.0, w=225.0, h=162.0, rot=true]
+}, [printed= 134]
+7: pattern = {
+   [3, dem=187, x=0.0, y=0.0, w=934.0, h=421.0, rot=false]
+   [14, dem=125, x=0.0, y=421.0, w=912.0, h=186.0, rot=false]
+   [17, dem=113, x=934.0, y=0.0, w=335.0, h=332.0, rot=true]
+   [25, dem=103, x=934.0, y=335.0, w=354.0, h=180.0, rot=true]
+   [26, dem=168, x=0.0, y=607.0, w=876.0, h=70.0, rot=false]
+   [30, dem=156, x=1266.0, y=0.0, w=242.0, h=115.0, rot=true]
+   [30, dem=156, x=1114.0, y=335.0, w=242.0, h=115.0, rot=true]
+}, [printed= 187]
+
+}
+Price = 1412.0
+
+Total time : 536031
