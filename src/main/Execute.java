@@ -2,26 +2,19 @@ package main;
 
 import image.TypeImage;
 
-import java.awt.Dimension;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.swing.JFileChooser;
-import javax.swing.JFrame;
 
 import tabou.Tabou;
-import vue.Affichage;
 
 /**
  * Execution general
  *
  */
-public abstract class Execute {
+public class Execute {
 	public Execute() {
 		// TODO Auto-generated constructor stub
 	}
@@ -31,7 +24,8 @@ public abstract class Execute {
 	 */
 	public File chooseFile()
 	{
-		JFileChooser jfc = new JFileChooser("./data");
+		JFileChooser jfc = new JFileChooser("./dataInput");
+		jfc.setRequestFocusEnabled(true);
 		int returnB = jfc.showOpenDialog(null);
 		if (returnB != JFileChooser.APPROVE_OPTION) return null;
 		
@@ -41,7 +35,7 @@ public abstract class Execute {
 	/*
 	 * Chargement du fichier et trie des images
 	 */
-	protected List<TypeImage> setup(File f) {
+	public List<TypeImage> setup(File f) {
 		List<TypeImage> imagesToPlace = LoadFile.lectureFichier(f.getAbsolutePath());
 		
 		//trier les images
@@ -71,11 +65,40 @@ public abstract class Execute {
 		
 		return tit;
 	}
+	
+	/*
+	 * Generation de la premiere solution
+	 */
+	public Solution firstSolution(List<TypeImage> imagesToPlace) {
+		/* 
+		 * Generation d'une solution aléatoire
+		 * Incrementer le nombre de pattern jusqu'à trouver la première 
+		 * solution qui fonctionne aléatoire
+		 */
+		Solution sRandom = null;
+		GenerateRandomSolution generator = new GenerateRandomSolution(imagesToPlace);
+		for (int nbPattern = 1;; nbPattern++)
+		{
+			System.out.println("Gen sol alea nb pattern = "+nbPattern);
+			Solution sR = generator.generate(nbPattern);
+			if (sR != null)
+			{
+				sRandom = sR;
+				break;
+			}
+		}
+		sRandom.reconstruct(); //recontruire la solution pour réduire le nombre de pattern
+		System.out.println("Solution aléatoire : \r\n");
+		System.out.println(sRandom);
+		System.out.println("prix sRandom = "+sRandom.calculPrice());
 		
+		return sRandom;
+	}
+	
 	/*
 	 * Recherche de la meilleure solution
 	 */
-	protected List<Solution> lookup(Solution first, int ltPercent, int sizeListElite, int nbIteration) {
+	public List<Solution> lookup(Solution first, int ltPercent, int sizeListElite, int nbIteration) {
 		if (ltPercent <= 0) ltPercent = 1;
 		if (sizeListElite <= 0) sizeListElite = 1;
 		
@@ -91,9 +114,4 @@ public abstract class Execute {
 				
 		return listElit;
 	}
-	
-	/*
-	 * Execute
-	 */
-	public abstract Solution execute(File f);
 }
